@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/factor1/f1-telos#readme",
   "dependencies": {
+    "ginger-grid": "^2.2.0",
     "prelude-wp": "^4.2.5"
   }
 }
