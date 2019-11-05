@@ -1,3 +1,69 @@
 /*----------------------------------------------------------------------------
   Variables
 ----------------------------------------------------------------------------*/
+// Colors
+$grass: #6cbe45;
+$clay: #aa4127;
+$court: #589dd5;
+$asphalt: #414042;
+$davesGray: #58595b;
+$nickel: #6d6e71;
+$licorice: #231f20;
+$white: #fff;
+
+// Font families
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+    url('../fonts/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url('../fonts/Gilroy-SemiBold.woff2') format('woff2'),
+    url('../fonts/Gilroy-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('../fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url('../fonts/../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Black-Diamond';
+  src: url('../fonts/BlackDiamond.woff2') format('woff2'),
+    url('../fonts/BlackDiamond.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$gilroyLight: 'Gilroy-Light';
+$gilroyRegular: 'Gilroy-Regular';
+$gilroySemibold: 'Gilroy-SemiBold';
+$gilroyBold: 'Gilroy-Bold';
+$gilroyExtrabold: 'Gilroy-ExtraBold';
+$blackDiamond: 'Black-Diamond';
+$balboa: balboa, sans-serif;

@@ -485,6 +485,48 @@ template {
   Variables
 ----------------------------------------------------------------------------*/
 
+@font-face {
+	font-family: 'Gilroy-Light';
+	src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy-SemiBold';
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy-Regular';
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy-ExtraBold';
+	src: url("../fonts/../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy-Bold';
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Black-Diamond';
+	src: url("../fonts/BlackDiamond.woff2") format("woff2"), url("../fonts/BlackDiamond.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*
 * Ginger
 * A minimal flexbox grid system named after a cute dog.
@@ -1494,8 +1536,142 @@ a img.aligncenter {
   Typography
 ------------------------------------------------------------------------------*/
 
+h1 {
+	margin: 0 0 1.25rem;
+	font: 500 7.8125rem/1 balboa, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	margin: 0 0 1.25rem;
+	font: 2.1875rem/1.14 "Gilroy-Regular";
+	color: #414042;
+}
+
+h3 {
+	margin: 0 0 1.25rem;
+	font: 1.875rem/1.17 "Gilroy-Regular";
+	color: #414042;
+}
+
+h4 {
+	margin: 0 0 0.9375rem;
+	font: 1.5625rem/1.2 "Gilroy-Light";
+	color: #589dd5;
+}
+
+h5 {
+	margin: 0 0 0.9375rem;
+	font: 1.125rem/1.39 "Gilroy-Bold";
+	color: #aa4127;
+}
+
+h6 {
+	margin: 0 0 1.5625rem;
+	font: 1.25rem/1.25 "Gilroy-SemiBold";
+	color: #fff;
+	text-transform: uppercase;
+}
+
+p,
+ol,
+ul,
+li {
+	font: 1.0625rem/1.41 "Gilroy-Regular";
+	color: #58595b;
+}
+
+p,
+ol,
+ul {
+	margin: 0 0 0.9375rem;
+}
+
 a {
+	font: inherit;
+	color: #589dd5;
 	text-decoration: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+a:hover {
+	color: #6cbe45;
+}
+
+.support {
+	margin-bottom: 2.5rem;
+	font-size: 1.625rem;
+	line-height: 1.38;
+	letter-spacing: 0.025em;
+	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.callout {
+	margin-bottom: 0.3125rem;
+	font: 1rem/1.125 "Gilroy-Bold";
+	letter-spacing: 0.025em;
+	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.callout--small {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.14;
+	color: #6d6e71;
+}
+
+.script {
+	margin: 0;
+	font: 400 3.75rem/1.33 "Black-Diamond";
+	text-shadow: none;
+	text-transform: none;
+}
+
+.script--green {
+	color: #6cbe45;
+}
+
+.script--blue {
+	color: #589dd5;
+}
+
+.testimonial {
+	margin-bottom: 4.6875rem;
+	font-size: 2.25rem;
+	line-height: 1.25;
+	color: #fff;
+}
+
+.testimonial--small {
+	margin: 0;
+	font-size: 0.9375rem;
+	line-height: 1.53;
+	color: #6d6e71;
+}
+
+.testimonial__author {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.36;
+	text-transform: none;
+}
+
+.video-title {
+	margin: 0;
+	line-height: 1;
+	color: #414042;
+	text-transform: uppercase;
+}
+
+.price {
+	margin-bottom: 1.875rem;
+	font-size: 3.75rem;
+	line-height: 1;
+	color: #231f20;
 }
 
 /*----------------------------------------------------------------------------
@@ -1593,6 +1769,158 @@ a {
 
 .screen-reader-text {
 	display: none;
+}
+
+/*------------------------------------------------------------------------------
+  Buttons
+------------------------------------------------------------------------------*/
+
+.button--court {
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #589dd5;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #589dd5;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.button--court:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	color: #589dd5;
+}
+
+.button--court:focus,
+.button--court:hover {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.button--court.disabled,
+.button--court:disabled {
+	border-color: rgba(88, 157, 213, 0.15);
+	background-color: rgba(88, 157, 213, 0.15);
+	pointer-events: none;
+}
+
+.button--grass {
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #6cbe45;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #6cbe45;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.button--grass:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	color: #6cbe45;
+}
+
+.button--grass:focus,
+.button--grass:hover {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.button--grass.disabled,
+.button--grass:disabled {
+	border-color: rgba(108, 190, 69, 0.15);
+	background-color: rgba(108, 190, 69, 0.15);
+	pointer-events: none;
+}
+
+.button--clay {
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #aa4127;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #aa4127;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.button--clay:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	color: #aa4127;
+}
+
+.button--clay:focus,
+.button--clay:hover {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.button--clay.disabled,
+.button--clay:disabled {
+	border-color: rgba(170, 65, 39, 0.15);
+	background-color: rgba(170, 65, 39, 0.15);
+	pointer-events: none;
+}
+
+.button--ghost {
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #414042;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #414042;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.button--ghost:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: rgba(65, 64, 66, 0.08);
+	color: #414042;
+}
+
+.button--ghost:focus,
+.button--ghost:hover {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.button--ghost.disabled,
+.button--ghost:disabled {
+	border-color: rgba(65, 64, 66, 0.15);
+	background-color: rgba(255, 255, 255, 0.15);
+	pointer-events: none;
 }
 
 /*------------------------------------------------------------------------------

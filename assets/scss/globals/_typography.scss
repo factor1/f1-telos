@@ -1,8 +1,142 @@
 /*------------------------------------------------------------------------------
   Typography
 ------------------------------------------------------------------------------*/
+// Headings
+h1 {
+  margin: 0 0 rem(20);
+  font: 500 rem(125)/1 $balboa;
+  color: $white;
+  text-transform: uppercase;
+  text-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: 0 0 rem(20);
+  font: rem(35)/1.14 $gilroyRegular;
+  color: $asphalt;
+}
+
+h3 {
+  margin: 0 0 rem(20);
+  font: rem(30)/1.17 $gilroyRegular;
+  color: $asphalt;
+}
+
+h4 {
+  margin: 0 0 rem(15);
+  font: rem(25)/1.2 $gilroyLight;
+  color: $court;
+}
+
+h5 {
+  margin: 0 0 rem(15);
+  font: rem(18)/1.39 $gilroyBold;
+  color: $clay;
+}
+
+h6 {
+  margin: 0 0 rem(25);
+  font: rem(20)/1.25 $gilroySemibold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+// Body copy
+p, ol, ul, li {
+  font: rem(17)/1.41 $gilroyRegular;
+  color: $davesGray;
+}
+
+p, ol, ul {
+  margin: 0 0 rem(15);
+}
 
 // Links
 a {
+  font: inherit;
+  color: $court;
   text-decoration: none;
+  transition: all .4s ease;
+
+  &:hover {
+    color: $grass;
+  }
+}
+
+// Typography classes
+.support { // h6
+  margin-bottom: rem(40);
+  font-size: rem(26);
+  line-height: 1.38;
+  letter-spacing: 0.025em;
+  text-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.2);
+}
+
+.callout { // h6
+  margin-bottom: rem(5);
+  font: rem(16)/1.125 $gilroyBold;
+  letter-spacing: 0.025em;
+  text-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.2);
+}
+
+.callout--small { // p
+  margin: 0;
+  font-size: rem(14);
+  line-height: 1.14;
+  color: $nickel;
+}
+
+.script { // h1
+  margin: 0;
+  font: 400 rem(60)/1.33 $blackDiamond;
+  text-shadow: none;
+  text-transform: none;
+
+  &--green {
+    color: $grass;
+  }
+
+  &--blue {
+    color: $court;
+  }
+}
+
+.testimonial { // h5
+  margin-bottom: rem(75);
+  font-size: rem(36);
+  line-height: 1.25;
+  color: $white;
+}
+
+.testimonial--small { // p
+  margin: 0;
+  font-size: rem(15);
+  line-height: 1.53;
+  color: $nickel;
+}
+
+.testimonial__author { // h6
+  margin: 0;
+  font-size: rem(14);
+  line-height: 1.36;
+  text-transform: none;
+}
+
+.video-title { // h5
+  margin: 0;
+  line-height: 1;
+  color: $asphalt;
+  text-transform: uppercase;
+}
+
+.price { // h5
+  margin-bottom: rem(30);
+  font-size: rem(60);
+  line-height: 1;
+  color: $licorice;
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  
 }

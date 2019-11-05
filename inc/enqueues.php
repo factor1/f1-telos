@@ -18,6 +18,9 @@ if (!(is_admin() )) {
  * Link to all theme CSS files.
  */
 function prelude_theme_scripts() {
+  // Fonts
+  wp_enqueue_style('typekit', 'https://use.typekit.net/bdt2vwc.css', array(), THEME_VERSION );
+
   // CSS
   wp_enqueue_style('prelude-css', get_template_directory_uri() . '/assets/css/theme.min.css', array(), THEME_VERSION );
 
