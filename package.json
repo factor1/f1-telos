@@ -1,0 +1,22 @@
+{
+  "name": "f1-telos",
+  "version": "0.0.1",
+  "description": "A custom WordPress theme for Telos Tennis designed and developed by Factor1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factor1/f1-telos.git"
+  },
+  "author": "Melanie Rhodes <factor1studios.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/factor1/f1-telos/issues"
+  },
+  "homepage": "https://github.com/factor1/f1-telos#readme",
+  "dependencies": {
+    "prelude-wp": "^4.2.5"
+  }
+}
