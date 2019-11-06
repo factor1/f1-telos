@@ -101,7 +101,7 @@ a {
   }
 }
 
-.testimonial { // h5
+.testimonial__text { // h5
   margin-bottom: rem(75);
   font-size: rem(36);
   line-height: 1.25;
@@ -157,5 +157,10 @@ a {
 
   .script {
     font-size: rem(50);
+  }
+
+  .testimonial__text {
+    margin-bottom: rem(40);
+    font-size: rem(28);
   }
 }

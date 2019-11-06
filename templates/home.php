@@ -17,4 +17,6 @@ get_template_part('parts/global/headline-text-split');
 
 get_template_part('parts/home/ipad-modal');
 
+get_template_part('parts/home/testimonial-slider-1');
+
 get_footer(); ?>

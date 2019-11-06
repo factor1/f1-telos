@@ -32,4 +32,13 @@ jQuery( document ).ready(function( $ ) {
 	// Modals
 	MicroModal.init();
 
+	// Home Testimonials 1
+	if( $('.home-testimonials__slider').length ) {
+		$('.home-testimonials__slider').slick({
+			autoplay: false,
+			arrows: true,
+			dots: true,
+		});
+	}
+
 });

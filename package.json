@@ -19,6 +19,7 @@
   "dependencies": {
     "ginger-grid": "^2.2.0",
     "micromodal": "^0.3.2",
-    "prelude-wp": "^4.2.5"
+    "prelude-wp": "^4.2.5",
+    "slick-carousel": "^1.8.1"
   }
 }

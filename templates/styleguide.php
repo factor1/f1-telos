@@ -37,7 +37,7 @@ get_header(); ?>
 
           <h1 class="script">Script</h1>
 
-          <h5 class="testimonial">Testimonial Text</h5>
+          <h5 class="testimonial__text">Testimonial Text</h5>
 
           <h6 class="testimonial__author">Author</h6>
         </div>
