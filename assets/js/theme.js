@@ -16,4 +16,17 @@ jQuery( document ).ready(function( $ ) {
 		$('body').addClass('safari');
 	}
 
+	// Menu function
+	$('.menu-icon').on('click', function() {
+		$(this).toggleClass('active');
+		$('.nav--mobile').toggleClass('active');
+	});
+
+	$(window).on('resize', function() {
+		if( $(window).width() > 1024 ) {
+			$('.menu-icon').removeClass('active');
+			$('.nav--mobile').removeClass('active');
+		}
+	});
+
 });

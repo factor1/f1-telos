@@ -1,3 +1,41 @@
 /*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.site-header {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(40) 0 rem(30);
+  }
+
+  .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: rem(250);
+    margin-right: rem(40);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .site-header {
+    .container {
+      padding: rem(25) 0 rem(15);
+    }
+
+    &__logo {
+      width: rem(180);
+    }
+  }
+}
