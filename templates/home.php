@@ -21,4 +21,6 @@ get_template_part('parts/home/testimonial-slider-1');
 
 get_template_part('parts/home/form-images-split');
 
+get_template_part('parts/global/testimonials');
+
 get_footer(); ?>

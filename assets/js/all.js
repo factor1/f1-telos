@@ -4047,6 +4047,25 @@ jQuery( document ).ready(function( $ ) {
 			autoplay: false,
 			arrows: true,
 			dots: true,
+			adaptiveHeight: true,
+		});
+	}
+
+	// Global Testimonials
+	if( $('.testimonials-section__slider').length ) {
+		$('.testimonials-section__slider').slick({
+			autoplay: false,
+			arrows: true,
+			dots: false,
+			slidesToShow: 2,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+			]
 		});
 	}
 

@@ -3094,6 +3094,62 @@ body {
 }
 
 /*
+ * Testimonials Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonials-section {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.testimonials-section .container {
+	padding: 3.75rem 0;
+}
+
+.testimonials-section__slider {
+	margin: 5rem 0;
+}
+
+.testimonials-section .slick-track {
+	height: 18.75rem;
+}
+
+.testimonials-section .slick-slide {
+	height: calc(100% - 5px);
+}
+
+.testimonials-section .slick-slide > div {
+	height: 100%;
+}
+
+.testimonials-section .testimonial {
+	height: 100%;
+	padding: 0 1.25rem;
+}
+
+.testimonials-section .testimonial > div {
+	height: 100%;
+	padding: 2.5rem 1.25rem 1.25rem;
+	border-top: 0.1875rem solid #6cbe45;
+	-webkit-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-section .testimonial p:first-of-type {
+	margin-bottom: 1.875rem;
+}
+
+.testimonials-section .testimonial i {
+	margin-bottom: 0.625rem;
+	color: #f3ac23;
+}
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
@@ -5439,6 +5495,14 @@ h2 {
 
 .headline-text-split .col-6 {
 	margin-bottom: 1.875rem;
+}
+
+.testimonials-section .container {
+	padding: 1.875rem 0;
+}
+
+.testimonials-section__slider {
+	margin: 2.5rem 0;
 }
 
 .hero--home {
