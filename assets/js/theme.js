@@ -41,4 +41,18 @@ jQuery( document ).ready(function( $ ) {
 		});
 	}
 
+	// Form Label Animation
+	$('.gform_wrapper form .animated').find('input, select, textarea').on('focusin', function() {
+		$(this).parents('.animated').children('label').addClass('active-position active-weight active-color');
+
+		// Off focus
+		$('.gform_wrapper form .animated').find('input, select, textarea').on('focusout', function() {
+			if( $(this).val() !== '' ) { // Remove active weight and keep raised position if input has content
+				$(this).parents('.animated').children('label').removeClass('active-weight');
+			} else { // Else remove both weight and raised position
+				$(this).parents('.animated').children('label').removeClass('active-position active-weight active-color');
+			}
+		});
+	});
+
 });

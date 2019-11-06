@@ -2606,6 +2606,256 @@ nav a {
 }
 
 /*------------------------------------------------------------------------------
+  Forms
+------------------------------------------------------------------------------*/
+
+.gform_wrapper {
+	margin: 0 !important;
+}
+
+.gform_wrapper form {
+	position: relative;
+}
+
+.gform_wrapper form .gform_fields {
+	display: -webkit-box !important;
+	display: -webkit-flex !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+.gform_wrapper form .gfield {
+	margin: 0 0 0.625rem !important;
+	padding: 0 !important;
+}
+
+.gform_wrapper form .full-width {
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+}
+
+.gform_wrapper form .half-width {
+	-webkit-flex-basis: 49%;
+	-ms-flex-preferred-size: 49%;
+	flex-basis: 49%;
+}
+
+.gform_wrapper form label {
+	position: relative;
+	left: 1.875rem;
+	padding-right: 1.875rem !important;
+	font: 0.875rem/1 "Gilroy-Light" !important;
+	color: #6d6e71;
+}
+
+.gform_wrapper form input[type="text"],
+.gform_wrapper form input[type="email"],
+.gform_wrapper form input[type="tel"],
+.gform_wrapper form input[type="number"],
+.gform_wrapper form input[type="url"],
+.gform_wrapper form textarea,
+.gform_wrapper form select {
+	width: 100% !important;
+	padding: 0.75rem 1.875rem !important;
+	border-radius: 0.3125rem !important;
+	border: 0.125rem solid #6d6e71;
+	background-color: rgba(255, 255, 255, 0.75);
+	font: 0.875rem/1 "Gilroy-Regular" !important;
+	color: #414042;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.gform_wrapper form input[type="text"]:active,
+.gform_wrapper form input[type="text"]:focus,
+.gform_wrapper form input[type="email"]:active,
+.gform_wrapper form input[type="email"]:focus,
+.gform_wrapper form input[type="tel"]:active,
+.gform_wrapper form input[type="tel"]:focus,
+.gform_wrapper form input[type="number"]:active,
+.gform_wrapper form input[type="number"]:focus,
+.gform_wrapper form input[type="url"]:active,
+.gform_wrapper form input[type="url"]:focus,
+.gform_wrapper form textarea:active,
+.gform_wrapper form textarea:focus,
+.gform_wrapper form select:active,
+.gform_wrapper form select:focus {
+	outline: none;
+	border-color: #6cbe45;
+}
+
+.gform_wrapper form .ginput_container_textarea {
+	margin-top: 0.625rem !important;
+}
+
+.gform_wrapper form div.ginput_container_select {
+	position: relative;
+}
+
+.gform_wrapper form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.gform_wrapper form select::-ms-expand {
+	display: none;
+}
+
+.gform_wrapper form .gfield_checkbox label {
+	max-width: unset !important;
+	min-width: 10.625rem;
+	margin-top: 0.375rem !important;
+}
+
+.gform_wrapper form input[type="checkbox"],
+.gform_wrapper form input[type="radio"] {
+	position: relative;
+	height: 1.25rem !important;
+	margin-right: 0 0 0.5rem !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+}
+
+.gform_wrapper form input[type="checkbox"]:after,
+.gform_wrapper form input[type="radio"]:after {
+	display: block;
+	position: relative;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.gform_wrapper form input[type="checkbox"]:focus,
+.gform_wrapper form input[type="checkbox"]:active,
+.gform_wrapper form input[type="radio"]:focus,
+.gform_wrapper form input[type="radio"]:active {
+	outline: none;
+}
+
+.gform_wrapper form input[type="radio"]:after {
+	border-radius: 50%;
+}
+
+.gform_wrapper form .gfield_required {
+	color: inherit;
+}
+
+.gform_wrapper form .gform_ajax_spinner {
+	position: absolute;
+	bottom: 0.625rem;
+	left: 110%;
+	width: 1.25rem !important;
+}
+
+.gform_wrapper form input[type="submit"] {
+	width: auto !important;
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #6cbe45;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #6cbe45;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.gform_wrapper form input[type="submit"]:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	color: #6cbe45;
+}
+
+.gform_wrapper form input[type="submit"]:focus,
+.gform_wrapper form input[type="submit"]:hover {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.gform_wrapper form input[type="submit"].disabled,
+.gform_wrapper form input[type="submit"]:disabled {
+	border-color: rgba(108, 190, 69, 0.15);
+	background-color: rgba(108, 190, 69, 0.15);
+	pointer-events: none;
+}
+
+.gform_wrapper form .animated label {
+	top: 2.5625rem;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.gform_wrapper form .animated label.active-position {
+	top: 0;
+}
+
+.gform_wrapper form .animated label.active-color {
+	color: #6cbe45;
+}
+
+.gform_wrapper form .animated label.active-weight {
+	font-weight: 700 !important;
+}
+
+.gform_wrapper form .animated input:active,
+.gform_wrapper form .animated input:focus,
+.gform_wrapper form .animated select:active,
+.gform_wrapper form .animated select:focus,
+.gform_wrapper form .animated textarea:active,
+.gform_wrapper form .animated textarea:focus {
+	outline: none !important;
+}
+
+.gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
+	border-color: #fff;
+}
+
+.gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error.full-width,
+.gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error.half-width {
+	max-width: unset !important;
+}
+
+.gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
+	top: 0;
+	color: #fff;
+}
+
+.gform_wrapper.gform_validation_error form div.validation_error {
+	border-color: #fff;
+	color: #fff;
+}
+
+.gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
+/*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
 
@@ -2984,6 +3234,82 @@ body {
 
 .home-testimonials .container {
 	padding: 5.625rem 0 3.125rem;
+}
+
+/*
+ * Form/Images Split
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-images-split {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.form-images-split:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.52)));
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.52));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.52));
+}
+
+.form-images-split .container {
+	padding: 5rem 0;
+	z-index: 1;
+}
+
+.form-images-split h1,
+.form-images-split h2,
+.form-images-split h3,
+.form-images-split h4,
+.form-images-split h5:not(.video-title),
+.form-images-split h6,
+.form-images-split p,
+.form-images-split ol,
+.form-images-split ul,
+.form-images-split li {
+	color: #fff;
+}
+
+.form-images-split .col-6 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+.form-images-split__img {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 48%;
+	-ms-flex: 0 1 48%;
+	flex: 0 1 48%;
+	margin-bottom: 1.875rem;
+	padding: 30% 0.3125rem 0.3125rem;
+}
+
+.form-images-split__img:first-of-type {
+	margin: 0 26% 1.875rem;
 }
 
 /*----------------------------------------------------------------------------
@@ -5088,6 +5414,17 @@ h2 {
 	font-size: 0.9375rem;
 }
 
+.gform_wrapper form input[type="submit"] {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.gform_wrapper form .half-width {
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+}
+
 .site-header .container {
 	padding: 1.5625rem 0 0.9375rem;
 }
@@ -5135,6 +5472,14 @@ h2 {
 
 .home-testimonials .container {
 	padding: 3.125rem 0 2.5rem;
+}
+
+.form-images-split .container {
+	padding: 2.5rem 0;
+}
+
+.form-images-split .col-6 {
+	margin-top: 1.875rem;
 }
 
 }

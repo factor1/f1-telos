@@ -19,4 +19,6 @@ get_template_part('parts/home/ipad-modal');
 
 get_template_part('parts/home/testimonial-slider-1');
 
+get_template_part('parts/home/form-images-split');
+
 get_footer(); ?>

@@ -1,0 +1,225 @@
+/*------------------------------------------------------------------------------
+  Forms
+------------------------------------------------------------------------------*/
+.gform_wrapper {
+  margin: 0 !important;
+
+  form {
+    position: relative;
+
+    // Layout Styles
+    .gform_fields {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+    }
+
+    .gfield {
+      margin: 0 0 rem(10) !important;
+      padding: 0 !important;
+    }
+
+    .full-width {
+      flex-basis: 100%;
+    }
+
+    .half-width {
+      flex-basis: 49%;
+    }
+
+    // Element Styles
+    label {
+      position: relative;
+      left: rem(30);
+      padding-right: rem(30) !important;
+      font: rem(14)/1 $gilroyLight !important;
+      color: $nickel;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+    textarea,
+    select {
+      width: 100% !important;
+      padding: rem(12) rem(30) !important;
+      border-radius: rem(5) !important;
+      border: rem(2) solid $nickel;
+      background-color: rgba($white, 0.75);
+      font: rem(14)/1 $gilroyRegular !important;
+      color: $asphalt;
+      transition: all .4s ease;
+
+      &:active,
+      &:focus {
+        outline: none;
+        border-color: $grass;
+      }
+    }
+
+    .ginput_container_textarea {
+      margin-top: rem(10) !important;
+    }
+
+    div.ginput_container_select {
+      position: relative;
+
+      // &:after {
+      //   position: absolute;
+      //   top: rem(5);
+      //   right: rem(15);
+      //   content: '0d7';
+      //   font-family: 'Font Awesome 5 Free';
+      //   font-weight: 900;
+      //   font-size: rem(20);
+      //   // color: $apple;
+      //   pointer-events: none;
+      // }
+    }
+
+    select {
+      appearance: none;
+
+      // Hides IE Dropdown default arrow
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    .gfield_checkbox {
+      label {
+        max-width: unset !important;
+        min-width: rem(170);
+        margin-top: rem(6) !important;
+      }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      position: relative;
+      height: rem(20) !important;
+      margin-right: 0 0 rem(8) !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+
+      &:after {
+        display: block;
+        position: relative;
+        content: '';
+        top: 0;
+        left: 0;
+        width: rem(20);
+        height: rem(20);
+        // border: rem(1) solid $apple;
+        // background-color: transparent;
+      }
+      &:focus, &:active {
+        outline: none;
+        &:after {
+          // border-color: $flamingo;
+        }
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked {
+        &:after {
+          // background: #fff url('../img/check.svg') center center/80% auto no-repeat;
+        }
+      }
+    }
+
+    input[type="radio"] {
+      &:after {
+        border-radius: 50%;
+      }
+      &:checked {
+        &:after {
+          //background: #fff url('../img/dot.svg') center center/60% auto no-repeat;
+        }
+      }
+    }
+
+    .gfield_required {
+      color: inherit;
+    }
+
+    // Ajax spinner
+    .gform_ajax_spinner {
+      position: absolute;
+      bottom: rem(10);
+      left: 110%;
+      width: rem(20) !important;
+    }
+
+    // Submit Button
+    input[type="submit"] {
+      width: auto !important;
+      @include buttons($grass, $grass, $white, $white, $grass);
+    }
+
+    // Active Styles
+    .animated {
+      label {
+        top: rem(41);
+        transition: all .3s ease;
+
+        &.active-position {
+          top: 0;
+        }
+
+        &.active-color {
+          color: $grass;
+        }
+
+        &.active-weight {
+          font-weight: 700 !important;
+        }
+      }
+
+      input, select, textarea {
+        &:active,
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+  }
+
+  // Errors
+  &.gform_validation_error form {
+    .gform_body ul.gform_fields li.gfield.gfield_error {
+      border-color: $white;
+
+      &.full-width,
+      &.half-width {
+        max-width: unset !important;
+      }
+
+      label {
+        top: 0;
+        color: $white;
+      }
+    }
+
+    div.validation_error {
+      border-color: $white;
+      color: $white;
+    }
+
+    .validation_message {
+      color: $white;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .gform_wrapper form {
+    .half-width {
+      flex-basis: 100%;
+    }
+  }
+}
