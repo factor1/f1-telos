@@ -2555,6 +2555,10 @@ body {
 	padding: 3.75rem 0;
 }
 
+.page-template-home .headline-text-split .container {
+	padding-bottom: 0;
+}
+
 /*
  * Hero (home)
  *
@@ -2604,6 +2608,79 @@ body {
 
 .hero--home img {
 	max-width: 12.5rem;
+}
+
+/*
+ * iPad Modal
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.ipad-modal {
+	margin-top: -3.125rem;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.ipad-modal .col-10 {
+	margin-bottom: -0.3125rem;
+}
+
+.ipad-modal img {
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.ipad-modal__img {
+	position: absolute;
+	bottom: 28%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 44%;
+	padding-bottom: 32%;
+}
+
+.ipad-modal__img div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ipad-modal__img:after {
+	content: url("../img/play.svg");
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 4.6875rem;
+	height: 4.6875rem;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	cursor: pointer;
+}
+
+.ipad-modal__img:hover:after {
+	opacity: 0.8;
+}
+
+.ipad-modal p {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 78%;
+	margin: auto;
+	max-width: 35%;
+	padding-left: 1.25rem;
 }
 
 /*----------------------------------------------------------------------------
@@ -4742,6 +4819,10 @@ h2 {
 	order: -1;
 	margin-top: 0;
 	margin-bottom: 2.8125rem;
+}
+
+.ipad-modal {
+	margin-top: 0;
 }
 
 }

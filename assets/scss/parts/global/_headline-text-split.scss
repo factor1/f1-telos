@@ -16,6 +16,10 @@
   }
 }
 
+.page-template-home .headline-text-split .container {
+  padding-bottom: 0;
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .headline-text-split {
