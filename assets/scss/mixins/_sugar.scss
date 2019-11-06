@@ -50,3 +50,8 @@
     pointer-events: none;
   }
 }
+
+// iPhoneX
+@mixin iPhoneX() {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}

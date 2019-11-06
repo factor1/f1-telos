@@ -9,7 +9,7 @@
 
   <?php
   /* Theme color for browsers that support it
-  <meta name="theme-color" content="#000">
+  <meta name="theme-color" content="#589dd5">
   */
   ?>
 
@@ -29,10 +29,8 @@
 
 <body <?php body_class(); ?>>
 
-  <?php // Header ?>
-  <header>
+  <?php // Header
+  get_template_part('parts/global/site-header');
 
-  </header>
-
-  <?php // Main Content ?>
+  // Main Content ?>
   <main>
