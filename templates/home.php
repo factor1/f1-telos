@@ -13,4 +13,6 @@ get_header();
 
 get_template_part('parts/home/hero');
 
+get_template_part('parts/global/headline-text-split');
+
 get_footer(); ?>

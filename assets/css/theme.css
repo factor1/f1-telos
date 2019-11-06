@@ -2538,6 +2538,24 @@ body {
  */
 
 /*
+ * Headline/Text Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.headline-text-split {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.headline-text-split .container {
+	padding: 3.75rem 0;
+}
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
@@ -4623,6 +4641,10 @@ h1 {
 	font-size: 3.75rem;
 }
 
+h2 {
+	font-size: 1.875rem;
+}
+
 .support {
 	margin-bottom: 1.5625rem;
 	font-size: 1.375rem;
@@ -4630,6 +4652,10 @@ h1 {
 
 .callout {
 	font-size: 0.875rem;
+}
+
+.script {
+	font-size: 3.125rem;
 }
 
 .menu-icon {
@@ -4683,6 +4709,14 @@ h1 {
 
 .site-header__logo {
 	width: 11.25rem;
+}
+
+.headline-text-split .container {
+	padding: 1.875rem 0;
+}
+
+.headline-text-split .col-6 {
+	margin-bottom: 1.875rem;
 }
 
 .hero--home {

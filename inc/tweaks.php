@@ -224,3 +224,11 @@
     add_editor_style('/assets/css/editor-styles.css');
   }
   add_action('init', 'custom_editor_styles');
+
+  // Hide ACF from everyone except factor1admin
+  $us = get_user_by('login', 'factor1admin');
+
+  // If the current logged-in user is not us, hide ACF
+  if(wp_get_current_user()->user_login !== $us->user_login) :
+    add_filter('acf/settings/show_admin', '__return_false');
+  endif;

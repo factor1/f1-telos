@@ -1,0 +1,30 @@
+/*
+ * Headline/Text Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.headline-text-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .headline-text-split {
+    .container {
+      padding: rem(30) 0;
+    }
+
+    .col-6 {
+      margin-bottom: rem(30);
+    }
+  }
+}
