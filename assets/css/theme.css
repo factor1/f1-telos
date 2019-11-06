@@ -2035,12 +2035,44 @@ nav a {
 	transform: translateX(0);
 }
 
+.nav--footer ul {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.nav--footer a {
+	padding: 0.625rem 1.25rem;
+	font: 0.9375rem/1.13 "Gilroy-SemiBold";
+	color: #fff;
+}
+
+.nav--footer a:hover {
+	color: rgba(255, 255, 255, 0.6);
+}
+
 /*----------------------------------------------------------------------------
   WordPress Social Menu
   - make sure to include FontAwesome for this to work!
 ----------------------------------------------------------------------------*/
 
+.menu-social {
+	margin-bottom: 0.625rem;
+}
+
 .menu-social ul {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	margin: 0;
 	padding: 0;
 	text-align: inherit;
@@ -2059,25 +2091,30 @@ nav a {
 }
 
 .menu-social ul li a:before {
-	display: none;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
 	font-family: 'Font Awesome 5 Brands';
-	color: blue;
+	font-size: 1.5625rem;
+	color: #fff;
+	text-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.5);
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
-.menu-social ul li a .svg-inline--fa {
-	font-size: 1.875rem;
-}
-
-.menu-social ul li a:hover {
-	color: purple;
+.menu-social ul li a:hover:before {
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .menu-social ul li a[href*="facebook.com"]::before {
-	content: '\f09a';
+	content: '\f082';
 }
 
 .menu-social ul li a[href*="twitter.com"]::before {
-	content: '\f099';
+	content: '\f081';
 }
 
 .menu-social ul li a[href*="dribbble.com"]::before {
@@ -2117,7 +2154,7 @@ nav a {
 }
 
 .menu-social ul li a[href*="linkedin.com"]::before {
-	content: '\f0e1';
+	content: '\f08c';
 }
 
 .menu-social ul li a[href*="yelp.com"]::before {
@@ -2328,6 +2365,55 @@ body {
 /*------------------------------------------------------------------------------
   Footer
 ------------------------------------------------------------------------------*/
+
+.site-footer__main {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	background: url("../img/background.jpg") center/cover no-repeat;
+}
+
+.site-footer__main .container {
+	padding: 2.5rem 0 1.5625rem;
+}
+
+.site-footer__credit {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	background-color: #589dd5;
+}
+
+.site-footer__credit .container {
+	padding: 0.9375rem 0;
+}
+
+.site-footer__credit .col-12 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.site-footer p {
+	margin: 0;
+	font: 0.75rem/1.33 "Gilroy-Regular";
+	color: #fff;
+}
+
+.factor1 {
+	font: 700 0.875rem/1 "Helvetica", sans-serif;
+	letter-spacing: -.1em;
+	color: #fff;
+}
+
+.factor1:hover {
+	color: rgba(255, 255, 255, 0.6);
+}
 
 /*----------------------------------------------------------------------------
   Plugin Overrides

@@ -125,3 +125,22 @@ nav {
     transform: translateX(0);
   }
 }
+
+// Footer nav styles
+.nav--footer {
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    padding: rem(10) rem(20);
+    font: rem(15)/1.13 $gilroySemibold;
+    color: $white;
+
+    &:hover {
+      color: rgba($white, 0.6);
+    }
+  }
+}
