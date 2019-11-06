@@ -29,4 +29,7 @@ jQuery( document ).ready(function( $ ) {
 		}
 	});
 
+	// Modals
+	MicroModal.init();
+
 });

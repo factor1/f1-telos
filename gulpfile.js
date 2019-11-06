@@ -15,6 +15,7 @@ var phpFiles     = ['./**/*.php', './*.php'],
     imageFiles   = ['./assets/img/*.{jpg,png,gif}'],
     concatFiles  = [
       './node_modules/bowser/bowser.js',
+      './node_modules/micromodal/dist/micromodal.js',
       './assets/js/*.js',
       '!./assets/js/font-awesome.config.js',
       '!./assets/js/theme.min.js',

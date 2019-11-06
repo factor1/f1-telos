@@ -138,5 +138,16 @@ a {
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  
+  h1 {
+    font-size: rem(60);
+  }
+
+  .support {
+    margin-bottom: rem(25);
+    font-size: rem(22);
+  }
+
+  .callout {
+    font-size: rem(14);
+  }
 }

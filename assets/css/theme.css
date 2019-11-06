@@ -2416,6 +2416,179 @@ body {
 }
 
 /*----------------------------------------------------------------------------
+  Modals
+----------------------------------------------------------------------------*/
+
+.modal {
+	position: relative;
+	z-index: 9999;
+}
+
+.modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.modal__container {
+	position: relative;
+	width: 100%;
+	max-width: 50rem;
+	max-height: 100vh;
+	margin: 0 0.8rem;
+	padding: 2.5rem 1.875rem 0.9375rem;
+	border-radius: 4px;
+	background-color: #fff;
+	overflow-y: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal__close {
+	position: absolute;
+	top: 0.3125rem;
+	right: 0;
+	background: transparent;
+	border: 0;
+}
+
+.modal__close:active,
+.modal__close:focus,
+.modal__close:hover {
+	outline: none;
+}
+
+.modal__close:active:before,
+.modal__close:focus:before,
+.modal__close:hover:before {
+	color: #6cbe45;
+}
+
+.modal__close:before {
+	content: "\2715";
+	color: #589dd5;
+	font-size: 1.5rem;
+	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.modal__content {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	line-height: 1.5;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.micromodal-slide {
+	display: none;
+}
+
+.micromodal-slide.is-open {
+	display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+	-webkit-animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+	-webkit-animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+	-webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+	-webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+	will-change: transform;
+}
+
+/*
+ * SCSS Parts
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+/*
+ * Hero (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero--home {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.hero--home:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero--home .container {
+	padding: 13.75rem 0 1.25rem;
+	z-index: 1;
+}
+
+.hero--home .row {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.hero--home .col-4 {
+	margin-top: 2.8125rem;
+}
+
+.hero--home h1,
+.hero--home p,
+.hero--home img {
+	margin: 0;
+}
+
+.hero--home img {
+	max-width: 12.5rem;
+}
+
+/*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
 
@@ -4446,9 +4619,62 @@ body {
 	margin: 0 auto;
 }
 
+h1 {
+	font-size: 3.75rem;
+}
+
+.support {
+	margin-bottom: 1.5625rem;
+	font-size: 1.375rem;
+}
+
+.callout {
+	font-size: 0.875rem;
+}
+
 .menu-icon {
 	top: 1.0625rem;
 	right: 0.5rem;
+}
+
+.nav--primary .nav-button.green a {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.nav--primary .nav-button.blue a {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.nav--mobile .nav-button.green a {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.nav--mobile .nav-button.blue a {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.button--court {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.button--grass {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.button--clay {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
+.button--ghost {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
 }
 
 .site-header .container {
@@ -4457,6 +4683,31 @@ body {
 
 .site-header__logo {
 	width: 11.25rem;
+}
+
+.hero--home {
+	background-position: left center !important;
+}
+
+.hero--home .container {
+	padding: 3.125rem 0 5rem;
+}
+
+.hero--home .row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+}
+
+.hero--home .col-4 {
+	-webkit-box-ordinal-group: 0;
+	-webkit-order: -1;
+	-ms-flex-order: -1;
+	order: -1;
+	margin-top: 0;
+	margin-bottom: 2.8125rem;
 }
 
 }
@@ -4921,6 +5172,110 @@ body {
 	-webkit-flex-basis: auto;
 	-ms-flex-preferred-size: auto;
 	flex-basis: auto;
+}
+
+}
+
+@-webkit-keyframes mmfadeIn {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@keyframes mmfadeIn {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@-webkit-keyframes mmfadeOut {
+
+from {
+	opacity: 1;
+}
+
+to {
+	opacity: 0;
+}
+
+}
+
+@keyframes mmfadeOut {
+
+from {
+	opacity: 1;
+}
+
+to {
+	opacity: 0;
+}
+
+}
+
+@-webkit-keyframes mmslideIn {
+
+from {
+	-webkit-transform: translateY(15%);
+	transform: translateY(15%);
+}
+
+to {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+}
+
+@keyframes mmslideIn {
+
+from {
+	-webkit-transform: translateY(15%);
+	transform: translateY(15%);
+}
+
+to {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+}
+
+@-webkit-keyframes mmslideOut {
+
+from {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+to {
+	-webkit-transform: translateY(-10%);
+	transform: translateY(-10%);
+}
+
+}
+
+@keyframes mmslideOut {
+
+from {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+to {
+	-webkit-transform: translateY(-10%);
+	transform: translateY(-10%);
 }
 
 }

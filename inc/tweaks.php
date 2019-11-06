@@ -135,3 +135,92 @@
     return str_replace( ' src', ' async="async" src', $tag );
   }
   add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
+  // Add custom classes to WYSIWYGs
+  function custom_wysiwyg_options( $init_array ) {
+    $style_formats = array(
+      array(
+        'title' => 'Responsive iFrame',
+  			'block' => 'div',
+        'classes' => 'flex-video',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Support Copy',
+        'block' => 'h6',
+        'classes' => 'support',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Callout Text',
+        'block' => 'h6',
+        'classes' => 'callout',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Callout Small Text',
+        'block' => 'p',
+        'classes' => 'callout--small',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text',
+        'block' => 'h1',
+        'classes' => 'script',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text Green',
+        'block' => 'h1',
+        'classes' => 'script script--green',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text Blue',
+        'block' => 'h1',
+        'classes' => 'script script--blue',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Testimonial Text',
+        'block' => 'h5',
+        'classes' => 'testimonial',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Testimonial Text Small',
+        'block' => 'p',
+        'classes' => 'testimonial--small',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Author',
+        'block' => 'h6',
+        'classes' => 'testimonial__author',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Video Title',
+        'block' => 'h5',
+        'classes' => 'video-title',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Price Text',
+        'block' => 'h5',
+        'classes' => 'price',
+        'wrapper' => false,
+      )
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats_merge'] = true;
+    $init_array['style_formats'] = wp_json_encode( $style_formats );
+    return $init_array;
+  }
+  add_filter( 'tiny_mce_before_init', 'custom_wysiwyg_options' );
+
+  // Add editor styles from custom wysiwyg options
+  function custom_editor_styles() {
+    add_editor_style('/assets/css/editor-styles.css');
+  }
+  add_action('init', 'custom_editor_styles');
