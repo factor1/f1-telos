@@ -1,17 +1,16 @@
 <?php
-  /**
-   * The default page template.
-   *
-   * Used when a default template individual page is queried.
-   */
-  get_header();
-?>
+/**
+ * The default page template.
+ *
+ * Used when a default template individual page is queried.
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+get_header();
 
-      <h1><?php the_title(); ?></h1>
-      <?php the_content(); ?>
+get_template_part('parts/global/hero');
 
-    <?php endwhile; endif;
-
-  get_footer();
+get_footer(); ?>
