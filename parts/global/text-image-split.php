@@ -11,9 +11,11 @@
 
 // Text/Image Split Custom Fields
 $layout = get_sub_field('text_image_split_layout_option'); // Image on left or right
+$media = get_sub_field('text_image_split_media_toggle'); // Image or video
 $image = get_sub_field('text_image_split_image');
 $img = wp_get_attachment_image_src($image, 'form_images_split_grid');
 $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
+$video = get_sub_field('text_image_split_video');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btn = get_sub_field('text_image_split_button');
@@ -26,9 +28,15 @@ $rowClass = $layout == 'right' ? ' row--reverse' : ''; ?>
   <div class="container">
     <div class="row<?php echo $rowClass; ?>">
 
-      <?php // Image ?>
+      <?php // Image or video ?>
       <div class="col-6 text-center">
-        <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
+        <?php if( $media == 'image' ) : ?>
+          <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
+        <?php else : ?>
+          <div class="flex-video">
+            <?php echo $video; ?>
+          </div>
+        <?php endif; ?>
       </div>
 
       <?php // Text ?>

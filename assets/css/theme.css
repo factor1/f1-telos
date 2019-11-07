@@ -2671,6 +2671,9 @@ nav a {
 .gform_wrapper form .gfield {
 	margin: 0 0 0.625rem !important;
 	padding: 0 !important;
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
 }
 
 .gform_wrapper form .full-width {
@@ -2691,6 +2694,7 @@ nav a {
 	padding-right: 1.875rem !important;
 	font: 0.875rem/1 "Gilroy-Light" !important;
 	color: #6d6e71;
+	z-index: 1;
 }
 
 .gform_wrapper form input[type="text"],
@@ -2702,8 +2706,8 @@ nav a {
 .gform_wrapper form select {
 	width: 100% !important;
 	padding: 0.75rem 1.875rem !important;
-	border-radius: 0.3125rem !important;
-	border: 0.125rem solid #6d6e71;
+	border-radius: 3.125rem !important;
+	border: 0.0625rem solid #6d6e71;
 	background-color: rgba(255, 255, 255, 0.75);
 	font: 0.875rem/1 "Gilroy-Regular" !important;
 	color: #414042;
@@ -2730,12 +2734,25 @@ nav a {
 	border-color: #6cbe45;
 }
 
+.gform_wrapper form textarea {
+	border-radius: 0.3125rem !important;
+}
+
 .gform_wrapper form .ginput_container_textarea {
 	margin-top: 0.625rem !important;
 }
 
 .gform_wrapper form div.ginput_container_select {
 	position: relative;
+}
+
+.gform_wrapper form div.ginput_container_select:after {
+	position: absolute;
+	top: 0.5625rem;
+	right: 1.25rem;
+	content: url("../img/angle.svg");
+	width: 0.9375rem;
+	pointer-events: none;
 }
 
 .gform_wrapper form select {
@@ -2774,6 +2791,8 @@ nav a {
 	left: 0;
 	width: 1.25rem;
 	height: 1.25rem;
+	border: 0.0625rem solid #6d6e71;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 .gform_wrapper form input[type="checkbox"]:focus,
@@ -2783,8 +2802,23 @@ nav a {
 	outline: none;
 }
 
+.gform_wrapper form input[type="checkbox"]:focus:after,
+.gform_wrapper form input[type="checkbox"]:active:after,
+.gform_wrapper form input[type="radio"]:focus:after,
+.gform_wrapper form input[type="radio"]:active:after {
+	border-color: #6cbe45;
+}
+
+.gform_wrapper form input[type="checkbox"]:checked:after {
+	background: #fff url("../img/check.svg") center center/80% auto no-repeat;
+}
+
 .gform_wrapper form input[type="radio"]:after {
 	border-radius: 50%;
+}
+
+.gform_wrapper form input[type="radio"]:checked:after {
+	background: #fff url("../img/dot.svg") center center/60% auto no-repeat;
 }
 
 .gform_wrapper form .gfield_required {
@@ -2866,7 +2900,7 @@ nav a {
 }
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
-	border-color: #fff;
+	border-color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error.full-width,
@@ -2876,16 +2910,16 @@ nav a {
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
 	top: 0;
-	color: #fff;
+	color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form div.validation_error {
-	border-color: #fff;
-	color: #fff;
+	border-color: #aa4127;
+	color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form .validation_message {
-	color: #fff;
+	color: #aa4127;
 }
 
 /*------------------------------------------------------------------------------
@@ -3420,6 +3454,39 @@ body {
 	max-width: 37.5rem;
 }
 
+.form-image-split .gform_wrapper form input[type="text"],
+.form-image-split .gform_wrapper form input[type="email"],
+.form-image-split .gform_wrapper form input[type="tel"],
+.form-image-split .gform_wrapper form input[type="number"],
+.form-image-split .gform_wrapper form input[type="url"],
+.form-image-split .gform_wrapper form textarea,
+.form-image-split .gform_wrapper form select {
+	border-radius: 0.3125rem !important;
+	border: 0.125rem solid #6d6e71;
+}
+
+.form-image-split .gform_wrapper form input[type="checkbox"]:after,
+.form-image-split .gform_wrapper form input[type="radio"]:after {
+	border: 0.0625rem solid #6d6e71;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
+	border-color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
+	color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form div.validation_error {
+	border-color: #fff;
+	color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
 /*
  * Text/Image Split (global)
  *
@@ -3444,6 +3511,28 @@ body {
 
 .text-image-split .button {
 	margin-top: 1.875rem;
+}
+
+/*
+ * Form Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-section {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.form-section .container {
+	padding: 3.75rem 0;
+}
+
+.form-section .gform_wrapper {
+	margin-top: 3.125rem !important;
 }
 
 /*
@@ -3663,6 +3752,39 @@ body {
 
 .form-images-split__img:first-of-type {
 	margin: 0 26% 1.875rem;
+}
+
+.form-images-split .gform_wrapper form input[type="text"],
+.form-images-split .gform_wrapper form input[type="email"],
+.form-images-split .gform_wrapper form input[type="tel"],
+.form-images-split .gform_wrapper form input[type="number"],
+.form-images-split .gform_wrapper form input[type="url"],
+.form-images-split .gform_wrapper form textarea,
+.form-images-split .gform_wrapper form select {
+	border-radius: 0.3125rem !important;
+	border: 0.125rem solid #6d6e71;
+}
+
+.form-images-split .gform_wrapper form input[type="checkbox"]:after,
+.form-images-split .gform_wrapper form input[type="radio"]:after {
+	border: 0.0625rem solid #6d6e71;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
+	border-color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
+	color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form div.validation_error {
+	border-color: #fff;
+	color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
 }
 
 /*

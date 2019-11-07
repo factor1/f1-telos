@@ -19,6 +19,7 @@
     .gfield {
       margin: 0 0 rem(10) !important;
       padding: 0 !important;
+      flex-basis: 100%;
     }
 
     .full-width {
@@ -36,6 +37,7 @@
       padding-right: rem(30) !important;
       font: rem(14)/1 $gilroyLight !important;
       color: $nickel;
+      z-index: 1;
     }
 
     input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
@@ -43,8 +45,8 @@
     select {
       width: 100% !important;
       padding: rem(12) rem(30) !important;
-      border-radius: rem(5) !important;
-      border: rem(2) solid $nickel;
+      border-radius: rem(50) !important;
+      border: rem(1) solid $nickel;
       background-color: rgba($white, 0.75);
       font: rem(14)/1 $gilroyRegular !important;
       color: $asphalt;
@@ -57,6 +59,10 @@
       }
     }
 
+    textarea {
+      border-radius: rem(5) !important;
+    }
+
     .ginput_container_textarea {
       margin-top: rem(10) !important;
     }
@@ -64,17 +70,14 @@
     div.ginput_container_select {
       position: relative;
 
-      // &:after {
-      //   position: absolute;
-      //   top: rem(5);
-      //   right: rem(15);
-      //   content: '0d7';
-      //   font-family: 'Font Awesome 5 Free';
-      //   font-weight: 900;
-      //   font-size: rem(20);
-      //   // color: $apple;
-      //   pointer-events: none;
-      // }
+      &:after {
+        position: absolute;
+        top: rem(9);
+        right: rem(20);
+        content: url('../img/angle.svg');
+        width: rem(15);
+        pointer-events: none;
+      }
     }
 
     select {
@@ -86,12 +89,10 @@
       }
     }
 
-    .gfield_checkbox {
-      label {
-        max-width: unset !important;
-        min-width: rem(170);
-        margin-top: rem(6) !important;
-      }
+    .gfield_checkbox label {
+      max-width: unset !important;
+      min-width: rem(170);
+      margin-top: rem(6) !important;
     }
 
     input[type="checkbox"],
@@ -112,33 +113,29 @@
         left: 0;
         width: rem(20);
         height: rem(20);
-        // border: rem(1) solid $apple;
-        // background-color: transparent;
+        border: rem(1) solid $nickel;
+        background-color: rgba($white, 0.75);
       }
+
       &:focus, &:active {
         outline: none;
+
         &:after {
-          // border-color: $flamingo;
+          border-color: $grass;
         }
       }
     }
 
-    input[type="checkbox"] {
-      &:checked {
-        &:after {
-          // background: #fff url('../img/check.svg') center center/80% auto no-repeat;
-        }
-      }
+    input[type="checkbox"]:checked:after {
+      background: #fff url('../img/check.svg') center center/80% auto no-repeat;
     }
 
     input[type="radio"] {
       &:after {
         border-radius: 50%;
       }
-      &:checked {
-        &:after {
-          //background: #fff url('../img/dot.svg') center center/60% auto no-repeat;
-        }
+      &:checked:after {
+        background: #fff url('../img/dot.svg') center center/60% auto no-repeat;
       }
     }
 
@@ -191,7 +188,7 @@
   // Errors
   &.gform_validation_error form {
     .gform_body ul.gform_fields li.gfield.gfield_error {
-      border-color: $white;
+      border-color: $clay;
 
       &.full-width,
       &.half-width {
@@ -200,17 +197,17 @@
 
       label {
         top: 0;
-        color: $white;
+        color: $clay;
       }
     }
 
     div.validation_error {
-      border-color: $white;
-      color: $white;
+      border-color: $clay;
+      color: $clay;
     }
 
     .validation_message {
-      color: $white;
+      color: $clay;
     }
   }
 }

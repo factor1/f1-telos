@@ -46,6 +46,41 @@
 
   .gform_wrapper {
     max-width: rem(600);
+
+    form {
+      input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+      textarea,
+      select {
+        border-radius: rem(5) !important;
+        border: rem(2) solid $nickel;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        &:after {
+          border: rem(1) solid $nickel;
+        }
+      }
+    }
+
+    &.gform_validation_error form {
+      .gform_body ul.gform_fields li.gfield.gfield_error {
+        border-color: $white;
+
+        label {
+          color: $white;
+        }
+      }
+
+      div.validation_error {
+        border-color: $white;
+        color: $white;
+      }
+
+      .validation_message {
+        color: $white;
+      }
+    }
   }
 }
 
