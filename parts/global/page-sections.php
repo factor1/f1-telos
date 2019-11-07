@@ -15,6 +15,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/centered-text-block');
 
+  elseif( get_row_layout() == 'form_image_split' ) :
+
+    get_template_part('parts/global/form-image-split');
+
   endif;
 
 endwhile; endif; ?>

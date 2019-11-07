@@ -3339,6 +3339,70 @@ body {
 }
 
 /*
+ * Form/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-image-split {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.form-image-split:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.7)));
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.form-image-split .container {
+	padding: 3.75rem 0;
+	z-index: 1;
+}
+
+.form-image-split .col-5 {
+	padding-bottom: 6.25rem;
+}
+
+.form-image-split h1,
+.form-image-split h2,
+.form-image-split h3,
+.form-image-split h4,
+.form-image-split h5,
+.form-image-split h6,
+.form-image-split p,
+.form-image-split ol,
+.form-image-split ul,
+.form-image-split li {
+	color: #fff;
+}
+
+.form-image-split .arrow {
+	position: absolute;
+	bottom: 0;
+	left: -10.625rem;
+	width: 3.4375rem;
+	margin-left: 3.125rem;
+	-webkit-transform: rotate(-50deg);
+	-ms-transform: rotate(-50deg);
+	transform: rotate(-50deg);
+}
+
+.form-image-split .gform_wrapper {
+	max-width: 37.5rem;
+}
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
@@ -5794,6 +5858,14 @@ h3 {
 
 .centered-text-block .container {
 	padding: 2.5rem 0;
+}
+
+.form-image-split .container {
+	padding: 1.875rem 0;
+}
+
+.form-image-split .col-5 {
+	padding-bottom: 3.125rem;
 }
 
 .hero--home {

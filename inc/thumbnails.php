@@ -20,4 +20,5 @@ if( function_exists('prelude_features') ){
   add_image_size( 'ipad', 1000, 750, array('center', 'center') );
   add_image_size( 'form_images_split', 2100, 975, array('left', 'center') );
   add_image_size( 'form_images_split_grid', 600, 400, array('center', 'center') );
+  add_image_size( 'form_image_split_foreground', 720, 510, array('center', 'center') );
 }
