@@ -1,0 +1,25 @@
+/*
+ * Testimonial Slider 1
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.home-testimonials {
+  @include iPhoneX;
+  background: url('../img/background.jpg') center/cover no-repeat;
+
+  .container {
+    padding: rem(90) 0 rem(50);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .home-testimonials .container {
+    padding: rem(50) 0 rem(40);
+  }
+}

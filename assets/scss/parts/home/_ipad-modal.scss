@@ -1,0 +1,77 @@
+/*
+ * iPad Modal
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.ipad-modal {
+  margin-top: rem(-50);
+  @include iPhoneX;
+
+  .col-10 {
+    margin-bottom: rem(-5);
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 28%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 44%;
+    padding-bottom: 32%;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:after {
+      content: url('../img/play.svg');
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: rem(75);
+      height: rem(75);
+      transition: all .4s ease;
+      cursor: pointer;
+    }
+
+    &:hover:after {
+      opacity: 0.8;
+    }
+  }
+
+  p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 78%;
+    margin: auto;
+    max-width: 35%;
+    padding-left: rem(20);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .ipad-modal {
+    margin-top: 0;
+  }
+}

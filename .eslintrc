@@ -4,7 +4,8 @@
     "jquery": true,
   },
   "globals": {
-    "bowser": true
+    "bowser": true,
+    "MicroModal": true,
   },
   "rules": {
     "comma-dangle": 0,
