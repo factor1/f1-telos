@@ -41,6 +41,10 @@
   &.tall .container {
     min-height: rem(645);
   }
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul, li, li:before {
+    color: $white;
+  }
 }
 
 .touch .hero__video,
