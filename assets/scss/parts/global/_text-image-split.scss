@@ -1,0 +1,38 @@
+/*
+ * Text/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero + .text-image-split {
+  padding-top: rem(30);
+}
+
+.text-image-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(30) 0;
+  }
+
+  .button {
+    margin-top: rem(30);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .text-image-split {
+    .col-6:first-of-type {
+      margin-bottom: rem(30);
+    }
+
+    .button {
+      margin-top: rem(20);
+    }
+  }
+}

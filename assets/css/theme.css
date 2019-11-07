@@ -3334,6 +3334,10 @@ body {
 	margin-bottom: 2.1875rem;
 }
 
+.text-image-split + .plans-grid {
+	margin-top: 1.875rem;
+}
+
 /*
  * Centered Text Block (global)
  *
@@ -3414,6 +3418,32 @@ body {
 
 .form-image-split .gform_wrapper {
 	max-width: 37.5rem;
+}
+
+/*
+ * Text/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero + .text-image-split {
+	padding-top: 1.875rem;
+}
+
+.text-image-split {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.text-image-split .container {
+	padding: 1.875rem 0;
+}
+
+.text-image-split .button {
+	margin-top: 1.875rem;
 }
 
 /*
@@ -5880,6 +5910,14 @@ h3 {
 
 .form-image-split .col-5 {
 	padding-bottom: 3.125rem;
+}
+
+.text-image-split .col-6:first-of-type {
+	margin-bottom: 1.875rem;
+}
+
+.text-image-split .button {
+	margin-top: 1.25rem;
 }
 
 .hero--home {
