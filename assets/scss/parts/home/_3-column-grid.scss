@@ -9,6 +9,7 @@
  */
 
 .three-column-grid {
+  position: relative;
   @include iPhoneX;
   background: url('../img/background.jpg') center/cover no-repeat;
 

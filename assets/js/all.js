@@ -4016,6 +4016,7 @@ jQuery( document ).ready(function( $ ) {
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if( isTouchDevice ) {
 		$('body').removeClass('no-touch');
+		$('body').addClass('touch');
 	}
 
 	// Browser detection via Bowser (https://github.com/lancedikson/bowser) - add detection as needed

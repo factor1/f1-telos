@@ -2671,6 +2671,9 @@ nav a {
 .gform_wrapper form .gfield {
 	margin: 0 0 0.625rem !important;
 	padding: 0 !important;
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
 }
 
 .gform_wrapper form .full-width {
@@ -2691,6 +2694,7 @@ nav a {
 	padding-right: 1.875rem !important;
 	font: 0.875rem/1 "Gilroy-Light" !important;
 	color: #6d6e71;
+	z-index: 1;
 }
 
 .gform_wrapper form input[type="text"],
@@ -2702,8 +2706,8 @@ nav a {
 .gform_wrapper form select {
 	width: 100% !important;
 	padding: 0.75rem 1.875rem !important;
-	border-radius: 0.3125rem !important;
-	border: 0.125rem solid #6d6e71;
+	border-radius: 3.125rem !important;
+	border: 0.0625rem solid #6d6e71;
 	background-color: rgba(255, 255, 255, 0.75);
 	font: 0.875rem/1 "Gilroy-Regular" !important;
 	color: #414042;
@@ -2730,12 +2734,25 @@ nav a {
 	border-color: #6cbe45;
 }
 
+.gform_wrapper form textarea {
+	border-radius: 0.3125rem !important;
+}
+
 .gform_wrapper form .ginput_container_textarea {
 	margin-top: 0.625rem !important;
 }
 
 .gform_wrapper form div.ginput_container_select {
 	position: relative;
+}
+
+.gform_wrapper form div.ginput_container_select:after {
+	position: absolute;
+	top: 0.5625rem;
+	right: 1.25rem;
+	content: url("../img/angle.svg");
+	width: 0.9375rem;
+	pointer-events: none;
 }
 
 .gform_wrapper form select {
@@ -2774,6 +2791,8 @@ nav a {
 	left: 0;
 	width: 1.25rem;
 	height: 1.25rem;
+	border: 0.0625rem solid #6d6e71;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 .gform_wrapper form input[type="checkbox"]:focus,
@@ -2783,8 +2802,23 @@ nav a {
 	outline: none;
 }
 
+.gform_wrapper form input[type="checkbox"]:focus:after,
+.gform_wrapper form input[type="checkbox"]:active:after,
+.gform_wrapper form input[type="radio"]:focus:after,
+.gform_wrapper form input[type="radio"]:active:after {
+	border-color: #6cbe45;
+}
+
+.gform_wrapper form input[type="checkbox"]:checked:after {
+	background: #fff url("../img/check.svg") center center/80% auto no-repeat;
+}
+
 .gform_wrapper form input[type="radio"]:after {
 	border-radius: 50%;
+}
+
+.gform_wrapper form input[type="radio"]:checked:after {
+	background: #fff url("../img/dot.svg") center center/60% auto no-repeat;
 }
 
 .gform_wrapper form .gfield_required {
@@ -2866,7 +2900,7 @@ nav a {
 }
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
-	border-color: #fff;
+	border-color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error.full-width,
@@ -2876,16 +2910,16 @@ nav a {
 
 .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
 	top: 0;
-	color: #fff;
+	color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form div.validation_error {
-	border-color: #fff;
-	color: #fff;
+	border-color: #aa4127;
+	color: #aa4127;
 }
 
 .gform_wrapper.gform_validation_error form .validation_message {
-	color: #fff;
+	color: #aa4127;
 }
 
 /*------------------------------------------------------------------------------
@@ -3105,6 +3139,71 @@ body {
  */
 
 /*
+ * Hero (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	overflow: hidden;
+}
+
+.hero__video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.hero video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.hero .container {
+	padding: 8.125rem 0;
+	z-index: 1;
+}
+
+.hero.tall .container {
+	min-height: 40.3125rem;
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6,
+.hero p,
+.hero ol,
+.hero ul,
+.hero li,
+.hero li:before {
+	color: #fff;
+}
+
+.touch .hero__video,
+.touch .hero__video video {
+	display: none;
+}
+
+/*
  * Headline/Text Split (global)
  *
  * Template part used on various templates/views
@@ -3267,6 +3366,173 @@ body {
 
 .plans-grid__plan .price + p {
 	margin-bottom: 2.1875rem;
+}
+
+.text-image-split + .plans-grid {
+	margin-top: 1.875rem;
+}
+
+/*
+ * Centered Text Block (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.centered-text-block {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.centered-text-block .container {
+	padding: 3.75rem 0;
+}
+
+/*
+ * Form/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-image-split {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.form-image-split:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.7)));
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.form-image-split .container {
+	padding: 3.75rem 0;
+	z-index: 1;
+}
+
+.form-image-split .col-5 {
+	padding-bottom: 6.25rem;
+}
+
+.form-image-split h1,
+.form-image-split h2,
+.form-image-split h3,
+.form-image-split h4,
+.form-image-split h5,
+.form-image-split h6,
+.form-image-split p,
+.form-image-split ol,
+.form-image-split ul,
+.form-image-split li {
+	color: #fff;
+}
+
+.form-image-split .arrow {
+	position: absolute;
+	bottom: 0;
+	left: -10.625rem;
+	width: 3.4375rem;
+	margin-left: 3.125rem;
+	-webkit-transform: rotate(-50deg);
+	-ms-transform: rotate(-50deg);
+	transform: rotate(-50deg);
+}
+
+.form-image-split .gform_wrapper {
+	max-width: 37.5rem;
+}
+
+.form-image-split .gform_wrapper form input[type="text"],
+.form-image-split .gform_wrapper form input[type="email"],
+.form-image-split .gform_wrapper form input[type="tel"],
+.form-image-split .gform_wrapper form input[type="number"],
+.form-image-split .gform_wrapper form input[type="url"],
+.form-image-split .gform_wrapper form textarea,
+.form-image-split .gform_wrapper form select {
+	border-radius: 0.3125rem !important;
+	border: 0.125rem solid #6d6e71;
+}
+
+.form-image-split .gform_wrapper form input[type="checkbox"]:after,
+.form-image-split .gform_wrapper form input[type="radio"]:after {
+	border: 0.0625rem solid #6d6e71;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
+	border-color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
+	color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form div.validation_error {
+	border-color: #fff;
+	color: #fff;
+}
+
+.form-image-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
+/*
+ * Text/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero + .text-image-split {
+	padding-top: 1.875rem;
+}
+
+.text-image-split {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.text-image-split .container {
+	padding: 1.875rem 0;
+}
+
+.text-image-split .button {
+	margin-top: 1.875rem;
+}
+
+/*
+ * Form Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-section {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.form-section .container {
+	padding: 3.75rem 0;
+}
+
+.form-section .gform_wrapper {
+	margin-top: 3.125rem !important;
 }
 
 /*
@@ -3488,6 +3754,39 @@ body {
 	margin: 0 26% 1.875rem;
 }
 
+.form-images-split .gform_wrapper form input[type="text"],
+.form-images-split .gform_wrapper form input[type="email"],
+.form-images-split .gform_wrapper form input[type="tel"],
+.form-images-split .gform_wrapper form input[type="number"],
+.form-images-split .gform_wrapper form input[type="url"],
+.form-images-split .gform_wrapper form textarea,
+.form-images-split .gform_wrapper form select {
+	border-radius: 0.3125rem !important;
+	border: 0.125rem solid #6d6e71;
+}
+
+.form-images-split .gform_wrapper form input[type="checkbox"]:after,
+.form-images-split .gform_wrapper form input[type="radio"]:after {
+	border: 0.0625rem solid #6d6e71;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error {
+	border-color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .gform_body ul.gform_fields li.gfield.gfield_error label {
+	color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form div.validation_error {
+	border-color: #fff;
+	color: #fff;
+}
+
+.form-images-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
 /*
  * 3-Column Grid
  *
@@ -3499,6 +3798,7 @@ body {
  */
 
 .three-column-grid {
+	position: relative;
 	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 	background: url("../img/background.jpg") center/cover no-repeat;
 }
@@ -5590,6 +5890,10 @@ h2 {
 	font-size: 1.875rem;
 }
 
+h3 {
+	font-size: 1.625rem;
+}
+
 .support {
 	margin-bottom: 1.5625rem;
 	font-size: 1.375rem;
@@ -5672,6 +5976,14 @@ h2 {
 	width: 11.25rem;
 }
 
+.hero .container {
+	padding: 5rem 0;
+}
+
+.hero.tall .container {
+	min-height: 25rem;
+}
+
 .headline-text-split .container {
 	padding: 1.875rem 0;
 }
@@ -5707,6 +6019,26 @@ h2 {
 }
 
 .plans-grid__plan > div:last-of-type {
+	margin-top: 1.25rem;
+}
+
+.centered-text-block .container {
+	padding: 2.5rem 0;
+}
+
+.form-image-split .container {
+	padding: 1.875rem 0;
+}
+
+.form-image-split .col-5 {
+	padding-bottom: 3.125rem;
+}
+
+.text-image-split .col-6:first-of-type {
+	margin-bottom: 1.875rem;
+}
+
+.text-image-split .button {
 	margin-top: 1.25rem;
 }
 

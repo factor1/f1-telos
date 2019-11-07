@@ -64,6 +64,9 @@
   }
 }
 
+.text-image-split + .plans-grid {
+  margin-top: rem(30);
+}
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
