@@ -3368,6 +3368,69 @@ body {
 	margin: 0 26% 1.875rem;
 }
 
+/*
+ * 3-Column Grid
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.three-column-grid {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	background: url("../img/background.jpg") center/cover no-repeat;
+}
+
+.three-column-grid:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.three-column-grid .container {
+	padding: 5rem 0 3.75rem;
+	z-index: 1;
+}
+
+.three-column-grid .col-12 {
+	margin-bottom: 2.1875rem;
+}
+
+.three-column-grid .col-4 {
+	margin-bottom: 4.0625rem;
+}
+
+.three-column-grid h1,
+.three-column-grid h2,
+.three-column-grid h3,
+.three-column-grid h4,
+.three-column-grid h5,
+.three-column-grid h6,
+.three-column-grid p,
+.three-column-grid ol,
+.three-column-grid ul,
+.three-column-grid li {
+	color: #fff;
+}
+
+.three-column-grid h6 {
+	margin: 0;
+}
+
+.three-column-grid__icon {
+	display: inline-block;
+	width: 9.375rem;
+	height: 9.375rem;
+	margin-bottom: 1.875rem;
+	border-radius: 50%;
+}
+
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
@@ -5544,6 +5607,19 @@ h2 {
 
 .form-images-split .col-6 {
 	margin-top: 1.875rem;
+}
+
+.three-column-grid .container {
+	padding: 2.5rem 0 1.875rem;
+}
+
+.three-column-grid .col-4 {
+	margin-bottom: 1.875rem;
+}
+
+.three-column-grid__icon {
+	width: 7.8125rem;
+	height: 7.8125rem;
 }
 
 }

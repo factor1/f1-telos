@@ -23,4 +23,6 @@ get_template_part('parts/home/form-images-split');
 
 get_template_part('parts/global/testimonials');
 
+get_template_part('parts/home/3-column-grid');
+
 get_footer(); ?>
