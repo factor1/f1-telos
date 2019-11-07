@@ -9,10 +9,13 @@
  * @since 0.0.1
  */
 
+// Check if default template
+$isDefault = is_page() && !is_page_template();
+
 // Testimonials Section Custom Fields
-$headline = get_field('testimonials_section_headline');
-$testimonials = get_field('section_testimonials');
-$btnText = get_field('testimonials_section_button_text');
+$headline = $isDefault ? get_sub_field('testimonials_section_headline') : get_field('testimonials_section_headline');
+$testimonials = $isDefault ? get_sub_field('section_testimonials') : get_field('section_testimonials');
+$btnText = $isDefault ? get_sub_field('testimonials_section_button_text') : get_field('testimonials_section_button_text');
 
 if( $testimonials ) : ?>
 
