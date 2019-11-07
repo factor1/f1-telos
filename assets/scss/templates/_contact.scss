@@ -1,0 +1,42 @@
+/*
+ * Template Name: Contact
+ *
+ * Template used on the contact page
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.contact-section {
+  @include iPhoneX;
+  background: $lightGreen url('../img/join-now.png') center bottom/100% auto no-repeat;
+
+  .container {
+    padding: rem(60) 0 rem(250);
+  }
+
+  h1 {
+    color: $asphalt;
+    text-shadow: none;
+  }
+
+  .gform_wrapper {
+    margin-top: rem(100) !important;
+    margin-bottom: rem(50) !important;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .contact-section {
+    .container {
+      padding-bottom: rem(180);
+    }
+
+    .gform_wrapper {
+      margin-top: rem(30) !important;
+      margin-bottom: rem(30) !important;
+    }
+  }
+}

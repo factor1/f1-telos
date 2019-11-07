@@ -3851,6 +3851,35 @@ body {
 	border-radius: 50%;
 }
 
+/*
+ * Template Name: Contact
+ *
+ * Template used on the contact page
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.contact-section {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	background: #e9f1dc url("../img/join-now.png") center bottom/100% auto no-repeat;
+}
+
+.contact-section .container {
+	padding: 3.75rem 0 15.625rem;
+}
+
+.contact-section h1 {
+	color: #414042;
+	text-shadow: none;
+}
+
+.contact-section .gform_wrapper {
+	margin-top: 6.25rem !important;
+	margin-bottom: 3.125rem !important;
+}
+
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
@@ -6094,6 +6123,15 @@ h3 {
 .three-column-grid__icon {
 	width: 7.8125rem;
 	height: 7.8125rem;
+}
+
+.contact-section .container {
+	padding-bottom: 11.25rem;
+}
+
+.contact-section .gform_wrapper {
+	margin-top: 1.875rem !important;
+	margin-bottom: 1.875rem !important;
 }
 
 }
