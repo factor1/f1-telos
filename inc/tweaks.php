@@ -210,6 +210,17 @@
         'block' => 'h5',
         'classes' => 'price',
         'wrapper' => false,
+      ),
+      array(
+        'title' => 'Checklist',
+        'block' => 'ul',
+        'classes' => 'checklist',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Checklist Item',
+        'block' => 'li',
+        'wrapper' => false,
       )
     );
     // Insert the array, JSON ENCODED, into 'style_formats'

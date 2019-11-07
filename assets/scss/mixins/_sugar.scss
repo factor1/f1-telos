@@ -35,11 +35,12 @@
   &:active {
     box-shadow: 0 0 rem(8) rgba(0, 0, 0, .8);
     background-color: $activeBg;
-    color: $activeColor;
+    color: $activeColor !important;
   }
 
   &:focus,
   &:hover {
+    color: $color;
     box-shadow: 0 0 rem(8) rgba(0, 0, 0, .8);
   }
 
