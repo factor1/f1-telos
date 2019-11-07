@@ -1,3 +1,51 @@
+// Global variables
+/* eslint-disable */
+var totalPages = null,
+		page = 2;
+/* eslint-enable */
+
+// Check api response status
+function checkStatus(response) {
+	if(response.status >= 200 && response.status < 300) {
+		return response;
+	} else {
+		// eslint-disable-next-line
+		var error = new Error(response.statusText);
+		error.reponse = response;
+		throw error;
+	}
+}
+
+// Create Testimonial
+function createTestimonial(acf) {
+	/* eslint-disable */
+	var stars = '',
+			content = '';
+	/* eslint-enable */
+
+	if( acf.testimonial_type ) {
+		content = '<div><div class="flex-video">' + acf.testimonial_video + '</div></div>';
+	} else {
+		/* eslint-disable */
+		if( acf.star_count ) {
+			for( var x = 1; x <= acf.star_count; x++ ) {
+				stars += '<i class="fas fa-star"></i>';
+			}
+		}
+
+		var text = '<p class="testimonial--small">' + acf.testimonial + '</p>';
+		var starsDiv = stars ? '<div>' + stars + '</div>' : '';
+		var author = '<p class="testimonial--small">&mdash; ' + acf.author + '</p>';
+		/* eslint-enable */
+
+		content = '<div>' + text + starsDiv + author + '</div>';
+	}
+
+	// eslint-disable-next-line
+	var testimonial = '<div class="col-6 text-center"><div class="testimonial">' + content + '</div></div>';
+	return testimonial;
+}
+
 jQuery( document ).ready(function( $ ) {
 	// Inside of this function, $() will work as an alias for jQuery()
 	// and other libraries also using $ will not be accessible under this shortcut
@@ -74,5 +122,48 @@ jQuery( document ).ready(function( $ ) {
 			}
 		});
 	});
+
+	// Testimonials archive loading
+	if( $('body.post-type-archive-testimonial').length ) {
+		/* eslint-disable */
+		var siteURL = document.getElementsByTagName('body')[0].dataset.url,
+				bre = '/wp-json/better-rest-endpoints/v1/',
+				url = siteURL + bre + 'testimonial?content=false&media=false&yoast=false&per_page=8&page=' + page,
+				newHTML = '';
+		/* eslint-enable */
+
+		$('#load-more .button').on('click', function() {
+			fetch(url)
+				.then(checkStatus)
+				.then(function(response) {
+					totalPages = response.headers.get('x-wp-totalpages');
+					return response.json();
+				})
+				.then(function(data) {
+					data.map(function(item) {
+
+						// Concat to newHTML every testimonial
+						newHTML += createTestimonial(item.acf);
+
+					});
+
+					$('.testimonials-archive .col-10').append(newHTML);
+				})
+				.then(function() {
+					// If on last page, hide load more button
+					if( page >= totalPages ) {
+						$('#load-more').hide();
+					}
+
+					// Increment page
+					page++;
+					return page;
+				})
+				.catch(function(error) {
+					// eslint-disable-next-line
+					console.error(error);
+				});
+		});
+	}
 
 });
