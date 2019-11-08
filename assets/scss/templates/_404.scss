@@ -1,0 +1,18 @@
+/**
+ * The 404 Not Found template.
+ *
+ * Used when WordPress encounters an unknown URL.
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.error-404 {
+  @include iPhoneX;
+  background: $lightGreen url('../img/join-now.png') center bottom/100% auto no-repeat;
+
+  .container {
+    padding: rem(60) 0 rem(250);
+  }
+}

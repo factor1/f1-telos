@@ -3940,6 +3940,25 @@ body {
 	padding: 0;
 }
 
+/**
+ * The 404 Not Found template.
+ *
+ * Used when WordPress encounters an unknown URL.
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.error-404 {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	background: #e9f1dc url("../img/join-now.png") center bottom/100% auto no-repeat;
+}
+
+.error-404 .container {
+	padding: 3.75rem 0 15.625rem;
+}
+
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
