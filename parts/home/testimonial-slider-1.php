@@ -25,7 +25,8 @@ if( $testimonials ) : ?>
             // Testimonial Custom Fields
             $type = get_field('testimonial_type'); // T/F video testimonial
             $content = $type ? get_field('testimonial_video') : get_field('testimonial');
-            $author = $type ? false : get_field('author'); ?>
+            $author = $type ? false : get_field('author');
+            $info = $type ? false : get_field('author_info'); ?>
 
             <div class="home-testimonials__testimonial">
 
@@ -39,7 +40,7 @@ if( $testimonials ) : ?>
 
                 <h5 class="testimonial__text"><?php echo $content; ?></h5>
 
-                <h6 class="testimonial__author">&mdash; <?php echo $author; ?></h6>
+                <h6 class="testimonial__author">&mdash; <?php echo $author . ', ' . $info; ?></h6>
 
               <?php endif; ?>
 

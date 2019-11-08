@@ -3016,6 +3016,38 @@ body {
 	color: rgba(255, 255, 255, 0.6);
 }
 
+/*
+ * Testimonial Component
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonial {
+	height: 100%;
+	padding: 0 1.25rem;
+}
+
+.testimonial > div {
+	height: 100%;
+	padding: 2.5rem 1.25rem 1.25rem;
+	border-top: 0.1875rem solid #6cbe45;
+	-webkit-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+.testimonial p:first-of-type {
+	margin-bottom: 1.875rem;
+}
+
+.testimonial i {
+	margin-bottom: 0.625rem;
+	color: #f3ac23;
+}
+
 /*----------------------------------------------------------------------------
   Modals
 ----------------------------------------------------------------------------*/
@@ -3257,28 +3289,6 @@ body {
 
 .testimonials-section .slick-slide > div {
 	height: 100%;
-}
-
-.testimonials-section .testimonial {
-	height: 100%;
-	padding: 0 1.25rem;
-}
-
-.testimonials-section .testimonial > div {
-	height: 100%;
-	padding: 2.5rem 1.25rem 1.25rem;
-	border-top: 0.1875rem solid #6cbe45;
-	-webkit-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
-}
-
-.testimonials-section .testimonial p:first-of-type {
-	margin-bottom: 1.875rem;
-}
-
-.testimonials-section .testimonial i {
-	margin-bottom: 0.625rem;
-	color: #f3ac23;
 }
 
 /*
@@ -3878,6 +3888,56 @@ body {
 .contact-section .gform_wrapper {
 	margin-top: 6.25rem !important;
 	margin-bottom: 3.125rem !important;
+}
+
+/*
+ * Testimonials CPT Archive
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonials-archive {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.testimonials-archive .container {
+	padding: 5rem 0;
+}
+
+.testimonials-archive .col-12:first-of-type {
+	margin-bottom: 3.75rem;
+}
+
+.testimonials-archive .col-12:last-of-type {
+	margin-top: 3.125rem;
+}
+
+.testimonials-archive .col-10 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+.testimonials-archive .col-6 {
+	margin-bottom: 3.75rem;
+}
+
+.testimonials-archive .testimonial {
+	padding: 0;
 }
 
 /*----------------------------------------------------------------------------
@@ -6132,6 +6192,10 @@ h3 {
 .contact-section .gform_wrapper {
 	margin-top: 1.875rem !important;
 	margin-bottom: 1.875rem !important;
+}
+
+.testimonials-archive .container {
+	padding: 2.5rem;
 }
 
 }

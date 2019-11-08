@@ -1,0 +1,47 @@
+/*
+ * Testimonials CPT Archive
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonials-archive {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(80) 0;
+  }
+
+  .col-12 {
+    &:first-of-type {
+      margin-bottom: rem(60);
+    }
+
+    &:last-of-type {
+      margin-top: rem(50);
+    }
+  }
+
+  .col-10 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .col-6 {
+    margin-bottom: rem(60);
+  }
+
+  .testimonial {
+    padding: 0;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .testimonials-archive .container {
+    padding: rem(40);
+  }
+}

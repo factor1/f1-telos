@@ -30,28 +30,6 @@
       height: 100%;
     }
   }
-
-  .testimonial {
-    height: 100%;
-    padding: 0 rem(20);
-
-    > div {
-      height: 100%;
-      padding: rem(40) rem(20) rem(20);
-      border-top: rem(3) solid $grass;
-      box-shadow: 0 rem(2) rem(10) rgba(0, 0, 0, 0.3);
-    }
-
-    p:first-of-type {
-      margin-bottom: rem(30);
-    }
-
-    i {
-      margin-bottom: rem(10);
-      color: $gold;
-    }
-
-  }
 }
 
 // Media Queries

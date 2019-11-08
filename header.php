@@ -27,7 +27,10 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php // Site URL
+$url = is_post_type_archive('testimonial') ? ' data-url="' . esc_url(home_url()) . '"' : ''; ?>
+
+<body <?php body_class(); ?><?php echo $url; ?>>
 
   <?php // Header
   get_template_part('parts/global/site-header');

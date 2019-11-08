@@ -40,6 +40,7 @@
 @import 'components/forms';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/testimonial';
 @import 'components/modals';
 
 // Parts
@@ -47,6 +48,7 @@
 
 // Templates
 @import 'templates/contact';
+@import 'templates/archive-testimonial';
 
 // Plugin Overrides
 @import 'plugins/overrides';

@@ -243,3 +243,11 @@
   if(wp_get_current_user()->user_login !== $us->user_login) :
     add_filter('acf/settings/show_admin', '__return_false');
   endif;
+
+  // Adjust query settings on testimonials archive
+  function adjust_queries( $query ) {
+    if( !is_admin() && is_post_type_archive('testimonial') && $query->is_main_query() ) :
+      $query->set('posts_per_page', 8);
+    endif;
+  }
+  add_action('pre_get_posts', 'adjust_queries');
