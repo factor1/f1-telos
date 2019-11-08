@@ -18,3 +18,11 @@
     @include buttons($asphalt, $white, $asphalt, rgba($asphalt, 0.08), $asphalt);
   }
 }
+
+// WooCommerce/Sensei buttons
+.woocommerce,
+.sensei {
+  .button {
+    @include buttons($grass, $grass, $white, $white, $grass);
+  }
+}

@@ -2637,6 +2637,50 @@ nav a {
 	pointer-events: none;
 }
 
+.woocommerce .button,
+.sensei .button {
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #6cbe45;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #6cbe45;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.woocommerce .button:active,
+.sensei .button:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	color: #6cbe45 !important;
+}
+
+.woocommerce .button:focus,
+.woocommerce .button:hover,
+.sensei .button:focus,
+.sensei .button:hover {
+	color: #fff;
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.woocommerce .button.disabled,
+.woocommerce .button:disabled,
+.sensei .button.disabled,
+.sensei .button:disabled {
+	border-color: rgba(108, 190, 69, 0.15);
+	background-color: rgba(108, 190, 69, 0.15);
+	pointer-events: none;
+}
+
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
@@ -3543,6 +3587,63 @@ body {
 
 .form-section .gform_wrapper {
 	margin-top: 3.125rem !important;
+}
+
+/*
+ * Featured Video (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.featured-video {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.featured-video .container {
+	padding: 1.875rem 0 2.5rem;
+}
+
+.featured-video__block {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+	background-color: #231f20;
+}
+
+.featured-video .flex-video {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 66.67%;
+	-ms-flex: 0 1 66.67%;
+	flex: 0 1 66.67%;
+	margin: 0;
+	padding-bottom: 38.25%;
+}
+
+.featured-video__content {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 33.3%;
+	-ms-flex: 1 1 33.3%;
+	flex: 1 1 33.3%;
+	padding: 1.25rem;
+	background-color: #fff;
+}
+
+.featured-video h2 a {
+	color: inherit;
+}
+
+.featured-video h2 a:hover {
+	text-decoration: underline;
 }
 
 /*
@@ -6065,6 +6166,12 @@ h3 {
 	font-size: 0.9375rem;
 }
 
+.woocommerce .button,
+.sensei .button {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
+}
+
 .gform_wrapper form input[type="submit"] {
 	padding: 0.625rem 1.25rem;
 	font-size: 0.9375rem;
@@ -6148,6 +6255,22 @@ h3 {
 
 .text-image-split .button {
 	margin-top: 1.25rem;
+}
+
+.featured-video__block {
+	background-color: #fff;
+}
+
+.featured-video .flex-video,
+.featured-video__content {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 100%;
+	-ms-flex: 0 1 100%;
+	flex: 0 1 100%;
+}
+
+.featured-video .flex-video {
+	padding-bottom: 56.25%;
 }
 
 .hero--home {

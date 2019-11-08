@@ -35,6 +35,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/form-section');
 
+  elseif( get_row_layout() == 'featured_video' ) :
+
+    get_template_part('parts/global/featured-video');
+
   endif;
 
 endwhile; endif; ?>
