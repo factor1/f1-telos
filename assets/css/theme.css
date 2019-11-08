@@ -3647,6 +3647,41 @@ body {
 }
 
 /*
+ * Recent Videos (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.recent-videos {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.recent-videos .container {
+	padding: 2.5rem 0;
+}
+
+.recent-videos h2 {
+	margin-bottom: 3.125rem;
+	border-bottom: 0.0625rem solid #414042;
+}
+
+.recent-videos .col-4 {
+	margin-bottom: 3.125rem;
+}
+
+.recent-videos h5 a {
+	color: inherit;
+}
+
+.recent-videos h5 a:hover {
+	text-decoration: underline;
+}
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
