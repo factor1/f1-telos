@@ -13,6 +13,7 @@
 $type = get_field('testimonial_type'); // T/F video testimonial
 $content = $type ? get_field('testimonial_video') : get_field('testimonial');
 $author = $type ? false : get_field('author');
+$info = $type ? false : get_field('author_info');
 $stars = $type ? false : get_field('star_count');
 
 // Conditional classes
@@ -40,8 +41,11 @@ $typeClass = $type ? '' : ' text'; ?>
           <?php } ?>
         </div>
       <?php endif; ?>
-      
-      <p class="testimonial--small">&mdash; <?php echo $author; ?></p>
+
+      <p class="testimonial--small">
+        <strong>&mdash; <?php echo $author; ?></strong><br>
+        <?php echo $info; ?>
+      </p>
     </div>
 
   <?php endif; ?>

@@ -35,7 +35,7 @@ function createTestimonial(acf) {
 
 		var text = '<p class="testimonial--small">' + acf.testimonial + '</p>';
 		var starsDiv = stars ? '<div>' + stars + '</div>' : '';
-		var author = '<p class="testimonial--small">&mdash; ' + acf.author + '</p>';
+		var author = '<p class="testimonial--small"><strong>&mdash; ' + acf.author + '</strong><br>' + acf.author_info + '</p>';
 		/* eslint-enable */
 
 		content = '<div>' + text + starsDiv + author + '</div>';
