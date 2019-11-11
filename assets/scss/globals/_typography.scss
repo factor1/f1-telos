@@ -14,6 +14,14 @@ h2 {
   margin: 0 0 rem(20);
   font: rem(35)/1.14 $gilroyRegular;
   color: $asphalt;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 h3 {
@@ -32,6 +40,14 @@ h5 {
   margin: 0 0 rem(15);
   font: rem(18)/1.39 $gilroyBold;
   color: $clay;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 h6 {

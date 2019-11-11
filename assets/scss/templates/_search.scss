@@ -1,19 +1,16 @@
-/*
- * Recent Videos (global)
- *
- * Template part used on various templates/views
+/**
+ * The search results template
  *
  * @package F1 Telos Tennis
  * @author Factor1 Studios
  * @since 0.0.1
  */
 
-
-.recent-videos {
+.video-results {
   @include iPhoneX;
 
   .container {
-    padding: rem(40) 0;
+    padding: rem(40) 0 rem(60);
   }
 
   h2 {

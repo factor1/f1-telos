@@ -1834,6 +1834,14 @@ h2 {
 	color: #414042;
 }
 
+h2 a {
+	color: inherit;
+}
+
+h2 a:hover {
+	text-decoration: underline;
+}
+
 h3 {
 	margin: 0 0 1.25rem;
 	font: 1.875rem/1.17 "Gilroy-Regular";
@@ -1850,6 +1858,14 @@ h5 {
 	margin: 0 0 0.9375rem;
 	font: 1.125rem/1.39 "Gilroy-Bold";
 	color: #aa4127;
+}
+
+h5 a {
+	color: inherit;
+}
+
+h5 a:hover {
+	text-decoration: underline;
 }
 
 h6 {
@@ -2967,6 +2983,30 @@ nav a {
 }
 
 /*------------------------------------------------------------------------------
+  Pagination
+------------------------------------------------------------------------------*/
+
+.pagination .nav-links {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.pagination .page-numbers {
+	width: auto !important;
+	padding: 0.3125rem;
+}
+
+/*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
 
@@ -3638,14 +3678,6 @@ body {
 	background-color: #fff;
 }
 
-.featured-video h2 a {
-	color: inherit;
-}
-
-.featured-video h2 a:hover {
-	text-decoration: underline;
-}
-
 /*
  * Recent Videos (global)
  *
@@ -3671,14 +3703,6 @@ body {
 
 .recent-videos .col-4 {
 	margin-bottom: 3.125rem;
-}
-
-.recent-videos h5 a {
-	color: inherit;
-}
-
-.recent-videos h5 a:hover {
-	text-decoration: underline;
 }
 
 /*
@@ -4168,6 +4192,31 @@ body {
 
 .testimonials-archive .testimonial {
 	padding: 0;
+}
+
+/**
+ * The search results template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.video-results {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.video-results .container {
+	padding: 2.5rem 0 3.75rem;
+}
+
+.video-results h2 {
+	margin-bottom: 3.125rem;
+	border-bottom: 0.0625rem solid #414042;
+}
+
+.video-results .col-4 {
+	margin-bottom: 3.125rem;
 }
 
 /**
