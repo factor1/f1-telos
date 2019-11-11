@@ -43,6 +43,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/recent-videos');
 
+  elseif( get_row_layout() == 'search_videos' ) :
+
+    get_template_part('parts/global/search-videos');
+
   endif;
 
 endwhile; endif; ?>
