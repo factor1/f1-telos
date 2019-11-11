@@ -35,6 +35,18 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/form-section');
 
+  elseif( get_row_layout() == 'featured_video' ) :
+
+    get_template_part('parts/global/featured-video');
+
+  elseif( get_row_layout() == 'recent_videos' ) :
+
+    get_template_part('parts/global/recent-videos');
+
+  elseif( get_row_layout() == 'search_videos' ) :
+
+    get_template_part('parts/global/search-videos');
+
   endif;
 
 endwhile; endif; ?>

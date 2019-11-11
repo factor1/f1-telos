@@ -1,0 +1,68 @@
+/*
+ * Serach Videos Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.search-videos {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(30) 0 rem(35);
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: rem(26);
+      margin: auto;
+      font-size: rem(26);
+    }
+
+    input[type="text"] {
+      flex: 1 1 75%;
+      margin-right: rem(30);
+      padding-left: rem(40);
+      border-radius: 0;
+      border: none;
+      border-bottom: rem(1) solid $asphalt;
+      font: rem(30)/1.33 $gilroyRegular;
+      color: $asphalt;
+      transition: all .4s ease;
+
+      &::placeholder {
+        font: inherit;
+        color: inherit;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        border-color: $grass;
+      }
+    }
+
+    .button {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .search-videos form input[type="text"] {
+    font-size: rem(20);
+  }
+}

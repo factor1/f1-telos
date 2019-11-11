@@ -1,0 +1,24 @@
+/**
+ * The search results template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.video-results {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(40) 0 rem(60);
+  }
+
+  h2 {
+    margin-bottom: rem(50);
+    border-bottom: rem(1) solid $asphalt;
+  }
+
+  .col-4 {
+    margin-bottom: rem(50);
+  }
+}

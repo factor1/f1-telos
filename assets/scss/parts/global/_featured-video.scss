@@ -1,0 +1,54 @@
+/*
+ * Featured Video (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.featured-video {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(30) 0 rem(40);
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 rem(2) rem(10) rgba(0, 0, 0, 0.3);
+    background-color: $licorice;
+  }
+
+  .flex-video {
+    flex: 0 1 66.67%;
+    margin: 0;
+    padding-bottom: 38.25%; // aspect-ratio correct?
+  }
+
+  &__content {
+    flex: 1 1 33.3%;
+    padding: rem(20);
+    background-color: $white;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .featured-video {
+    &__block {
+      background-color: $white;
+    }
+
+    .flex-video,
+    &__content {
+      flex: 0 1 100%;
+    }
+
+    .flex-video {
+      padding-bottom: 56.25%;
+    }
+  }
+}
