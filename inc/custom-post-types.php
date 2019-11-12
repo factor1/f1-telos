@@ -94,7 +94,7 @@ function community_videos() {
 		'label'                 => __( 'Community Video', 'text_domain' ),
 		'description'           => __( 'Community Videos', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt' ),
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
 		'taxonomies'            => array( 'video-type', 'category' ),
 		'hierarchical'          => true,
 		'public'                => true,
