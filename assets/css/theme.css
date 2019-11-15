@@ -2388,6 +2388,10 @@ nav a {
 	color: rgba(255, 255, 255, 0.6);
 }
 
+.woocommerce-MyAccount-navigation ul {
+	display: block;
+}
+
 /*----------------------------------------------------------------------------
   WordPress Social Menu
   - make sure to include FontAwesome for this to work!
@@ -3483,6 +3487,14 @@ body {
 
 .centered-text-block .container {
 	padding: 3.75rem 0;
+}
+
+.sensei .centered-text-block h1 {
+	margin: 0 0 1.25rem;
+	font: 2.1875rem/1.14 "Gilroy-SemiBold";
+	color: #414042;
+	text-transform: none;
+	text-shadow: none;
 }
 
 /*
