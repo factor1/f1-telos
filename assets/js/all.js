@@ -4088,7 +4088,14 @@ jQuery( document ).ready(function( $ ) {
 	});
 
 	// Modals
-	MicroModal.init();
+	// Reset modal iframe on close
+	function resetIFrame() {
+		$('.modal iframe').attr('src', $('.modal iframe').attr('src'));
+	}
+
+	MicroModal.init({
+		onClose: resetIFrame,
+	});
 
 	// Home Testimonials 1
 	if( $('.home-testimonials__slider').length ) {
