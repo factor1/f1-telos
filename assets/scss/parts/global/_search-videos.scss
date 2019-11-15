@@ -18,22 +18,22 @@
   form {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 
     i {
       position: absolute;
-      top: 0;
-      bottom: 0;
+      top: rem(15);
       left: 0;
       height: rem(26);
-      margin: auto;
       font-size: rem(26);
     }
 
     input[type="text"] {
       flex: 1 1 75%;
       margin-right: rem(30);
+      margin-bottom: rem(20);
       padding-left: rem(40);
       border-radius: 0;
       border: none;
@@ -56,13 +56,20 @@
 
     .button {
       flex: 0 1 auto;
+      margin-bottom: rem(20);
     }
   }
 }
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .search-videos form input[type="text"] {
-    font-size: rem(20);
+  .search-videos form {
+    i {
+      top: rem(5);
+    }
+    
+    input[type="text"] {
+      font-size: rem(20);
+    }
   }
 }

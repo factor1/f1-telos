@@ -3730,6 +3730,9 @@ body {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	-webkit-box-pack: start;
 	-webkit-justify-content: flex-start;
 	-ms-flex-pack: start;
@@ -3742,11 +3745,9 @@ body {
 
 .search-videos form i {
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: 0.9375rem;
 	left: 0;
 	height: 1.625rem;
-	margin: auto;
 	font-size: 1.625rem;
 }
 
@@ -3756,6 +3757,7 @@ body {
 	-ms-flex: 1 1 75%;
 	flex: 1 1 75%;
 	margin-right: 1.875rem;
+	margin-bottom: 1.25rem;
 	padding-left: 2.5rem;
 	border-radius: 0;
 	border: none;
@@ -3798,6 +3800,7 @@ body {
 	-webkit-flex: 0 1 auto;
 	-ms-flex: 0 1 auto;
 	flex: 0 1 auto;
+	margin-bottom: 1.25rem;
 }
 
 /*
@@ -6450,6 +6453,10 @@ h3 {
 
 .featured-video .flex-video {
 	padding-bottom: 56.25%;
+}
+
+.search-videos form i {
+	top: 0.3125rem;
 }
 
 .search-videos form input[type="text"] {
