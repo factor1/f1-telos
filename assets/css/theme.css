@@ -2123,7 +2123,7 @@ nav a {
 	align-items: center;
 }
 
-.nav--primary li + li {
+.nav--primary > ul > li + li {
 	margin-left: 2%;
 }
 
@@ -2220,6 +2220,21 @@ nav a {
 	border-color: rgba(88, 157, 213, 0.15);
 	background-color: rgba(88, 157, 213, 0.15);
 	pointer-events: none;
+}
+
+.nav--primary .menu-item-has-children:hover .sub-menu {
+	display: block;
+}
+
+.nav--primary .sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 115%;
+	padding: 0.625rem;
+	background-color: rgba(233, 241, 220, 0.9);
+	z-index: 9999;
 }
 
 .nav--mobile {
