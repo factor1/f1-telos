@@ -22,7 +22,11 @@
 // WooCommerce/Sensei buttons
 .woocommerce,
 .sensei {
-  .button {
+  .button,
+  .button.add_to_cart_button,
+  button[type="submit"],
+  .button.checkout-button,
+  .button.checkout-button.alt {
     @include buttons($grass, $grass, $white, $white, $grass);
   }
 }
