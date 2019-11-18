@@ -16,6 +16,14 @@
   }
 }
 
+.sensei .centered-text-block h1 {
+  margin: 0 0 rem(20);
+  font: rem(35)/1.14 $gilroySemibold;
+  color: $asphalt;
+  text-transform: none;
+  text-shadow: none;
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .centered-text-block .container {

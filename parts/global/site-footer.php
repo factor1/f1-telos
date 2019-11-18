@@ -6,7 +6,8 @@
  * @author Factor1 Studios
  * @since 0.0.1
  */
-?>
+
+$menu = is_user_logged_in() ? 'footer-in' : 'footer'; ?>
 
 <footer class="site-footer">
   <div class="site-footer__main">
@@ -20,7 +21,7 @@
           // Footer nav
           wp_nav_menu(
             array(
-              'theme_location' => 'footer',
+              'theme_location' => $menu,
               'container' =>'nav',
               'container_class' => 'nav--footer',
               'depth' => 1,

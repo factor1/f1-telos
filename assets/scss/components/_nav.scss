@@ -32,7 +32,7 @@ nav {
     align-items: center;
   }
 
-  li + li {
+  > ul > li + li {
     margin-left: 2%;
   }
 
@@ -61,6 +61,22 @@ nav {
     &.blue a {
       @include buttons($court, $court, $white, $white, $court);
     }
+  }
+
+  // Submenus
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 115%;
+    padding: rem(10);
+    background-color: rgba($lightGreen, 0.9);
+    z-index: 9999;
   }
 }
 
@@ -143,4 +159,9 @@ nav {
       color: rgba($white, 0.6);
     }
   }
+}
+
+// WooCommerce nav
+.woocommerce-MyAccount-navigation ul {
+  display: block;
 }
