@@ -73,9 +73,10 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 115%;
+    width: 200%;
+    min-width: rem(200);
     padding: rem(10);
-    background-color: rgba($lightGreen, 0.9);
+    background-color: rgba($lightGreen, 0.95);
     z-index: 9999;
   }
 }
