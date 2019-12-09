@@ -8,10 +8,18 @@ body {
 }
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   @include iPhoneX;
+  background-color: $white;
+  box-shadow: 0 rem(1) rem(5) rgba(0, 0, 0, 0.3);
+  z-index: 9999;
 
   .container {
-    padding: rem(40) 0 rem(30);
+    // padding: rem(40) 0 rem(30);
+    padding: rem(10) 0 rem(5);
   }
 
   .col-12 {
@@ -27,15 +35,23 @@ body {
   }
 }
 
+main {
+  margin-top: rem(75);
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-header {
-    .container {
-      padding: rem(25) 0 rem(15);
-    }
+    // .container {
+    //   padding: rem(25) 0 rem(15);
+    // }
 
     &__logo {
       width: rem(180);
     }
+  }
+
+  main {
+    margin-top: rem(59);
   }
 }

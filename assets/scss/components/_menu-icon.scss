@@ -4,8 +4,9 @@
 .menu-icon {
   // General styles
   display: none;
-  position: absolute;
-  top: rem(34);
+  position: fixed;
+  // top: rem(34);
+  top: rem(15);
   right: rem(15);
   padding: rem(20) rem(10);
   background: transparent;
@@ -79,7 +80,8 @@
 
 @media screen and (max-width: $small-breakpoint) {
   .menu-icon {
-    top: rem(17);
+    // top: rem(17);
+    top: rem(8);
     right: rem(8);
   }
 }
