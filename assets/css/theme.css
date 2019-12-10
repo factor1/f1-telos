@@ -4348,6 +4348,26 @@ main {
 	padding: 3.75rem 0 15.625rem;
 }
 
+.single-lesson .video {
+	position: relative;
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 56.25%;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.single-lesson .video iframe,
+.single-lesson .video object,
+.single-lesson .video embed,
+.single-lesson .video video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
