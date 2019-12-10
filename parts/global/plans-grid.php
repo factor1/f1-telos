@@ -14,7 +14,7 @@ $intro = get_field('plans_grid_intro', 'option');
 
 if( have_rows('plans', 'option') ) : ?>
 
-  <section class="plans-grid">
+  <section class="plans-grid" id="pricing">
     <div class="container">
       <div class="row">
         <div class="col-10 col-centered">

@@ -12,8 +12,9 @@
 // Hero Custom Fields
 $headline = get_field('home_hero_headline');
 $support = get_field('home_hero_support');
-$videoToggle = get_field('home_hero_video_toggle');
-$btnText = get_field('home_hero_button_text');
+$btn = get_field('home_hero_button');
+$btnType = get_field('home_hero_button_type'); // T/F anchor link
+$btnClass = $btnType ? ' anchor-scroll' : '';
 $callout = get_field('home_hero_callout'); ?>
 
 <section class="hero--home" style="background: url('<?php echo featuredURL('home_hero'); ?>') 10% center/cover no-repeat">
@@ -27,11 +28,13 @@ $callout = get_field('home_hero_callout'); ?>
           <h6 class="support"><?php echo $support; ?></h6>
         <?php endif;
 
-        // Optional video modal
-        if( $videoToggle ) : ?>
-          <button class="button button--clay" data-micromodal-trigger="home-hero"><i class="far fa-play-circle"></i> <?php echo $btnText; ?></button>
-        <?php endif; ?>
+        if( $btn ) : ?>
 
+          <a href="<?php echo esc_url($btn['url']); ?>" class="button button--clay<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>">
+            <?php echo $btn['title']; ?>
+          </a>
+
+        <?php endif; ?>
       </div>
 
       <?php // Optional callout

@@ -78,14 +78,30 @@ jQuery( document ).ready(function( $ ) {
 		}
 	});
 
-	// Modals
-	// Reset modal iframe on close
-	function resetIFrame() {
-		$('.modal iframe').attr('src', $('.modal iframe').attr('src'));
-	}
+	// Smooth Anchor Link Scrolling
+	$('.anchor-scroll').on('click', function(e) {
+		e.preventDefault();
 
-	MicroModal.init({
-		onClose: resetIFrame,
+		// Store hash
+		var hash = this.hash;
+
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top,
+		}, 800, function(){
+
+			window.location.hash = hash;
+		});
+	});
+
+	// Modals
+	MicroModal.init();
+
+	// Reset modal iframe on close
+	$('.modal__close').on('click', function() {
+		var currentModal = $(this).parents('.modal');
+		var iframeSrc = $(this).parents('.modal').find('iframe').attr('src');
+
+		currentModal.find('iframe').attr('src', iframeSrc);
 	});
 
 	// Home Testimonials 1
