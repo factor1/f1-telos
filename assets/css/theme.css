@@ -3677,6 +3677,10 @@ main {
 	color: #fff;
 }
 
+.form-image-split .gform_confirmation_message {
+	color: #fff;
+}
+
 /*
  * Text/Image Split (global)
  *
@@ -4165,6 +4169,10 @@ main {
 }
 
 .form-images-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
+.form-images-split .gform_confirmation_message {
 	color: #fff;
 }
 
