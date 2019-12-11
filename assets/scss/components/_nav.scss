@@ -87,16 +87,19 @@ nav {
   top: 0;
   right: 0;
   @include iPhoneX;
-  background-color: rgba($white, 0.8);
+  background-color: rgba($white, 0.9);
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
   transform: translateX(100%);
   transition: all .4s ease;
 
+  > ul {
+    padding: rem(100) rem(24) rem(30);
+  }
+
   ul {
     max-width: rem(300);
-    padding: rem(100) rem(24) rem(30);
     flex-wrap: wrap;
     justify-content: flex-end;
   }
@@ -114,6 +117,10 @@ nav {
     &:hover {
       color: $grass;
     }
+  }
+
+  .sub-menu a {
+    font-size: rem(16);
   }
 
   .nav-button {

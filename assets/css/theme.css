@@ -2243,7 +2243,7 @@ nav a {
 	top: 0;
 	right: 0;
 	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.9);
 	z-index: 9999;
 	opacity: 0;
 	pointer-events: none;
@@ -2255,9 +2255,12 @@ nav a {
 	transition: all .4s ease;
 }
 
+.nav--mobile > ul {
+	padding: 6.25rem 1.5rem 1.875rem;
+}
+
 .nav--mobile ul {
 	max-width: 18.75rem;
-	padding: 6.25rem 1.5rem 1.875rem;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -2283,6 +2286,10 @@ nav a {
 
 .nav--mobile a:hover {
 	color: #6cbe45;
+}
+
+.nav--mobile .sub-menu a {
+	font-size: 1rem;
 }
 
 .nav--mobile .nav-button {
