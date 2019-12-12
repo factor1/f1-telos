@@ -23,6 +23,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/testimonials');
 
+  elseif( get_row_layout() == 'testimonials_grid' ) :
+
+    get_template_part('parts/global/testimonials-grid');
+
   elseif( get_row_layout() == 'plans_grid' ) :
 
     get_template_part('parts/global/plans-grid');

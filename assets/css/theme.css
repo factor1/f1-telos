@@ -1969,7 +1969,7 @@ a:hover {
 
 .price {
 	margin-bottom: 1.875rem;
-	font-size: 3.75rem;
+	font-size: 3rem;
 	line-height: 1;
 	color: #231f20;
 }
@@ -3092,6 +3092,11 @@ body {
 	overflow-x: hidden;
 }
 
+.woocommerce-page .coupon input[type="text"] {
+	width: 12.5rem !important;
+	margin-top: 0.6875rem !important;
+}
+
 .site-header {
 	position: fixed;
 	top: 0;
@@ -3677,6 +3682,10 @@ main {
 	color: #fff;
 }
 
+.form-image-split .gform_confirmation_message {
+	color: #fff;
+}
+
 /*
  * Text/Image Split (global)
  *
@@ -4165,6 +4174,10 @@ main {
 }
 
 .form-images-split .gform_wrapper.gform_validation_error form .validation_message {
+	color: #fff;
+}
+
+.form-images-split .gform_confirmation_message {
 	color: #fff;
 }
 

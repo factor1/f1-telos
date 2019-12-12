@@ -7,6 +7,11 @@ body {
   overflow-x: hidden;
 }
 
+.woocommerce-page .coupon input[type="text"] {
+  width: rem(200) !important;
+  margin-top: rem(11) !important;
+}
+
 .site-header {
   position: fixed;
   top: 0;
