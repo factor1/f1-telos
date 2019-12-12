@@ -15,7 +15,7 @@ $isDefault = is_page() && !is_page_template();
 // Testimonials Section Custom Fields
 $headline = $isDefault ? get_sub_field('testimonials_section_headline') : get_field('testimonials_section_headline');
 $testimonials = $isDefault ? get_sub_field('section_testimonials') : get_field('section_testimonials');
-$btnText = $isDefault ? get_sub_field('testimonials_section_button_text') : get_field('testimonials_section_button_text');
+$btn = $isDefault ? get_sub_field('testimonials_section_button') : get_field('testimonials_section_button');
 
 if( $testimonials ) : ?>
 
@@ -36,9 +36,14 @@ if( $testimonials ) : ?>
 
           </div>
 
-          <a href="<?php echo esc_url(get_post_type_archive_link('testimonial')); ?>" class="button button--clay" role="link" title="<?php echo $btnText; ?>">
-            <?php echo $btnText; ?>
-          </a>
+          <?php if( $btn ) : ?>
+
+            <a href="<?php echo $btn['url']; ?>" class="button button--clay" role="link" title="<?php echo $btn['title']; ?>">
+              <?php echo $btn['title']; ?>
+            </a>
+
+          <?php endif; ?>
+
         </div>
       </div>
     </div>
