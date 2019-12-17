@@ -25,7 +25,7 @@ $callout = get_field('ipad_callout_text'); ?>
         </div>
 
         <?php if( $callout ) : ?>
-          <p class="callout--small"><?php echo $callout; ?></p>
+          <p class="callout--small sm-hide"><?php echo $callout; ?></p>
         <?php endif; ?>
       </div>
     </div>

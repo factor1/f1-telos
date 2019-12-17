@@ -40,7 +40,7 @@ $callout = get_field('home_hero_callout'); ?>
       <?php // Optional callout
       if( $callout ) : ?>
 
-        <div class="col-4 sm-col-3">
+        <div class="col-4 sm-hide">
           <?php echo $callout; ?>
         </div>
 
