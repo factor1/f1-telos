@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------*/
 // Theme information (name, starting theme version)
 var theme        = 'f1-telos',
-    version      = '0.0.1'; // updated with gulp version task, do not edit here.
+    version      = '0.2.0'; // updated with gulp version task, do not edit here.
 
 // Set the paths you will be working with
 var phpFiles     = ['./**/*.php', './*.php'],
@@ -15,6 +15,8 @@ var phpFiles     = ['./**/*.php', './*.php'],
     imageFiles   = ['./assets/img/*.{jpg,png,gif}'],
     concatFiles  = [
       './node_modules/bowser/bowser.js',
+      './node_modules/micromodal/dist/micromodal.js',
+      './node_modules/slick-carousel/slick/slick.js',
       './assets/js/*.js',
       '!./assets/js/font-awesome.config.js',
       '!./assets/js/theme.min.js',
@@ -64,6 +66,7 @@ gulp.task('sass', function() {
       includePaths: [
         './node_modules/normalize-scss/sass/',
         './node_modules/ginger-grid/',
+        './node_modules/slick-carousel/slick',
       ]
     })
       .on('error', sass.logError)

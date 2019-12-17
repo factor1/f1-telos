@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------------------
+  Pagination
+------------------------------------------------------------------------------*/
+.pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-numbers {
+    width: auto !important;
+    padding: rem(5);
+  }
+}

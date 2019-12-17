@@ -1,0 +1,175 @@
+/*------------------------------------------------------------------------------
+  Nav Menus
+------------------------------------------------------------------------------*/
+// General nav styles
+nav {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Primary nav styles
+.nav--primary {
+  flex: 1 1 auto;
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  > ul > li + li {
+    margin-left: 2%;
+  }
+
+  a {
+    padding: rem(10) 0;
+    font: rem(18)/1.11 $gilroyRegular;
+    color: $davesGray;
+
+    &:hover {
+      color: $grass;
+    }
+  }
+
+  .nav-button {
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+
+    a {
+      padding: rem(10) rem(30) !important;
+    }
+
+    &.green a {
+      @include buttons($grass, $grass, $white, $white, $grass);
+    }
+
+    &.blue a {
+      @include buttons($court, $court, $white, $white, $court);
+    }
+  }
+
+  // Submenus
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200%;
+    min-width: rem(200);
+    padding: rem(10);
+    background-color: rgba($lightGreen, 0.95);
+    z-index: 9999;
+  }
+}
+
+// Mobile nav styles
+.nav--mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  @include iPhoneX;
+  background-color: rgba($white, 0.9);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: all .4s ease;
+
+  > ul {
+    padding: rem(100) rem(24) rem(30);
+  }
+
+  ul {
+    max-width: rem(300);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  li {
+    flex: 0 1 100%;
+    text-align: right;
+  }
+
+  a {
+    padding: rem(10) 0;
+    font: rem(18)/1.11 $gilroyRegular;
+    color: $davesGray;
+
+    &:hover {
+      color: $grass;
+    }
+  }
+
+  .sub-menu a {
+    font-size: rem(16);
+  }
+
+  .nav-button {
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+
+    a {
+      width: auto;
+      padding: rem(5) rem(15) !important;
+      text-align: center;
+    }
+
+    &.green a {
+      @include buttons($grass, $grass, $white, $white, $grass);
+    }
+
+    &.blue a {
+      @include buttons($court, $court, $white, $white, $court);
+    }
+  }
+
+  // Active styles
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+}
+
+// Footer nav styles
+.nav--footer {
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    padding: rem(10) rem(20);
+    font: rem(15)/1.13 $gilroySemibold;
+    color: $white;
+
+    &:hover {
+      color: rgba($white, 0.6);
+    }
+  }
+}
+
+// WooCommerce nav
+.woocommerce-MyAccount-navigation ul {
+  display: block;
+}

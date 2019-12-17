@@ -1,0 +1,21 @@
+/*
+ * Form Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+
+  .gform_wrapper {
+    margin-top: rem(50) !important;
+  }
+}

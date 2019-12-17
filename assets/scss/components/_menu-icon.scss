@@ -1,0 +1,87 @@
+/*------------------------------------------------------------------------------
+  Menu Icons and Buttons
+------------------------------------------------------------------------------*/
+.menu-icon {
+  // General styles
+  display: none;
+  position: fixed;
+  // top: rem(34);
+  top: rem(15);
+  right: rem(15);
+  padding: rem(20) rem(10);
+  background: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  z-index: 99999;
+
+  span {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: rem(-8);
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: rem(8);
+      left: 0;
+    }
+  }
+
+  span,
+  span:before,
+  span:after {
+    display: block;
+    width: rem(30);
+    height: rem(3);
+    background-color: rgba($court, .85);
+    transform-origin: -4% center;
+    transition: all .4s ease;
+  }
+
+  &:active,
+  &:hover {
+    span,
+    span:before,
+    span:after {
+      background-color: rgba($grass, 1);
+    }
+  }
+
+  // Active styles
+  &.active span {
+    background-color: transparent;
+
+    &:before {
+      top: rem(-11);
+      left: rem(5);
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: rem(11);
+      left: rem(5);
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .menu-icon {
+    // top: rem(17);
+    top: rem(8);
+    right: rem(8);
+  }
+}

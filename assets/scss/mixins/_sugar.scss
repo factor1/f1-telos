@@ -17,3 +17,47 @@
     padding-top: ($height / $width) * 100%;
   }
 }
+
+// Buttons
+@mixin buttons($border, $bg, $color, $activeBg, $activeColor ) {
+  display: inline-block;
+  padding: rem(15) rem(30);
+  border-radius: rem(100);
+  border: rem(2) solid $border;
+  box-shadow: 0 0 rem(0) rgba(0, 0, 0, .8);
+  background-color: $bg !important;
+  font: rem(18)/1 $gilroySemibold;
+  color: $color;
+  outline: none;
+  -webkit-appearance: none;
+  transition: all .4s ease;
+
+  &:active {
+    box-shadow: 0 0 rem(8) rgba(0, 0, 0, .8);
+    background-color: $activeBg !important;
+    color: $activeColor !important;
+  }
+
+  &:focus,
+  &:hover {
+    color: $color;
+    box-shadow: 0 0 rem(8) rgba(0, 0, 0, .8);
+  }
+
+  &.disabled,
+  &:disabled {
+    border-color: rgba($border, 0.15);
+    background-color: rgba($bg, 0.15);
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding: rem(10) rem(20);
+    font-size: rem(15);
+  }
+}
+
+// iPhoneX
+@mixin iPhoneX() {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}

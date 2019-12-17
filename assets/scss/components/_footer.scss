@@ -1,3 +1,44 @@
 /*------------------------------------------------------------------------------
   Footer
 ------------------------------------------------------------------------------*/
+.site-footer {
+  &__main {
+    @include iPhoneX;
+    background: url('../img/background.jpg') center/cover no-repeat;
+
+    .container {
+      padding: rem(40) 0 rem(25);
+    }
+  }
+
+  &__credit {
+    @include iPhoneX;
+    background-color: $court;
+
+    .container {
+      padding: rem(15) 0;
+    }
+
+    .col-12 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  p {
+    margin: 0;
+    font: rem(12)/1.33 $gilroyRegular;
+    color: $white;
+  }
+}
+
+.factor1 {
+  font: 700 rem(14)/1 'Helvetica', sans-serif;
+  letter-spacing: -.1em;
+  color: $white;
+
+  &:hover {
+    color: rgba($white, 0.6);
+  }
+}

@@ -1,0 +1,102 @@
+/*
+ * Form/Image Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.form-image-split {
+  position: relative;
+  @include iPhoneX;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+  }
+
+  .container {
+    padding: rem(60) 0;
+    z-index: 1;
+  }
+
+  .col-5 {
+    padding-bottom: rem(100);
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+    color: $white;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: rem(-170);
+    width: rem(55);
+    margin-left: rem(50);
+    transform: rotate(-50deg);
+  }
+
+  .gform_wrapper {
+    max-width: rem(600);
+
+    form {
+      input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+      textarea,
+      select {
+        border-radius: rem(5) !important;
+        border: rem(2) solid $nickel;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        &:after {
+          border: rem(1) solid $nickel;
+        }
+      }
+    }
+
+    &.gform_validation_error form {
+      .gform_body ul.gform_fields li.gfield.gfield_error {
+        border-color: $white;
+
+        label {
+          color: $white;
+        }
+      }
+
+      div.validation_error {
+        border-color: $white;
+        color: $white;
+      }
+
+      .validation_message {
+        color: $white;
+      }
+    }
+  }
+
+  .gform_confirmation_message {
+    color: $white;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .form-image-split {
+    .container {
+      padding: rem(30) 0;
+    }
+
+    .col-5 {
+      padding-bottom: rem(50);
+    }
+  }
+}

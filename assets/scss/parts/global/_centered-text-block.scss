@@ -1,0 +1,32 @@
+/*
+ * Centered Text Block (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.centered-text-block {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+}
+
+.sensei .centered-text-block h1 {
+  margin: 0 0 rem(20);
+  font: rem(35)/1.14 $gilroySemibold;
+  color: $asphalt;
+  text-transform: none;
+  text-shadow: none;
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .centered-text-block .container {
+    padding: rem(40) 0;
+  }
+}

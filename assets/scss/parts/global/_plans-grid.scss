@@ -1,0 +1,96 @@
+/*
+ * Plans Grid (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.plans-grid {
+  @include iPhoneX;
+  background: $lightGreen url('../img/join-now.png') center bottom/100% auto no-repeat;
+
+  .container {
+    padding: rem(60) 0 rem(250);
+  }
+
+  .col-10 {
+    margin-bottom: rem(90);
+  }
+
+  .col {
+    margin-bottom: rem(50);
+  }
+
+  &__plan {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: rem(24) rem(24) rem(40);
+    border: rem(4) solid transparent;
+    border-radius: rem(10);
+    background-color: $white;
+    box-shadow: 0 rem(5) rem(15) rgba(0, 0 , 0, 0.2);
+
+    &.featured {
+      border-color: $grass;
+      transform: translateY(-55px);
+    }
+
+    > div {
+      flex: 0 1 100%;
+
+      &:last-of-type {
+        align-self: flex-end;
+        margin-top: rem(45);
+      }
+    }
+
+    .price-group {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .price {
+      margin-right: rem(15);
+    }
+
+    .price + p {
+      margin-bottom: rem(35);
+    }
+  }
+}
+
+.text-image-split + .plans-grid {
+  margin-top: rem(30);
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .plans-grid {
+    .container {
+      padding: rem(40) 0 rem(180);
+    }
+
+    .col-10 {
+      margin-bottom: rem(40);
+    }
+
+    .col {
+      margin-bottom: rem(30);
+    }
+
+    &__plan {
+      &.featured {
+        transform: none;
+      }
+
+      > div:last-of-type {
+        margin-top: rem(20);
+      }
+    }
+  }
+}

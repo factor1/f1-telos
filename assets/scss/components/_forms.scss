@@ -1,0 +1,222 @@
+/*------------------------------------------------------------------------------
+  Forms
+------------------------------------------------------------------------------*/
+.gform_wrapper {
+  margin: 0 !important;
+
+  form {
+    position: relative;
+
+    // Layout Styles
+    .gform_fields {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+    }
+
+    .gfield {
+      margin: 0 0 rem(10) !important;
+      padding: 0 !important;
+      flex-basis: 100%;
+    }
+
+    .full-width {
+      flex-basis: 100%;
+    }
+
+    .half-width {
+      flex-basis: 49%;
+    }
+
+    // Element Styles
+    label {
+      position: relative;
+      left: rem(30);
+      padding-right: rem(30) !important;
+      font: rem(14)/1 $gilroyLight !important;
+      color: $nickel;
+      z-index: 1;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+    textarea,
+    select {
+      width: 100% !important;
+      padding: rem(12) rem(30) !important;
+      border-radius: rem(50) !important;
+      border: rem(1) solid $nickel;
+      background-color: rgba($white, 0.75);
+      font: rem(14)/1 $gilroyRegular !important;
+      color: $asphalt;
+      transition: all .4s ease;
+
+      &:active,
+      &:focus {
+        outline: none;
+        border-color: $grass;
+      }
+    }
+
+    textarea {
+      border-radius: rem(5) !important;
+    }
+
+    .ginput_container_textarea {
+      margin-top: rem(10) !important;
+    }
+
+    div.ginput_container_select {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        top: rem(9);
+        right: rem(20);
+        content: url('../img/angle.svg');
+        width: rem(15);
+        pointer-events: none;
+      }
+    }
+
+    select {
+      appearance: none;
+
+      // Hides IE Dropdown default arrow
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    .gfield_checkbox label {
+      max-width: unset !important;
+      min-width: rem(170);
+      margin-top: rem(6) !important;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      position: relative;
+      height: rem(20) !important;
+      margin-right: 0 0 rem(8) !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+
+      &:after {
+        display: block;
+        position: relative;
+        content: '';
+        top: 0;
+        left: 0;
+        width: rem(20);
+        height: rem(20);
+        border: rem(1) solid $nickel;
+        background-color: rgba($white, 0.75);
+      }
+
+      &:focus, &:active {
+        outline: none;
+
+        &:after {
+          border-color: $grass;
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked:after {
+      background: #fff url('../img/check.svg') center center/80% auto no-repeat;
+    }
+
+    input[type="radio"] {
+      &:after {
+        border-radius: 50%;
+      }
+      &:checked:after {
+        background: #fff url('../img/dot.svg') center center/60% auto no-repeat;
+      }
+    }
+
+    .gfield_required {
+      color: inherit;
+    }
+
+    // Ajax spinner
+    .gform_ajax_spinner {
+      position: absolute;
+      bottom: rem(10);
+      left: 110%;
+      width: rem(20) !important;
+    }
+
+    // Submit Button
+    input[type="submit"] {
+      width: auto !important;
+      @include buttons($grass, $grass, $white, $white, $grass);
+    }
+
+    // Active Styles
+    .animated {
+      label {
+        top: rem(41);
+        transition: all .3s ease;
+
+        &.active-position {
+          top: 0;
+        }
+
+        &.active-color {
+          color: $grass;
+        }
+
+        &.active-weight {
+          font-weight: 700 !important;
+        }
+      }
+
+      input, select, textarea {
+        &:active,
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+  }
+
+  // Errors
+  &.gform_validation_error form {
+    .gform_body ul.gform_fields li.gfield.gfield_error {
+      border-color: $clay;
+
+      &.full-width,
+      &.half-width {
+        max-width: unset !important;
+      }
+
+      label {
+        top: 0;
+        color: $clay;
+      }
+    }
+
+    div.validation_error {
+      border-color: $clay;
+      color: $clay;
+    }
+
+    .validation_message {
+      color: $clay;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .gform_wrapper form {
+    .half-width {
+      flex-basis: 100%;
+    }
+  }
+}

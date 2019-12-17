@@ -1,6 +1,6 @@
 <?php
 
-  define( 'THEME_VERSION', '0.0.1' );
+  define( 'THEME_VERSION', '0.2.0' );
 
   /**
    * Load tweaks
@@ -36,3 +36,8 @@
    * Load shortcodes
    */
   require get_template_directory() . '/inc/shortcodes.php';
+
+  /**
+   * Load ACF Options
+   */
+  require get_template_directory() . '/inc/acf.php';

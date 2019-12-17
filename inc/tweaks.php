@@ -31,7 +31,7 @@
     }
     add_action( 'after_setup_theme', 'prelude_features' );
   }
-  
+
   // Set the maximum content width for the theme
   function prelude_content_width() {
     $GLOBALS[ 'content_width' ] = apply_filters( 'prelude_content_width', 1200 );
@@ -127,3 +127,203 @@
     return $buttons;
   }
   add_filter("mce_buttons_3", "enable_more_buttons");
+
+  // Add async defer to font awesome script
+  function add_async_attribute($tag, $handle) {
+    if ( 'font-awesome' !== $handle )
+      return $tag;
+    return str_replace( ' src', ' async="async" src', $tag );
+  }
+  add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
+  // Add custom classes to WYSIWYGs
+  function custom_wysiwyg_options( $init_array ) {
+    $style_formats = array(
+      array(
+        'title' => 'Responsive iFrame',
+  			'block' => 'div',
+        'classes' => 'flex-video',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Support Copy',
+        'block' => 'h6',
+        'classes' => 'support',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Callout Text',
+        'block' => 'h6',
+        'classes' => 'callout',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Callout Small Text',
+        'block' => 'p',
+        'classes' => 'callout--small',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text',
+        'block' => 'h1',
+        'classes' => 'script',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text Green',
+        'block' => 'h1',
+        'classes' => 'script script--green',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Script Text Blue',
+        'block' => 'h1',
+        'classes' => 'script script--blue',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Testimonial Text',
+        'block' => 'h5',
+        'classes' => 'testimonial',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Testimonial Text Small',
+        'block' => 'p',
+        'classes' => 'testimonial--small',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Author',
+        'block' => 'h6',
+        'classes' => 'testimonial__author',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Video Title',
+        'block' => 'h5',
+        'classes' => 'video-title',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Price Text',
+        'block' => 'h5',
+        'classes' => 'price',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Checklist',
+        'block' => 'ul',
+        'classes' => 'checklist',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Checklist Item',
+        'block' => 'li',
+        'wrapper' => false,
+      )
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats_merge'] = true;
+    $init_array['style_formats'] = wp_json_encode( $style_formats );
+    return $init_array;
+  }
+  add_filter( 'tiny_mce_before_init', 'custom_wysiwyg_options' );
+
+  // Add editor styles from custom wysiwyg options
+  function custom_editor_styles() {
+    add_editor_style('/assets/css/editor-styles.css');
+  }
+  add_action('init', 'custom_editor_styles');
+
+  // Hide ACF from everyone except factor1admin
+  $us = get_user_by('login', 'factor1admin');
+
+  // If the current logged-in user is not us, hide ACF
+  if(wp_get_current_user()->user_login !== $us->user_login) :
+    add_filter('acf/settings/show_admin', '__return_false');
+  endif;
+
+  // Adjust query settings on testimonials archive
+  function adjust_queries( $query ) {
+    if( !is_admin() && is_post_type_archive('testimonial') && $query->is_main_query() ) :
+      $query->set('posts_per_page', 8);
+    endif;
+  }
+  add_action('pre_get_posts', 'adjust_queries');
+
+  // Customize Wordpress Admin
+  // add login logo
+  function custom_loginlogo() {
+  	echo '<style type="text/css">
+      .login {
+        background: #e9f1dc url(' . get_template_directory_uri() . '/assets/img/join-now.png) center bottom/100% auto no-repeat;
+      }
+      .login .message,
+      .login #login_error {
+        margin-top: 30px;
+        border-color: #aa4127;
+      }
+      .login p a {
+        color: #414042 !important;
+        transition: all .4s ease;
+      }
+      .login p a:hover {
+        color: #589dd5 !important;
+      }
+      .login input[type="text"]:active,
+      .login input[type="text"]:focus,
+      .login input[type="password"]:active,
+      .login input[type="password"]:focus,
+      input[type=text]:focus,
+      input[type=search]:focus,
+      input[type=radio]:focus,
+      input[type=tel]:focus,
+      input[type=time]:focus,
+      input[type=url]:focus,
+      input[type=week]:focus,
+      input[type=password]:focus,
+      input[type=checkbox]:focus,
+      input[type=color]:focus,
+      input[type=date]:focus,
+      input[type=datetime]:focus,
+      input[type=datetime-local]:focus,
+      input[type=email]:focus,
+      input[type=month]:focus,
+      input[type=number]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #589dd5;
+        box-shadow: 0 0 2px rgba(0, 147, 201, .6);
+      }
+      .login input[type="submit"] {
+        background-color: #589dd5;
+        border-color: #589dd5;
+        box-shadow: 0 1px 0 #589dd5;
+        text-shadow: none;
+      }
+      .login input[type="submit"]:hover {
+        background-color: #589dd5;
+      }
+    	h1 a {
+    		height: 100% !important;
+    		width:100% !important;
+    		background-image: url(' . get_template_directory_uri() . '/assets/img/logo.svg) !important;
+    		background-postion-x: center !important;
+    		background-size:contain !important;
+    		margin-bottom:10px !important;
+      }
+    	h1 {
+    		width: 320px !important;
+    		Height: 120px !important
+      }
+  	</style>';
+  }
+  add_action('login_head', 'custom_loginlogo');
+
+  // add custom footer text
+  function modify_footer_admin () {
+  	echo 'Created by <a href="https://factor1studios.com">factor1</a>. ';
+  	echo 'Powered by<a href="https://WordPress.org">WordPress</a>.';
+  }
+  add_filter('admin_footer_text', 'modify_footer_admin');

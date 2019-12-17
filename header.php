@@ -3,13 +3,13 @@
 <head>
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta property="og:title" content="<?php the_title(); ?>" />
   <meta property="og:site_name" content="<?php bloginfo('name') ?>">
 
   <?php
   /* Theme color for browsers that support it
-  <meta name="theme-color" content="#000">
+  <meta name="theme-color" content="#589dd5">
   */
   ?>
 
@@ -27,12 +27,13 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php // Site URL
+$url = is_post_type_archive('testimonial') ? ' data-url="' . esc_url(home_url()) . '"' : ''; ?>
 
-  <?php // Header ?>
-  <header>
+<body <?php body_class(); ?><?php echo $url; ?>>
 
-  </header>
+  <?php // Header
+  get_template_part('parts/global/site-header');
 
-  <?php // Main Content ?>
+  // Main Content ?>
   <main>

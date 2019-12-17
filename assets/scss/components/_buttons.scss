@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  Buttons
+------------------------------------------------------------------------------*/
+.button {
+  &--court {
+    @include buttons($court, $court, $white, $white, $court);
+  }
+
+  &--grass {
+    @include buttons($grass, $grass, $white, $white, $grass);
+  }
+
+  &--clay {
+    @include buttons($clay, $clay, $white, $white, $clay);
+  }
+
+  &--ghost {
+    @include buttons($asphalt, $white, $asphalt, rgba($asphalt, 0.08), $asphalt);
+  }
+}
+
+// WooCommerce/Sensei buttons
+.woocommerce,
+.sensei {
+  .button,
+  .button.add_to_cart_button,
+  button[type="submit"],
+  .button.checkout-button,
+  .button.checkout-button.alt {
+    @include buttons($grass, $grass, $white, $white, $grass);
+  }
+}

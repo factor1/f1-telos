@@ -5,9 +5,11 @@
   function prelude_custom_menus() {
     register_nav_menus(
       array(
-        'primary' => 'Primary Menu',
-        'footer'  => 'Footer Menu',
-        'social'  => 'Social Menu',
+        'primary'    => 'Primary Menu',
+        'primary-in' => 'Primary Menu (Logged In)',
+        'footer'     => 'Footer Menu',
+        'footer-in'  => 'Footer Menu (Logged In)',
+        'social'     => 'Social Menu',
       )
     );
   }

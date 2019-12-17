@@ -1,0 +1,46 @@
+/*
+ * Testimonials Section (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonials-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+
+  &__slider {
+    margin: rem(80) 0;
+  }
+
+  .slick-track {
+    height: rem(300);
+  }
+
+  .slick-slide {
+    height: calc(100% - 5px);
+
+    > div {
+      height: 100%;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .testimonials-section {
+    .container {
+      padding: rem(30) 0;
+    }
+
+    &__slider {
+      margin: rem(40) 0;
+    }
+  }
+}

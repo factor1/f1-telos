@@ -1,0 +1,27 @@
+/*
+ * SCSS Parts
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+// Global
+@import 'global/hero';
+@import 'global/headline-text-split';
+@import 'global/testimonials';
+@import 'global/plans-grid';
+@import 'global/centered-text-block';
+@import 'global/form-image-split';
+@import 'global/text-image-split';
+@import 'global/form-section';
+@import 'global/featured-video';
+@import 'global/recent-videos';
+@import 'global/search-videos';
+
+// Home
+@import 'home/hero';
+@import 'home/ipad-modal';
+@import 'home/testimonial-slider-1';
+@import 'home/form-images-split';
+@import 'home/3-column-grid';

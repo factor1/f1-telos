@@ -20,6 +20,10 @@
 @import 'settings/ginger-settings';
 @import 'ginger';
 
+// Slick
+@import 'slick.scss';
+@import 'settings/slick-settings';
+
 // Mixins
 @import 'mixins/sugar';
 
@@ -29,9 +33,26 @@
 @import 'globals/typography';
 
 // Components
+@import 'components/menu-icon';
+@import 'components/nav';
 @import 'components/social-menu';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/pagination';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/testimonial';
+@import 'components/modals';
+
+// Parts
+@import 'parts/all';
+
+// Templates
+@import 'templates/contact';
+@import 'templates/archive-testimonial';
+@import 'templates/search';
+@import 'templates/404';
+@import 'templates/single-lesson';
 
 // Plugin Overrides
 @import 'plugins/overrides';
