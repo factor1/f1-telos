@@ -3958,6 +3958,10 @@ main {
 	max-width: 12.5rem;
 }
 
+.hero--home .button {
+	margin: 0.3125rem;
+}
+
 /*
  * iPad Modal
  *
