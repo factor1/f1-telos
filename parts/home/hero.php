@@ -23,6 +23,8 @@ $callout = get_field('home_hero_callout'); ?>
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
+	      <div class="sm-only"><div style="display: block; height: 135px; width:100%;"></div></div>
+	      
         <h1><?php echo $headline; ?></h1>
 
         <?php // Optional support
@@ -50,7 +52,7 @@ $callout = get_field('home_hero_callout'); ?>
       <?php // Optional callout
       if( $callout ) : ?>
 
-        <div class="col-4 sm-hide">
+        <div class="col-4 sm-col-12">
           <?php echo $callout; ?>
         </div>
 
