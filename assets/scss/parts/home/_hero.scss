@@ -54,17 +54,17 @@
     background-position: left center !important;
 
     .container {
-      padding: rem(50) 0 rem(80);
+      padding: rem(50) 0;
     }
 
     .row {
       flex-direction: row-reverse;
     }
 
-    .col-4 {
-      order: -1;
-      margin-top: 0;
-      margin-bottom: rem(45);
-    }
+    // .col-4 {
+    //   // order: -1;
+    //   margin-top: 0;
+    //   margin-bottom: rem(45);
+    // }
   }
 }
