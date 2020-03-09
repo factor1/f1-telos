@@ -41,3 +41,8 @@
    * Load ACF Options
    */
   require get_template_directory() . '/inc/acf.php';
+
+  /**
+   * Load Responsive Media
+   */
+  require get_template_directory() . '/inc/responsive-media.php';
