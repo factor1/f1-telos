@@ -1,0 +1,32 @@
+/*
+ * 50/50 Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.4.0
+ */
+
+.fifty-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .col-6 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(50);
+
+    > div {
+      flex: 0 1 100%;
+    }
+  }
+
+  .button {
+    align-self: flex-end;
+    margin-top: rem(20);
+  }
+}
