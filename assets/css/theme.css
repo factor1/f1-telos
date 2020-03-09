@@ -3908,6 +3908,49 @@ main {
 }
 
 /*
+ * 50/50 Split (global)
+ *
+ * Template part used on various templates/views
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.4.0
+ */
+
+.fifty-split {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.fifty-split .container {
+	padding: 3.125rem 0;
+}
+
+.fifty-split .col-6 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-bottom: 3.125rem;
+}
+
+.fifty-split .col-6 > div {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 100%;
+	-ms-flex: 0 1 100%;
+	flex: 0 1 100%;
+}
+
+.fifty-split .button {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	margin-top: 1.25rem;
+}
+
+/*
  * Hero (home)
  *
  * Template part used on the home template

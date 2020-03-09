@@ -1,6 +1,6 @@
 <?php
 
-  define( 'THEME_VERSION', '0.3.0' );
+  define( 'THEME_VERSION', '0.4.0' );
 
   /**
    * Load tweaks
@@ -41,3 +41,8 @@
    * Load ACF Options
    */
   require get_template_directory() . '/inc/acf.php';
+
+  /**
+   * Load Responsive Media
+   */
+  require get_template_directory() . '/inc/responsive-media.php';

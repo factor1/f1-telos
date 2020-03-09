@@ -51,6 +51,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/search-videos');
 
+  elseif( get_row_layout() == '50_50_section' ) :
+
+    get_template_part('parts/global/50-50-split');
+
   endif;
 
 endwhile; endif; ?>
