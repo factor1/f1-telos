@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------*/
 // Theme information (name, starting theme version)
 var theme        = 'f1-telos',
-    version      = '0.4.0'; // updated with gulp version task, do not edit here.
+    version      = '0.5.0'; // updated with gulp version task, do not edit here.
 
 // Set the paths you will be working with
 var phpFiles     = ['./**/*.php', './*.php'],
