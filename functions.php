@@ -46,3 +46,8 @@
    * Load Responsive Media
    */
   require get_template_directory() . '/inc/responsive-media.php';
+
+  /**
+   * Sett WooCommerce products to use a video in place of the image
+   */
+  require get_template_directory() . '/inc/product-video.php';

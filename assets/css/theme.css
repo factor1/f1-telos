@@ -4098,6 +4098,73 @@ main {
 }
 
 /*
+ * Product Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.product-grid {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.product-grid .container {
+	padding: 3.75rem 0;
+}
+
+.product-grid .col-10 {
+	margin-bottom: 1.875rem;
+}
+
+.product-grid .col-4 {
+	margin-bottom: 1.875rem;
+}
+
+.product-grid .col-4 > a {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 30% 1.25rem;
+}
+
+.product-grid .col-4 > a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(35, 31, 32, 0.5);
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.product-grid .col-4 > a:hover:before {
+	background-color: rgba(35, 31, 32, 0.7);
+}
+
+.product-grid .col-4 h3 {
+	position: relative;
+	margin: 0;
+	color: #fff;
+	z-index: 1;
+}
+
+/*
  * Form/Images Split
  *
  * Template part used on the home template
@@ -7184,6 +7251,17 @@ main {
 	-webkit-flex-basis: auto;
 	-ms-flex-preferred-size: auto;
 	flex-basis: auto;
+}
+
+}
+
+@media screen and (max-width: 25rem) {
+
+.product-grid .col-4 {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 80%;
+	-ms-flex: 0 1 80%;
+	flex: 0 1 80%;
 }
 
 }
