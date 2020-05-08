@@ -25,9 +25,11 @@ if( have_rows('grid_blocks') ) : ?>
             </div>
 
 
+              <p class="text-center">
               <a href="<?php echo esc_url($btn['url']); ?>" class="button button--grass" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
                 <?php echo $btn['title']; ?>
               </a>
+			</p>
 
 
           </div>
