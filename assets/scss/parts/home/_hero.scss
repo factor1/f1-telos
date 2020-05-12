@@ -23,7 +23,7 @@
   }
 
   .container {
-    padding: rem(220) 0 rem(20);
+    padding: rem(144) 0 rem(10);
     z-index: 1;
   }
 
@@ -32,7 +32,7 @@
   }
 
   .col-4 {
-    margin-top: rem(45);
+    margin-top: 0;
   }
 
   h1, p, img {
@@ -51,7 +51,7 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .hero--home {
-    background-position: left center !important;
+    background-position: center center !important;
 
     .container {
       padding: rem(50) 0;

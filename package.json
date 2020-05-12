@@ -18,6 +18,7 @@
   "homepage": "https://github.com/factor1/f1-telos#readme",
   "dependencies": {
     "ginger-grid": "^2.2.0",
+    "gulp": "^3.9.1",
     "micromodal": "^0.3.2",
     "prelude-wp": "^4.2.5",
     "slick-carousel": "^1.8.1"
