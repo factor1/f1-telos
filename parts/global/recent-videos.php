@@ -19,7 +19,7 @@ $btn = get_sub_field('recent_videos_button');
 if( $type ) :
   $args = array(
     'post_type' => 'community-video',
-    'posts_per_page' => 3,
+    'posts_per_page' => 6,
     'tax_query' => array(
       array(
         'taxonomy' => 'video-type',
@@ -31,7 +31,7 @@ if( $type ) :
 else :
   $args = array(
     'post_type' => 'community-video',
-    'posts_per_page' => 3,
+    'posts_per_page' => 6,
   );
 endif;
 

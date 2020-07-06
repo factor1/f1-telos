@@ -7,9 +7,15 @@
  * @since 0.0.1
  */
 
+$hideHero = get_field('default_hero_toggle'); // T/F hide hero
+
 get_header();
 
-get_template_part('parts/global/hero');
+if( !$hideHero ) :
+
+  get_template_part('parts/global/hero');
+
+endif;
 
 if( have_posts() ) : while( have_posts() ) : the_post();
 
