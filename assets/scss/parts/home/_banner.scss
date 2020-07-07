@@ -1,0 +1,62 @@
+/*
+ * Banner
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.home-banner {
+  position: relative;
+  @include iPhoneX;
+  overflow: hidden;
+
+  &__ribbon {
+    position: absolute;
+    top: rem(35);
+    right: rem(-60);
+    padding: rem(10) rem(100);
+    background-color: $court;
+    transform: rotate(34deg);
+    z-index: 2;
+  }
+
+  .testimonial__text {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .container {
+    padding: rem(130) 0 rem(45);
+    z-index: 1;
+  }
+
+  .support {
+    font-size: rem(48);
+  }
+
+  img {
+    display: inline;
+    height: inherit;
+    width: rem(322);
+    margin: 0 rem(-15) rem(9);
+    vertical-align: middle;
+  }
+
+  .col-9 .testimonial__text {
+    font-size: rem(48);
+    text-transform: uppercase;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+}
