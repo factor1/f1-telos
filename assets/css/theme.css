@@ -4296,6 +4296,71 @@ main {
 }
 
 /*
+ * Banner
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.home-banner {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	overflow: hidden;
+}
+
+.home-banner__ribbon {
+	position: absolute;
+	top: 2.1875rem;
+	right: -3.75rem;
+	padding: 0.625rem 6.25rem;
+	background-color: #589dd5;
+	-webkit-transform: rotate(34deg);
+	-ms-transform: rotate(34deg);
+	transform: rotate(34deg);
+	z-index: 2;
+}
+
+.home-banner .testimonial__text {
+	margin: 0;
+	line-height: 1;
+}
+
+.home-banner .container {
+	padding: 8.125rem 0 2.8125rem;
+	z-index: 1;
+}
+
+.home-banner .support {
+	font-size: 3rem;
+}
+
+.home-banner img {
+	display: inline;
+	height: inherit;
+	width: 20.125rem;
+	margin: 0 -0.9375rem 0.5625rem;
+	vertical-align: middle;
+}
+
+.home-banner .col-9 .testimonial__text {
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.home-banner:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+/*
  * 3-Column Grid
  *
  * Template part used on the home template
