@@ -10,6 +10,7 @@
  */
 
 $plansToggle = get_field('home_plans_section_toggle');
+$bannerToggle = get_field('home_banner_toggle');
 
 get_header();
 
@@ -26,6 +27,12 @@ get_template_part('parts/home/product-grid');
 get_template_part('parts/home/form-images-split');
 
 get_template_part('parts/global/testimonials');
+
+if( $bannerToggle ) :
+
+  get_template_part('parts/home/banner');
+
+endif;
 
 get_template_part('parts/home/3-column-grid');
 
