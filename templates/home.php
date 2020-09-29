@@ -20,6 +20,12 @@ get_template_part('parts/global/headline-text-split');
 
 get_template_part('parts/home/ipad-modal');
 
+if( $bannerToggle ) :
+
+  get_template_part('parts/home/banner');
+
+endif;
+
 get_template_part('parts/home/testimonial-slider-1');
 
 // get_template_part('parts/home/product-grid');
@@ -27,12 +33,6 @@ get_template_part('parts/home/testimonial-slider-1');
 get_template_part('parts/home/form-images-split');
 
 get_template_part('parts/global/testimonials');
-
-if( $bannerToggle ) :
-
-  get_template_part('parts/home/banner');
-
-endif;
 
 get_template_part('parts/home/3-column-grid');
 
