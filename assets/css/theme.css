@@ -4317,8 +4317,8 @@ main {
 
 .home-banner__ribbon {
 	position: absolute;
-	top: 2.1875rem;
-	right: -3.75rem;
+	top: 2.5rem;
+	right: -5.3125rem;
 	padding: 0.625rem 6.25rem;
 	background-color: #589dd5;
 	-webkit-transform: rotate(34deg);
@@ -4341,6 +4341,10 @@ main {
 	font-size: 3rem;
 }
 
+.home-banner strong {
+	font-family: "Gilroy-Bold";
+}
+
 .home-banner img {
 	display: inline;
 	height: inherit;
@@ -4352,6 +4356,10 @@ main {
 .home-banner .col-9 .testimonial__text {
 	font-size: 3rem;
 	text-transform: uppercase;
+}
+
+.home-banner .button {
+	font-size: 1.5rem;
 }
 
 .home-banner:after {
@@ -6834,6 +6842,14 @@ main {
 
 .form-images-split .col-6 {
 	margin-top: 1.875rem;
+}
+
+.home-banner__ribbon {
+	top: 2.1875rem;
+}
+
+.home-banner .button {
+	font-size: 1.125rem;
 }
 
 .three-column-grid .container {
