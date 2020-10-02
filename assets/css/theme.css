@@ -3548,6 +3548,10 @@ main {
 }
 
 .plans-grid__plan .price {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 100%;
+	-ms-flex: 0 1 100%;
+	flex: 0 1 100%;
 	margin-right: 0.9375rem;
 }
 
