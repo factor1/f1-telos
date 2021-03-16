@@ -308,7 +308,7 @@
     	h1 a {
     		height: 100% !important;
     		width:100% !important;
-    		background-image: url(' . get_template_directory_uri() . '/assets/img/logo.svg) !important;
+    		background-image: url(' . get_template_directory_uri() . '/assets/img/logo.png) !important;
     		background-postion-x: center !important;
     		background-size:contain !important;
     		margin-bottom:10px !important;
