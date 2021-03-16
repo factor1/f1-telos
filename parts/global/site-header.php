@@ -16,7 +16,7 @@ $menu = is_user_logged_in() ? 'primary-in' : 'primary'; ?>
 
         <?php // Logo ?>
         <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo get_bloginfo('name'); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
         </a>
 
         <?php // Primary nav
