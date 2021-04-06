@@ -1705,6 +1705,13 @@ img {
 	height: 100%;
 }
 
+.anchor {
+	position: absolute;
+	top: -5rem;
+	left: 0;
+	width: 100%;
+}
+
 /*------------------------------------------------------------------------------
   WordPress CSS - https://codex.wordpress.org/CSS#WordPress_Generated_Classes
 ------------------------------------------------------------------------------*/
