@@ -17,6 +17,8 @@ $ribbon = get_field('home_banner_ribbon'); ?>
 
 <section class="home-banner" style="background: url('<?php echo $bg[0]; ?>') 90% top/cover no-repeat">
 
+  <div class="anchor" id="register"></div>
+
   <?php // Optional ribbon
   if( $ribbon ) : ?>
 
