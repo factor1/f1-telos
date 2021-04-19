@@ -45,6 +45,7 @@
 
   .button {
     margin: rem(5);
+    @include buttons($altBlue, $altBlue, $white, $white, $altBlue);
   }
 }
 
