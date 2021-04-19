@@ -4018,6 +4018,41 @@ main {
 
 .hero--home .button {
 	margin: 0.3125rem;
+	display: inline-block;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 6.25rem;
+	border: 0.125rem solid #269af9;
+	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
+	background-color: #269af9 !important;
+	font: 1.125rem/1 "Gilroy-SemiBold";
+	color: #fff;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.hero--home .button:active {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	background-color: #fff !important;
+	color: #269af9 !important;
+}
+
+.hero--home .button:focus,
+.hero--home .button:hover {
+	color: #fff;
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.hero--home .button.disabled,
+.hero--home .button:disabled {
+	border-color: rgba(38, 154, 249, 0.15);
+	background-color: rgba(38, 154, 249, 0.15);
+	pointer-events: none;
 }
 
 /*
@@ -6821,6 +6856,11 @@ main {
 
 .search-videos form input[type="text"] {
 	font-size: 1.25rem;
+}
+
+.hero--home .button {
+	padding: 0.625rem 1.25rem;
+	font-size: 0.9375rem;
 }
 
 .hero--home {
