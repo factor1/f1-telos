@@ -4012,6 +4012,10 @@ main {
 	margin: 0;
 }
 
+.hero--home h1 {
+	text-transform: none;
+}
+
 .hero--home img {
 	max-width: 12.5rem;
 }
