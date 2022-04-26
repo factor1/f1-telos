@@ -11,12 +11,20 @@
 
 // Testimonial Slider 1 Custom Fields
 $testimonials = get_field('home_testimonials_1');
+$intro = get_field('home_testimonials_intro');
 
 if( $testimonials ) : ?>
 
   <section class="home-testimonials">
     <div class="container">
       <div class="row">
+
+        <?php if($intro) : ?>
+          <div class="col-12">
+            <?php echo $intro; ?>
+          </div>
+        <?php endif; ?>
+
         <div class="col-10 sm-col-10 col-centered text-center home-testimonials__slider">
 
           <?php foreach( $testimonials as $post ) :
@@ -25,8 +33,8 @@ if( $testimonials ) : ?>
             // Testimonial Custom Fields
             $type = get_field('testimonial_type'); // T/F video testimonial
             $content = $type ? get_field('testimonial_video') : get_field('testimonial');
-            $author = $type ? false : get_field('author');
-            $info = $type ? false : get_field('author_info'); ?>
+            $author = get_field('author');
+            $info = get_field('author_info'); ?>
 
             <div class="home-testimonials__testimonial">
 
@@ -35,6 +43,14 @@ if( $testimonials ) : ?>
                 <div class="flex-video">
                   <?php echo $content; ?>
                 </div>
+
+                <?php if($author && $info): ?>
+                  <div>
+                    <p>
+                      <h6 class="testimonial__author">&mdash; <?php echo $author . ', ' . $info; ?></h6>
+                    </p>
+                  </div>
+                <?php endif; ?>
 
               <?php else : ?>
 

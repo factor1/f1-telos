@@ -108,6 +108,10 @@ a {
   text-shadow: none;
   text-transform: none;
 
+  &.big {
+    font-size: rem(90);
+  }
+
   &--green {
     color: $grass;
   }
@@ -133,7 +137,7 @@ a {
 
 .testimonial__author { // h6
   margin: 0;
-  font-size: rem(14);
+  font-size: rem(18);
   line-height: 1.36;
   text-transform: none;
 }
@@ -199,7 +203,7 @@ a {
     font-size: rem(14);
   }
 
-  .script {
+  .script, .script.big {
     font-size: rem(50);
   }
 

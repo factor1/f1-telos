@@ -36,6 +36,10 @@
   color: #6c6e71;
 }
 
+.script.big {
+  font-size: 90px;
+}
+
 .script--green {
   color: #6cbe45;
 }

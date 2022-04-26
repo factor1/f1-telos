@@ -1938,6 +1938,10 @@ a:hover {
 	text-transform: none;
 }
 
+.script.big {
+	font-size: 5.625rem;
+}
+
 .script--green {
 	color: #6cbe45;
 }
@@ -1962,7 +1966,7 @@ a:hover {
 
 .testimonial__author {
 	margin: 0;
-	font-size: 0.875rem;
+	font-size: 1.125rem;
 	line-height: 1.36;
 	text-transform: none;
 }
@@ -4148,7 +4152,15 @@ main {
 }
 
 .home-testimonials .container {
-	padding: 5.625rem 0 3.125rem;
+	padding: 4.375rem 0 5.625rem;
+}
+
+.home-testimonials__slider {
+	margin: 1.875rem auto;
+}
+
+.home-testimonials__testimonial {
+	padding: 0 1.25rem;
 }
 
 /*
@@ -4484,6 +4496,50 @@ main {
 	height: 9.375rem;
 	margin-bottom: 1.875rem;
 	border-radius: 50%;
+}
+
+/*
+ * Highlight Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.highlight-grid {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.highlight-grid .container {
+	padding: 4.375rem 0 5.625rem;
+}
+
+.highlight-grid .col-12 {
+	margin: 0 auto 3.125rem;
+}
+
+.highlight-grid hr {
+	width: 100%;
+	margin: 1.5625rem 0 3.125rem;
+	border-bottom: solid 0.0625rem #6d6e71;
+	border-top: none;
+}
+
+.highlight-grid__single {
+	margin-bottom: 1.875rem;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 8.125rem;
+	margin-bottom: 1.25rem;
+}
+
+.highlight-grid__single .highlight-content .button {
+	font-family: "Gilroy-Light";
+	padding: 0.625rem 0.9375rem;
+	border-radius: 0.3125rem;
 }
 
 /*
@@ -5642,6 +5698,14 @@ main {
 	display: block;
 }
 
+.highlight-grid hr {
+	display: none;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 13.75rem;
+}
+
 }
 
 @media screen and (max-width: 64em) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -6681,7 +6745,8 @@ h3 {
 	font-size: 0.875rem;
 }
 
-.script {
+.script,
+.script.big {
 	font-size: 3.125rem;
 }
 
@@ -6918,6 +6983,10 @@ main {
 .three-column-grid__icon {
 	width: 7.8125rem;
 	height: 7.8125rem;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 20rem;
 }
 
 .contact-section .container {

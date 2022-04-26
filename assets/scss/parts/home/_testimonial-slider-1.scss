@@ -13,7 +13,15 @@
   background: url('../img/background.jpg') center/cover no-repeat;
 
   .container {
-    padding: rem(90) 0 rem(50);
+    padding: rem(70) 0 rem(90);
+  }
+
+  &__slider {
+    margin: rem(30) auto;
+  }
+
+  &__testimonial {
+    padding: 0 rem(20);
   }
 }
 
