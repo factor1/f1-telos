@@ -29,7 +29,7 @@ $callout = get_field('home_hero_callout'); ?>
 
         <?php // Optional support
         if( $support) : ?>
-          <h6 class="support"><?php echo $support; ?></h6>
+          <h6 class="support-slim"><?php echo $support; ?></h6>
         <?php endif;
 
         // Optional modal button
@@ -52,7 +52,7 @@ $callout = get_field('home_hero_callout'); ?>
       <?php // Optional callout
       if( $callout ) : ?>
 
-        <div class="col-4 sm-col-12">
+        <div class="col-6 sm-col-12 hero-callout">
           <?php echo $callout; ?>
         </div>
 

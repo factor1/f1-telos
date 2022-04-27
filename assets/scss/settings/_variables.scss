@@ -64,6 +64,14 @@ $altBlue: #269af9;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'playlistscript';
+  src: url('../fonts/playlist_script.woff2') format('woff2'),
+    url('../fonts/playlist_script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $gilroyLight: 'Gilroy-Light';
 $gilroyRegular: 'Gilroy-Regular';
 $gilroySemibold: 'Gilroy-SemiBold';
@@ -71,3 +79,4 @@ $gilroyBold: 'Gilroy-Bold';
 $gilroyExtrabold: 'Gilroy-ExtraBold';
 $blackDiamond: 'Black-Diamond';
 $balboa: balboa, sans-serif;
+$playlist: 'playlistscript';

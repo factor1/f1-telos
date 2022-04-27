@@ -4115,7 +4115,9 @@ jQuery( document ).ready(function( $ ) {
 
 	// Home Testimonials 1
 	if( $('.home-testimonials__slider').length ) {
+		var slidesToShow = script_vars.slides_to_show ? script_vars.slides_to_show : 1;
 		$('.home-testimonials__slider').slick({
+			slidesToShow: slidesToShow,
 			autoplay: false,
 			arrows: true,
 			dots: true,

@@ -527,6 +527,13 @@ template {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'playlistscript';
+	src: url("../fonts/playlist_script.woff2") format("woff2"), url("../fonts/playlist_script.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*
 * Ginger
 * A minimal flexbox grid system named after a cute dog.
@@ -1466,6 +1473,21 @@ template {
 	background: #fff url("../img/ajax-loader.gif") center center no-repeat;
 }
 
+.slick-list .slick-track {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
 /* Icons */
 
 @font-face {
@@ -1917,6 +1939,21 @@ a:hover {
 	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 }
 
+.support-slim {
+	margin-bottom: 2.5rem;
+	font-size: 1.25rem;
+	font-family: "Gilroy-Light";
+	line-height: 1.38;
+	letter-spacing: 0.25rem;
+	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.support-slim i {
+	text-transform: capitalize;
+	font-size: 1.0625rem;
+	letter-spacing: 0.0625rem;
+}
+
 .callout {
 	margin-bottom: 0.3125rem;
 	font: 1rem/1.125 "Gilroy-Bold";
@@ -1933,9 +1970,13 @@ a:hover {
 
 .script {
 	margin: 0;
-	font: 400 3.75rem/1.33 "Black-Diamond";
+	font: 400 3.75rem/1.33 "playlistscript";
 	text-shadow: none;
 	text-transform: none;
+}
+
+.script.big {
+	font-size: 5.625rem;
 }
 
 .script--green {
@@ -1962,7 +2003,7 @@ a:hover {
 
 .testimonial__author {
 	margin: 0;
-	font-size: 0.875rem;
+	font-size: 1.125rem;
 	line-height: 1.36;
 	text-transform: none;
 }
@@ -4013,7 +4054,12 @@ main {
 }
 
 .hero--home h1 {
-	text-transform: none;
+	text-transform: uppercase;
+	font-family: "Gilroy-Bold";
+	color: #6cbe45;
+	font-size: 2.5rem;
+	letter-spacing: 0.625rem;
+	margin-bottom: 2.5rem;
 }
 
 .hero--home img {
@@ -4022,13 +4068,14 @@ main {
 
 .hero--home .button {
 	margin: 0.3125rem;
+	text-transform: uppercase;
 	display: inline-block;
 	padding: 0.9375rem 1.875rem;
 	border-radius: 6.25rem;
-	border: 0.125rem solid #269af9;
+	border: 0.125rem solid #6cbe45;
 	-webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
 	box-shadow: 0 0 0rem rgba(0, 0, 0, 0.8);
-	background-color: #269af9 !important;
+	background-color: #6cbe45 !important;
 	font: 1.125rem/1 "Gilroy-SemiBold";
 	color: #fff;
 	outline: none;
@@ -4042,7 +4089,7 @@ main {
 	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
 	background-color: #fff !important;
-	color: #269af9 !important;
+	color: #6cbe45 !important;
 }
 
 .hero--home .button:focus,
@@ -4054,9 +4101,14 @@ main {
 
 .hero--home .button.disabled,
 .hero--home .button:disabled {
-	border-color: rgba(38, 154, 249, 0.15);
-	background-color: rgba(38, 154, 249, 0.15);
+	border-color: rgba(108, 190, 69, 0.15);
+	background-color: rgba(108, 190, 69, 0.15);
 	pointer-events: none;
+}
+
+.hero--home .hero-callout {
+	margin: 6.25rem 0 0;
+	text-align: right;
 }
 
 /*
@@ -4148,7 +4200,22 @@ main {
 }
 
 .home-testimonials .container {
-	padding: 5.625rem 0 3.125rem;
+	padding: 4.375rem 0 5.625rem;
+}
+
+.home-testimonials__slider {
+	margin: 1.875rem auto;
+}
+
+.home-testimonials__testimonial {
+	padding: 0 1.25rem;
+	max-width: 50rem;
+}
+
+.home-testimonials__testimonial .flex-video {
+	margin: 0 auto;
+	padding-bottom: 40%;
+	max-width: 34.375rem;
 }
 
 /*
@@ -4484,6 +4551,135 @@ main {
 	height: 9.375rem;
 	margin-bottom: 1.875rem;
 	border-radius: 50%;
+}
+
+/*
+ * Highlight Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.highlight-grid {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.highlight-grid .container {
+	padding: 4.375rem 0 5.625rem;
+}
+
+.highlight-grid .col-12 {
+	margin: 0 auto 3.125rem;
+}
+
+.highlight-grid hr {
+	width: 100%;
+	margin: 1.5625rem 0 3.125rem;
+	border-bottom: solid 0.0625rem #6d6e71;
+	border-top: none;
+	max-width: 62.5rem;
+}
+
+.highlight-grid hr:last-of-type {
+	display: none;
+}
+
+.highlight-grid__single {
+	margin-bottom: 1.875rem;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 8.125rem;
+	margin-bottom: 1.25rem;
+}
+
+.highlight-grid__single .highlight-content .button {
+	font-family: "Gilroy-Light";
+	padding: 0.625rem 0.9375rem;
+	border-radius: 0.3125rem;
+}
+
+/*
+ * CTA Banner (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.cta-banner {
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.cta-banner .container {
+	padding: 5.625rem 0;
+}
+
+.cta-banner .container.msg-padding {
+	padding: 5.625rem 0 1.25rem;
+}
+
+.cta-banner__container {
+	position: relative;
+	background: url("../img/background.jpg") center/cover no-repeat;
+	padding: 4.375rem 0 3.75rem;
+	border-radius: 0.625rem;
+}
+
+.cta-banner__container:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 9.375rem;
+	height: 0.1875rem;
+	top: 1.25rem;
+	left: calc(50% - 75px);
+	background-color: #231f20;
+	border-radius: 0.625rem;
+}
+
+.cta-banner__container h2,
+.cta-banner__container h3 {
+	color: #fff;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: "Gilroy-SemiBold";
+}
+
+.cta-banner__container h2 {
+	font-size: 3rem;
+}
+
+.cta-banner__container h3 {
+	font-size: 2.3125rem;
+}
+
+.cta-banner__container .banner-discount {
+	margin: 0.625rem 0 0;
+	color: #fff;
+	text-align: center;
+	font: 1.5625rem/1 "Gilroy-SemiBold";
+}
+
+.cta-banner__container .banner-discount span {
+	font-size: 2.5rem;
+	background: #6cbe45;
+	padding: 0.3125rem 0.9375rem;
+	border-radius: 0.3125rem;
+	margin: 0 0.4375rem;
+}
+
+.cta-banner__message {
+	text-align: center;
+	color: #fff;
+	text-shadow: 0rem 0rem 0.3125rem #231f20;
+	margin: 2.5rem auto;
+	font-family: "Gilroy-Light";
 }
 
 /*
@@ -5183,6 +5379,24 @@ main {
 
 }
 
+@media screen and (min-width: 64em) {
+
+.col-2 {
+	-webkit-flex-basis: 18%;
+	-ms-flex-preferred-size: 18%;
+	flex-basis: 18%;
+}
+
+}
+
+@media screen and (min-width: 100rem) {
+
+.hero--home .container {
+	padding: 20rem 0 0.625rem;
+}
+
+}
+
 @media screen and (max-width: 64em) {
 
 .md-col-1 {
@@ -5640,6 +5854,14 @@ main {
 
 .menu-icon {
 	display: block;
+}
+
+.highlight-grid hr {
+	display: none;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 13.75rem;
 }
 
 }
@@ -6681,7 +6903,8 @@ h3 {
 	font-size: 0.875rem;
 }
 
-.script {
+.script,
+.script.big {
 	font-size: 3.125rem;
 }
 
@@ -6918,6 +7141,18 @@ main {
 .three-column-grid__icon {
 	width: 7.8125rem;
 	height: 7.8125rem;
+}
+
+.highlight-grid__single .highlight-image {
+	min-height: 20rem;
+}
+
+.cta-banner__container h2 {
+	font-size: 2.375rem;
+}
+
+.cta-banner__container h3 {
+	font-size: 1.5625rem;
 }
 
 .contact-section .container {

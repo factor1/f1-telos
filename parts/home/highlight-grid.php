@@ -1,0 +1,54 @@
+<?php
+/*
+ * Highlight Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+$intro = get_field('home_highlight_grid_intro');
+
+if( have_rows('home_highlight_cards') ) : ?>
+
+  <section class="highlight-grid">
+    <div class="container">
+      <div class="row row--justify-content-center">
+
+        <div class="col-12 col-centered">
+          <?php echo $intro; ?>
+        </div>
+
+        <?php $i=1; while( have_rows('home_highlight_cards') ) : the_row();
+          // Highligh Grid Custom Subfields
+          $image = wp_get_attachment_image_src(get_sub_field('image'), 'product_grid');
+          $content = get_sub_field('content');
+          $link = get_sub_field('link'); ?>
+
+          <div class="col-2 md-col-4 sm-col-12 stretch text-center">
+
+            <div class="highlight-grid__single">
+              <div class="highlight-image" style="background: url('<?php echo $image[0]; ?>') center/cover no-repeat"></div>
+              <div class="highlight-content">
+                <?php echo $content; ?>
+                <?php if($link): ?>
+                  <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--clay" ><?php echo $link['title']; ?></a>           
+                <?php endif; ?>
+              </div>
+            </div>
+
+          </div>
+
+          <?php if($i%5 == 0): ?>
+            <hr>
+          <?php endif; ?>
+
+        <?php $i++; endwhile; ?>
+
+      </div>
+    </div>
+  </section>
+
+<?php endif; ?>

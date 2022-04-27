@@ -13,7 +13,7 @@
   &--clay {
     @include buttons($clay, $clay, $white, $white, $clay);
   }
-
+  
   &--ghost {
     @include buttons($asphalt, $white, $asphalt, rgba($asphalt, 0.08), $asphalt);
   }
