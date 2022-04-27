@@ -88,6 +88,21 @@ a {
   text-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.2);
 }
 
+.support-slim { // h6
+  margin-bottom: rem(40);
+  font-size: rem(20);
+  font-family: $gilroyLight;
+  line-height: 1.38;
+  letter-spacing: rem(4);
+  text-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.2);
+
+  i {
+    text-transform: capitalize;
+    font-size: rem(17);
+    letter-spacing: rem(1);
+  }
+}
+
 .callout { // h6
   margin-bottom: rem(5);
   font: rem(16)/1.125 $gilroyBold;
@@ -104,7 +119,7 @@ a {
 
 .script { // h1
   margin: 0;
-  font: 400 rem(60)/1.33 $blackDiamond;
+  font: 400 rem(60)/1.33 $playlist;
   text-shadow: none;
   text-transform: none;
 

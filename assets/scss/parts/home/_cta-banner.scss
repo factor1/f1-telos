@@ -7,3 +7,87 @@
  * @author Factor1 Studios
  * @since 0.5.0
  */
+
+.cta-banner {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(90) 0;
+
+    &.msg-padding {
+      padding: rem(90) 0 rem(20);
+    }
+  }
+
+  &__container {
+    position: relative;
+    background: url('../img/background.jpg') center/cover no-repeat;
+    padding: rem(70) 0 rem(60);
+    border-radius: rem(10);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: rem(150);
+      height: rem(3);
+      top: rem(20);
+      left: calc(50% - 75px);
+      background-color: $licorice;
+      border-radius: rem(10);
+    }
+
+    h2, h3 {
+      color: $white;
+      margin: 0;
+      text-transform: uppercase;
+      font-family: $gilroySemibold;
+    }
+
+    h2 {
+      font-size: rem(48);
+    }
+
+    h3 {
+      font-size: rem(37);
+    }
+
+    .banner-discount {
+      margin: rem(10) 0 0;
+      color: $white;
+      text-align: center;
+      font: rem(25)/1 $gilroySemibold;
+
+      span {
+        font-size: rem(40);
+        background: $grass;
+        padding: rem(5) rem(15);
+        border-radius: rem(5);
+        margin: 0 rem(7);
+      }
+    }
+
+  }
+
+  &__message {
+    text-align: center;
+    color: #fff;
+    text-shadow: rem(0) rem(0) rem(5) $licorice;
+    margin: rem(40) auto;
+    font-family: $gilroyLight;
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .cta-banner__container {
+    h2 {
+      font-size: rem(38);
+    }
+
+    h3 {
+      font-size: rem(25);
+    }
+  }
+}

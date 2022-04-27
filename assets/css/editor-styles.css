@@ -1,3 +1,9 @@
+/* Do not change this! This ensures that white text remains visible in admin WYSIWYG editors */
+*[style*="color: #ffffff"],
+*[style*="color: #ffffff;"] {
+  color: #a1abb2 !important;
+}
+
 .flex-video {
   margin-top: 10px;
   margin-bottom: 10px;
