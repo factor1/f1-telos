@@ -1473,6 +1473,21 @@ template {
 	background: #fff url("../img/ajax-loader.gif") center center no-repeat;
 }
 
+.slick-list .slick-track {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
 /* Icons */
 
 @font-face {
@@ -4194,6 +4209,13 @@ main {
 
 .home-testimonials__testimonial {
 	padding: 0 1.25rem;
+	max-width: 50rem;
+}
+
+.home-testimonials__testimonial .flex-video {
+	margin: 0 auto;
+	padding-bottom: 40%;
+	max-width: 34.375rem;
 }
 
 /*
@@ -4558,6 +4580,11 @@ main {
 	margin: 1.5625rem 0 3.125rem;
 	border-bottom: solid 0.0625rem #6d6e71;
 	border-top: none;
+	max-width: 62.5rem;
+}
+
+.highlight-grid hr:last-of-type {
+	display: none;
 }
 
 .highlight-grid__single {
@@ -5348,6 +5375,16 @@ main {
 
 .offset-11 {
 	margin-left: 91.66666%;
+}
+
+}
+
+@media screen and (min-width: 64em) {
+
+.col-2 {
+	-webkit-flex-basis: 18%;
+	-ms-flex-preferred-size: 18%;
+	flex-basis: 18%;
 }
 
 }

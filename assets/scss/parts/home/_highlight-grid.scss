@@ -24,7 +24,14 @@
     margin: rem(25) 0 rem(50);
     border-bottom: solid rem(1) $nickel;
     border-top: none;
+    max-width: rem(1000);
+
+    &:last-of-type {
+      display: none;
+    }
   }
+
+  
 
   &__single {
     margin-bottom: rem(30);
@@ -47,6 +54,12 @@
 }
 
 // Media Queries
+@media screen and (min-width: $medium-breakpoint) {
+  .col-2 {
+    flex-basis: 18%;
+  }
+}
+
 @media screen and (max-width: $medium-breakpoint) {
   .highlight-grid hr {
     display: none;
