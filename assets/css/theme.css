@@ -4589,15 +4589,35 @@ main {
 
 .highlight-grid__single {
 	margin-bottom: 1.875rem;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
-.highlight-grid__single .highlight-image {
+.highlight-grid__single .highlight-content .single-image {
+	width: 100%;
 	min-height: 8.125rem;
 	margin-bottom: 1.25rem;
 }
 
-.highlight-grid__single .highlight-content .button {
+.highlight-grid__single .button {
 	font-family: "Gilroy-Light";
+	margin: 0 auto;
 	padding: 0.625rem 0.9375rem;
 	border-radius: 0.3125rem;
 }
@@ -5862,6 +5882,10 @@ main {
 
 .highlight-grid__single .highlight-image {
 	min-height: 13.75rem;
+}
+
+.highlight-grid .sm-col-12 {
+	margin-bottom: 3.125rem;
 }
 
 }
