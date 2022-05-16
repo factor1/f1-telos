@@ -4571,7 +4571,7 @@ main {
 	padding: 4.375rem 0 5.625rem;
 }
 
-.highlight-grid .col-12 {
+.highlight-grid .col-2 {
 	margin: 0 auto 3.125rem;
 }
 
@@ -4588,7 +4588,6 @@ main {
 }
 
 .highlight-grid__single {
-	margin-bottom: 1.875rem;
 	height: 100%;
 	display: -webkit-box;
 	display: -webkit-flex;
