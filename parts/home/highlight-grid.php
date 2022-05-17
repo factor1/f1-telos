@@ -30,13 +30,15 @@ if( have_rows('home_highlight_cards') ) : ?>
           <div class="col-2 md-col-4 sm-col-12 stretch text-center">
 
             <div class="highlight-grid__single">
-              <div class="highlight-image" style="background: url('<?php echo $image[0]; ?>') center/cover no-repeat"></div>
               <div class="highlight-content">
-                <?php echo $content; ?>
-                <?php if($link): ?>
-                  <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--clay" ><?php echo $link['title']; ?></a>           
-                <?php endif; ?>
+                <div class="single-image" style="background: url('<?php echo $image[0]; ?>') center/cover no-repeat"></div>
+                <div>
+                  <?php echo $content; ?>
+                </div>
               </div>
+              <?php if($link): ?>
+                <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--clay" ><?php echo $link['title']; ?></a>           
+              <?php endif; ?>
             </div>
 
           </div>

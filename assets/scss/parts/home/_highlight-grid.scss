@@ -15,7 +15,7 @@
     padding: rem(70) 0 rem(90);
   }
 
-  .col-12 {
+  .col-2 {
     margin: 0 auto rem(50);
   }
 
@@ -34,19 +34,26 @@
   
 
   &__single {
-    margin-bottom: rem(30);
-
-    .highlight-image {
-      min-height: rem(130);
-      margin-bottom: rem(20);
-    }
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
     
     .highlight-content {
-      .button {
-        font-family: $gilroyLight;
-        padding: rem(10) rem(15);
-        border-radius: rem(5);
+
+      .single-image {
+        width: 100%;
+        min-height: rem(130);
+        margin-bottom: rem(20);
       }
+    }
+
+    .button {
+      font-family: $gilroyLight;
+      margin: 0 auto;
+      padding: rem(10) rem(15);
+      border-radius: rem(5);
     }
 
   }
@@ -66,6 +73,10 @@
   }
   .highlight-grid__single .highlight-image {
     min-height: rem(220);
+  }
+
+  .highlight-grid .sm-col-12 {
+    margin-bottom: rem(50);
   }
 }
 
