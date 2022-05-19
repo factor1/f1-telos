@@ -13,16 +13,12 @@
 
   .container {
     padding: rem(90) 0;
-
-    &.msg-padding {
-      padding: rem(90) 0 rem(20);
-    }
   }
 
   &__container {
     position: relative;
     background: url('../img/background.jpg') center/cover no-repeat;
-    padding: rem(70) 0 rem(60);
+    padding: rem(70) 0 rem(30);
     border-radius: rem(10);
 
     &:before {
@@ -73,7 +69,7 @@
     text-align: center;
     color: #fff;
     text-shadow: rem(0) rem(0) rem(5) $licorice;
-    margin: rem(40) auto;
+    margin: rem(50) auto 0;
     font-family: $gilroyLight;
   }
 

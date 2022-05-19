@@ -33,17 +33,19 @@
               <?php if($discount): ?>
                 <p class="banner-discount">& SAVE <span><?php echo '$'.$discount; ?></span></p>
               <?php endif; ?>
+
+              <div class="cta-banner__message">
+                <?php echo $message; ?>
+              </div>
+              
             </div> 
             
           <?php if($link): ?>
             </a>
           <?php endif; ?>
+
         </div>
-        <?php if($message): ?>
-          <div class="col-8 col-centered cta-banner__message">
-            <?php echo $message; ?>
-          </div>
-        <?php endif; ?>
+
       </div>
     </div>
   </section>
