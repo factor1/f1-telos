@@ -19,7 +19,7 @@ if (!(is_admin() )) {
  */
 function prelude_theme_scripts() {
   // Font Awesome
-  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/44d1f7d674.js', array(), THEME_VERSION );
+  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/de235ca0c9.js', array(), THEME_VERSION );
 
   // Fonts
   wp_enqueue_style('typekit', 'https://use.typekit.net/bdt2vwc.css', array(), THEME_VERSION );
