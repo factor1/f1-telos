@@ -57,6 +57,9 @@
 
   .hero-callout {
     margin: rem(100) 0 0;
+    * {
+      text-align: left;
+    }
   }
 }
 

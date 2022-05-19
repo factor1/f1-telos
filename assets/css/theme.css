@@ -4103,6 +4103,10 @@ main {
 	margin: 6.25rem 0 0;
 }
 
+.hero--home .hero-callout * {
+	text-align: left;
+}
+
 /*
  * iPad Modal
  *
