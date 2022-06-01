@@ -4567,8 +4567,10 @@ main {
 	padding: 4.375rem 0 5.625rem;
 }
 
-.highlight-grid .col-2 {
-	margin: 0 auto 3.125rem;
+.highlight-grid .col-2,
+.highlight-grid .col-4,
+.highlight-grid .col-6 {
+	margin: 0 auto 5rem;
 }
 
 .highlight-grid hr {
@@ -4602,11 +4604,13 @@ main {
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	max-width: 15rem;
+	margin: 0 auto;
 }
 
 .highlight-grid__single .highlight-content .single-image {
 	width: 100%;
-	min-height: 8.125rem;
+	min-height: 10rem;
 	margin-bottom: 1.25rem;
 }
 

@@ -15,8 +15,8 @@
     padding: rem(70) 0 rem(90);
   }
 
-  .col-2 {
-    margin: 0 auto rem(50);
+  .col-2, .col-4, .col-6 {
+    margin: 0 auto rem(80);
   }
 
   hr {
@@ -39,12 +39,14 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
+    max-width: rem(240);
+    margin: 0 auto;
     
     .highlight-content {
 
       .single-image {
         width: 100%;
-        min-height: rem(130);
+        min-height: rem(160);
         margin-bottom: rem(20);
       }
     }

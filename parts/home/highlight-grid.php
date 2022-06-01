@@ -27,7 +27,7 @@ if( have_rows('home_highlight_cards') ) : ?>
           $content = get_sub_field('content');
           $link = get_sub_field('link'); ?>
 
-          <div class="col-2 md-col-4 sm-col-12 stretch text-center">
+          <div class="col-4 md-col-6 sm-col-12 stretch text-center">
 
             <div class="highlight-grid__single">
               <div class="highlight-content">
