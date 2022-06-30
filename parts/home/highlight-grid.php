@@ -10,10 +10,11 @@
  */
 
 $intro = get_field('home_highlight_grid_intro');
+$section_id = get_field('home_highlight_section_id');
 
 if( have_rows('home_highlight_cards') ) : ?>
 
-  <section class="highlight-grid">
+  <section class="highlight-grid" id="<?php echo $section_id; ?>">
     <div class="container">
       <div class="row row--justify-content-center">
 
