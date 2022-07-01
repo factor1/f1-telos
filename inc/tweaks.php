@@ -170,15 +170,33 @@
         'wrapper' => false,
       ),
       array(
+        'title' => 'Big script Text',
+        'block' => 'h1',
+        'classes' => 'script big',
+        'wrapper' => false,
+      ),
+      array(
         'title' => 'Script Text Green',
         'block' => 'h1',
         'classes' => 'script script--green',
         'wrapper' => false,
       ),
       array(
+        'title' => 'Big script Text Green',
+        'block' => 'h1',
+        'classes' => 'script script--green big',
+        'wrapper' => false,
+      ),
+      array(
         'title' => 'Script Text Blue',
         'block' => 'h1',
         'classes' => 'script script--blue',
+        'wrapper' => false,
+      ),
+      array(
+        'title' => 'Big script Text Blue',
+        'block' => 'h1',
+        'classes' => 'script script--blue big',
         'wrapper' => false,
       ),
       array(

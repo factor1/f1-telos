@@ -19,7 +19,7 @@ if (!(is_admin() )) {
  */
 function prelude_theme_scripts() {
   // Font Awesome
-  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/44d1f7d674.js', array(), THEME_VERSION );
+  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/de235ca0c9.js', array(), THEME_VERSION );
 
   // Fonts
   wp_enqueue_style('typekit', 'https://use.typekit.net/bdt2vwc.css', array(), THEME_VERSION );
@@ -29,5 +29,11 @@ function prelude_theme_scripts() {
 
   // JS
   wp_enqueue_script('prelude-js', get_template_directory_uri() . '/assets/js/theme.min.js', array('jquery'), THEME_VERSION, true );
+
+  //Add ACF vars to script
+  wp_localize_script('prelude-js', 'script_vars', array(
+      'slides_to_show' => get_field('home_testimonials_slides_to_show', get_option('page_on_front')),
+    )
+  );
 }
 add_action( 'wp_enqueue_scripts', 'prelude_theme_scripts' );

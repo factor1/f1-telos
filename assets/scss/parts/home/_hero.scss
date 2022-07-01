@@ -27,9 +27,6 @@
     z-index: 1;
   }
 
-  .row {
-    justify-content: flex-end;
-  }
 
   .col-4 {
     margin-top: 0;
@@ -40,7 +37,12 @@
   }
 
   h1 {
-    text-transform: none;
+    text-transform: uppercase;
+    font-family: $gilroyBold;
+    color: $grass;
+    font-size: rem(40);
+    letter-spacing: rem(10);
+    margin-bottom: rem(40);
   }
 
   img {
@@ -49,11 +51,25 @@
 
   .button {
     margin: rem(5);
-    @include buttons($altBlue, $altBlue, $white, $white, $altBlue);
+    text-transform: uppercase;
+    @include buttons($grass, $grass, $white, $white, $grass);
+  }
+
+  .hero-callout {
+    margin: rem(100) 0 0;
+    * {
+      text-align: left;
+    }
   }
 }
 
 // Media Queries
+@media screen and (min-width: rem(1600)) {
+  .hero--home .container {
+    padding: rem(320) 0 rem(10);
+  }
+}
+
 @media screen and (max-width: $small-breakpoint) {
   .hero--home {
     background-position: center center !important;

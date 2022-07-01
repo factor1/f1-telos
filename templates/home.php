@@ -16,10 +16,6 @@ get_header();
 
 get_template_part('parts/home/hero');
 
-get_template_part('parts/global/headline-text-split');
-
-get_template_part('parts/home/ipad-modal');
-
 if( $bannerToggle ) :
 
   get_template_part('parts/home/banner');
@@ -28,18 +24,26 @@ endif;
 
 get_template_part('parts/home/testimonial-slider-1');
 
+get_template_part('parts/home/highlight-grid');
+
+get_template_part('parts/home/cta-banner');
+
 // get_template_part('parts/home/product-grid');
 
-get_template_part('parts/home/form-images-split');
+// get_template_part('parts/home/form-images-split');
 
-get_template_part('parts/global/testimonials');
+// get_template_part('parts/global/testimonials');
 
-get_template_part('parts/home/3-column-grid');
+// get_template_part('parts/home/3-column-grid');
 
 if( $plansToggle ) :
 
   get_template_part('parts/global/plans-grid');
 
 endif;
+
+get_template_part('parts/global/headline-text-split');
+
+get_template_part('parts/home/ipad-modal');
 
 get_footer(); ?>
