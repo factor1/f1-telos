@@ -11,8 +11,15 @@
 
 $plansToggle = get_field('home_plans_section_toggle');
 $bannerToggle = get_field('home_banner_toggle');
+$extraHeroToggle = get_field('extra_hero_toggle');
 
 get_header();
+
+if( $extraHeroToggle ) :
+
+  get_template_part('parts/home/extra-hero');
+
+endif;
 
 get_template_part('parts/home/hero');
 
