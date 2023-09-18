@@ -44,10 +44,6 @@ if( have_rows('home_highlight_cards') ) : ?>
 
           </div>
 
-          <?php if($i%5 == 0): ?>
-            <hr>
-          <?php endif; ?>
-
         <?php $i++; endwhile; ?>
 
       </div>
