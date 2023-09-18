@@ -6,7 +6,8 @@
  * @author Factor1 Studios
  * @since 0.0.1
  */
-
+$menuTextToggle = get_field('top_bar_text_toggle', 'option');
+$menuText = get_field('top_bar_text', 'option');
 $menu = is_user_logged_in() ? 'primary-in' : 'primary'; ?>
 
 <header class="site-header">
@@ -18,6 +19,10 @@ $menu = is_user_logged_in() ? 'primary-in' : 'primary'; ?>
         <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
         </a>
+
+        <?php if($menuTextToggle && $menuText): ?>
+          <div class="site-header__text sm-only"><?php echo $menuText; ?></div>
+        <?php endif; ?>
 
         <?php // Primary nav
         wp_nav_menu(

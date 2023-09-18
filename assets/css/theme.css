@@ -3188,6 +3188,10 @@ body {
 	margin-right: 2.5rem;
 }
 
+.site-header__text {
+	margin-right: 3.125rem;
+}
+
 main {
 	margin-top: 4.6875rem;
 }
@@ -4699,6 +4703,63 @@ main {
 	text-shadow: 0rem 0rem 0.3125rem #231f20;
 	margin: 3.125rem auto 0;
 	font-family: "Gilroy-Light";
+}
+
+/*
+ * Extra Hero (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Telos Tennis
+ * @author Factor1 Studios
+ * @since 0.5.0
+ */
+
+.extra-hero {
+	position: relative;
+	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.extra-hero:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.3;
+}
+
+.extra-hero .container {
+	padding: 15% 0 15%;
+	z-index: 1;
+}
+
+.extra-hero__top-text {
+	position: absolute;
+	top: 5%;
+	right: 3%;
+	text-shadow: 0 0 0.3125rem #656565c9;
+	z-index: 3;
+}
+
+.extra-hero__top-text h3 {
+	color: #fff;
+}
+
+.extra-hero h1 {
+	text-transform: uppercase;
+	font-family: "Gilroy-Bold";
+	font-size: 4.0625rem;
+	letter-spacing: 0.625rem;
+	margin-bottom: 2.5rem;
+	text-shadow: 0 0 0.3125rem #656565c9;
+}
+
+.extra-hero .buttons {
+	margin: 1.875rem 0 0;
 }
 
 /*
@@ -7008,6 +7069,7 @@ h3 {
 
 .site-header__logo {
 	width: 11.25rem;
+	margin-right: 0.9375rem;
 }
 
 main {
@@ -7180,6 +7242,10 @@ main {
 
 .cta-banner__container h3 {
 	font-size: 1.5625rem;
+}
+
+.extra-hero .container {
+	padding: 10rem 0;
 }
 
 .contact-section .container {
