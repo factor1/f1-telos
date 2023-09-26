@@ -4740,13 +4740,17 @@ main {
 .extra-hero__top-text {
 	position: absolute;
 	top: 5%;
-	right: 3%;
+	left: 3%;
 	text-shadow: 0 0 0.3125rem #656565c9;
 	z-index: 3;
 }
 
 .extra-hero__top-text h3 {
 	color: #fff;
+}
+
+.extra-hero iframe {
+	max-width: 100%;
 }
 
 .extra-hero h1 {
