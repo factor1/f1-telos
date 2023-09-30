@@ -4762,6 +4762,10 @@ main {
 	text-shadow: 0 0 0.3125rem #656565c9;
 }
 
+.extra-hero h6 {
+	text-transform: unset;
+}
+
 .extra-hero .buttons {
 	margin: 1.875rem 0 0;
 }
@@ -7249,7 +7253,7 @@ main {
 }
 
 .extra-hero .container {
-	padding: 10rem 0;
+	padding: 3.125rem 0;
 }
 
 .contact-section .container {
