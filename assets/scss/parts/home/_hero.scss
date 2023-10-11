@@ -12,6 +12,16 @@
   position: relative;
   @include iPhoneX;
 
+  &.slim {
+    .container {
+      padding: rem(50) 0 rem(10);
+    }
+
+    .sm-only {
+      display: none !important;
+    }
+  }
+
   &:after {
     content: '';
     position: absolute;

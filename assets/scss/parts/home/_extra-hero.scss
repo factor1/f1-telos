@@ -11,6 +11,7 @@
 .extra-hero {
   position: relative;
   @include iPhoneX;
+  text-shadow: 0 0 rem(15) #000;
 
   &:after {
     content: '';
@@ -27,6 +28,10 @@
   .container {
     padding: rem(25) 0 10%;
     z-index: 1;
+  }
+
+  .support {
+    text-shadow: 0 0 rem(15) #000;
   }
 
   &__top-text {
@@ -51,7 +56,7 @@
     font-size: rem(65);
     letter-spacing: rem(10);
     margin-bottom: rem(40);
-    text-shadow: 0 0 rem(5) #656565c9;
+    text-shadow: 0 0 rem(15) #000;
   }
 
   h6 {

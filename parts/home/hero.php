@@ -17,9 +17,12 @@ $modalBtnText = get_field('home_hero_modal_button_text');
 $btn = get_field('home_hero_button');
 $btnType = get_field('home_hero_button_type'); // T/F anchor link
 $btnClass = $btnType ? ' anchor-scroll' : '';
-$callout = get_field('home_hero_callout'); ?>
+$callout = get_field('home_hero_callout');
+$slimToggle = get_field('home_hero_slim_toggle');
+$heroClass = $slimToggle ? ' slim' : '';
+?>
 
-<section class="hero--home" style="background: url('<?php echo featuredURL('home_hero'); ?>') 10% center/cover no-repeat">
+<section class="hero--home <?php echo $heroClass; ?>" style="background: url('<?php echo featuredURL('home_hero'); ?>') 10% center/cover no-repeat">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">

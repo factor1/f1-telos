@@ -1939,7 +1939,7 @@ a:hover {
 	margin-bottom: 2.5rem;
 	font-size: 1.625rem;
 	line-height: 1.38;
-	letter-spacing: 0.025em;
+	letter-spacing: 0.25rem;
 	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 }
 
@@ -4029,6 +4029,14 @@ main {
 	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 }
 
+.hero--home.slim .container {
+	padding: 3.125rem 0 0.625rem;
+}
+
+.hero--home.slim .sm-only {
+	display: none !important;
+}
+
 .hero--home:after {
 	content: '';
 	position: absolute;
@@ -4718,6 +4726,7 @@ main {
 .extra-hero {
 	position: relative;
 	padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+	text-shadow: 0 0 0.9375rem #000;
 }
 
 .extra-hero:after {
@@ -4735,6 +4744,10 @@ main {
 .extra-hero .container {
 	padding: 1.5625rem 0 10%;
 	z-index: 1;
+}
+
+.extra-hero .support {
+	text-shadow: 0 0 0.9375rem #000;
 }
 
 .extra-hero__top-text {
@@ -4759,7 +4772,7 @@ main {
 	font-size: 4.0625rem;
 	letter-spacing: 0.625rem;
 	margin-bottom: 2.5rem;
-	text-shadow: 0 0 0.3125rem #656565c9;
+	text-shadow: 0 0 0.9375rem #000;
 }
 
 .extra-hero h6 {
