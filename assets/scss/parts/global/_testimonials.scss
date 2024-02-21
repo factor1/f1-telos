@@ -39,8 +39,17 @@
       padding: rem(30) 0;
     }
 
+    .slick-track {
+      height: auto;
+    }
+
     &__slider {
       margin: rem(40) 0;
+    }
+    
+    .slick-slide {
+      height: auto;
+      margin-bottom: rem(20);
     }
   }
 }
