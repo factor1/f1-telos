@@ -109,6 +109,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
+    top: 46%;
     left: -8%;
     [dir="rtl"] & {
         left: auto;

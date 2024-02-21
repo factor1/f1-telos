@@ -12,15 +12,15 @@
   @include iPhoneX;
 
   .container {
-    padding: rem(60) 0;
+    padding: rem(60) 0 rem(30);
   }
 
   &__slider {
-    margin: rem(80) 0;
+    margin: rem(80) 0 0;
   }
 
   .slick-track {
-    height: rem(300);
+    height: rem(420);
   }
 
   .slick-slide {
