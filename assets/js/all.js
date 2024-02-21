@@ -4128,7 +4128,8 @@ jQuery( document ).ready(function( $ ) {
 	// Global Testimonials
 	if( $('.testimonials-section__slider').length ) {
 		$('.testimonials-section__slider').slick({
-			autoplay: false,
+			autoplay: true,
+			speed: 3000,
 			arrows: true,
 			dots: false,
 			slidesToShow: 2,
