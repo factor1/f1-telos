@@ -31,6 +31,8 @@ endif;
 
 get_template_part('parts/home/testimonial-slider-1');
 
+get_template_part('parts/global/50-50-split');
+
 get_template_part('parts/home/highlight-grid');
 
 get_template_part('parts/home/cta-banner');
