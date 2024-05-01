@@ -120,7 +120,7 @@ jQuery( document ).ready(function( $ ) {
 	if( $('.testimonials-section__slider').length ) {
 		$('.testimonials-section__slider').slick({
 			autoplay: true,
-			speed: 3000,
+			speed: 6000,
 			arrows: true,
 			dots: false,
 			slidesToShow: 2,
