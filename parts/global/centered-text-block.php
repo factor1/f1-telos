@@ -21,9 +21,12 @@ $content = get_sub_field('centered_text_block_content');
 $btnToggle = $isSingle || $isVideo ? false : get_sub_field('centered_text_block_button_toggle');
 $btnAlign = get_sub_field('centered_text_block_button_alignment');
 $btn = get_sub_field('centered_text_block_button');
-$btnColor = get_sub_field('centered_text_block_button_color'); ?>
+$btnColor = get_sub_field('centered_text_block_button_color');
+$padding_toggle = get_sub_field('centered_text_block_padding_toggle');
+$padding_class = $padding_toggle ? ' no-padding' : '';
+?>
 
-<section class="centered-text-block">
+<section class="centered-text-block <?php echo $padding_class; ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">

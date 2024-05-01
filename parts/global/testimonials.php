@@ -16,10 +16,12 @@ $isDefault = is_page() && !is_page_template();
 $headline = $isDefault ? get_sub_field('testimonials_section_headline') : get_field('testimonials_section_headline');
 $testimonials = $isDefault ? get_sub_field('section_testimonials') : get_field('section_testimonials');
 $btn = $isDefault ? get_sub_field('testimonials_section_button') : get_field('testimonials_section_button');
+$padding_toggle = get_sub_field('testimonials_section_padding_toggle');
+$padding_class = $padding_toggle ? ' no-padding' : '';
 
 if( $testimonials ) : ?>
 
-  <section class="testimonials-section">
+  <section class="testimonials-section <?php echo $padding_class; ?>">
     <div class="container">
       <div class="row">
         <div class="col-10 sm-col-10 col-centered text-center">

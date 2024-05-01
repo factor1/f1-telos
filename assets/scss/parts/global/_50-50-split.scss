@@ -29,4 +29,18 @@
     align-self: flex-end;
     margin-top: rem(20);
   }
+
+  &.full-width {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .row--full-width {
+    .col-6 {
+      padding: rem(50);
+      margin-bottom: rem(0);
+    }
+  }
+
 }

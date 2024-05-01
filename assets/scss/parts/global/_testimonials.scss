@@ -11,6 +11,10 @@
 .testimonials-section {
   @include iPhoneX;
 
+  &.no-padding .container {
+    padding: 0;
+  }
+
   .container {
     padding: rem(60) 0 rem(30);
   }
