@@ -34,9 +34,12 @@ if( have_rows('50_50_splits') ) : ?>
 
             <?php if( $btnToggle && $btn ) : ?>
 
-              <a href="<?php echo esc_url($btn['url']); ?>" class="button button--grass" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-                <?php echo $btn['title']; ?>
-              </a>
+              <div class="text-center">
+                <a href="<?php echo esc_url($btn['url']); ?>" class="button button--grass" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
+                  <?php echo $btn['title']; ?>
+                </a>
+              </div>
+
 
             <?php endif; ?>
 
