@@ -2016,7 +2016,7 @@ a:hover {
 .video-title {
 	margin: 0;
 	line-height: 1;
-	color: #414042;
+	color: #414042 !important;
 	text-transform: uppercase;
 }
 
