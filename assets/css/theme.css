@@ -4644,6 +4644,10 @@ main {
 	margin: 0 auto;
 }
 
+.highlight-grid__single .highlight-content {
+	width: 100%;
+}
+
 .highlight-grid__single .highlight-content .single-image {
 	width: 100%;
 	min-height: 10rem;
