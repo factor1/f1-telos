@@ -3881,6 +3881,10 @@ main {
 	border-bottom: 0.0625rem solid #414042;
 }
 
+.recent-videos .video-subtitle {
+	margin: 0.625rem 0 0;
+}
+
 .recent-videos .col-4 {
 	margin-bottom: 3.125rem;
 }
