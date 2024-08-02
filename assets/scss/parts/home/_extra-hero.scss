@@ -65,6 +65,9 @@
 
   .buttons {
     margin: rem(30) 0 0;
+    .button {
+      margin-bottom: rem(10);
+    }
   }
 
 }

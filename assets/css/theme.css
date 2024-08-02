@@ -4811,6 +4811,10 @@ main {
 	margin: 1.875rem 0 0;
 }
 
+.extra-hero .buttons .button {
+	margin-bottom: 0.625rem;
+}
+
 /*
  * Template Name: Contact
  *
