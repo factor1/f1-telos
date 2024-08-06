@@ -30,7 +30,7 @@ if( $extraHeroToggle ) :
 
 endif;
 
-get_template_part('parts/home/hero');
+get_template_part('parts/home/testimonial-slider-1');
 
 if( $bannerToggle ) :
 
@@ -38,7 +38,9 @@ if( $bannerToggle ) :
 
 endif;
 
-get_template_part('parts/home/testimonial-slider-1');
+get_template_part('parts/home/hero');
+
+
 
 get_template_part('parts/global/50-50-split');
 
