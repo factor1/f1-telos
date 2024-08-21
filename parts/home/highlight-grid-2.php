@@ -1,6 +1,6 @@
 <?php
 /*
- * Highlight Grid (home)
+ * Highlight Grid 2 (home)
  *
  * Template part used on the home template
  *
@@ -9,12 +9,12 @@
  * @since 0.5.0
  */
 
-$intro = get_field('home_highlight_grid_intro');
-$section_id = get_field('home_highlight_section_id');
-$bgImage = get_field('home_highlight_background_Image');
+$intro = get_field('home_highlight_2_grid_intro');
+$section_id = get_field('home_highlight_2_section_id');
+$bgImage = get_field('home_highlight_2_background_Image');
 $bgImg = wp_get_attachment_image_src($bgImage, 'large');
 
-if( have_rows('home_highlight_cards') ) : ?>
+if( have_rows('home_highlight_2_cards') ) : ?>
 
   <section class="highlight-grid" id="<?php echo $section_id; ?>" style="background: url(<?php echo $bgImg[0]; ?>) center/cover;">
     <div class="container">
@@ -24,7 +24,7 @@ if( have_rows('home_highlight_cards') ) : ?>
           <?php echo $intro; ?>
         </div>
 
-        <?php $i=1; while( have_rows('home_highlight_cards') ) : the_row();
+        <?php $i=1; while( have_rows('home_highlight_2_cards') ) : the_row();
           // Highligh Grid Custom Subfields
           $image = wp_get_attachment_image_src(get_sub_field('image'), 'product_grid');
           $content = get_sub_field('content');

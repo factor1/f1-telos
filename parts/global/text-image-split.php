@@ -18,6 +18,7 @@ $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
 $video = get_sub_field('text_image_split_video');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
+$btnAlign = get_sub_field('text_image_split_button_alignment');
 $btn = get_sub_field('text_image_split_button');
 $btnColor = get_sub_field('text_image_split_button_color');
 
@@ -45,9 +46,11 @@ $rowClass = $layout == 'right' ? ' row--reverse' : ''; ?>
 
         // Optional button
         if( $btnToggle && $btn ) : ?>
-          <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnColor; ?>" role="link" title="<?php echo $btn['title']; ?>">
-            <?php echo $btn['title']; ?>
-          </a>
+          <div class="text-<?php echo $btnAlign; ?>">
+            <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnColor; ?>" role="link" title="<?php echo $btn['title']; ?>">
+              <?php echo $btn['title']; ?>
+            </a>
+          </div>
         <?php endif; ?>
       </div>
 

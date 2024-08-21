@@ -11,6 +11,10 @@
 .centered-text-block {
   @include iPhoneX;
 
+  &.no-padding .container {
+    padding: 0;
+  }
+
   .container {
     padding: rem(60) 0;
   }

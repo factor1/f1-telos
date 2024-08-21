@@ -19,7 +19,7 @@ $btn = get_sub_field('recent_videos_button');
 if( $type ) :
   $args = array(
     'post_type' => 'community-video',
-    'posts_per_page' => 6,
+    'posts_per_page' => 12,
     'tax_query' => array(
       array(
         'taxonomy' => 'video-type',
@@ -31,7 +31,7 @@ if( $type ) :
 else :
   $args = array(
     'post_type' => 'community-video',
-    'posts_per_page' => 6,
+    'posts_per_page' => 12,
   );
 endif;
 
@@ -50,6 +50,7 @@ if( $videos->have_posts() ) : ?>
         <?php // Videos here
         while( $videos->have_posts() ) : $videos->the_post();
           // Video CPT Custom Fields
+          $subtitle = get_field('video_subtitle');
           $link = get_field('video_link'); ?>
 
           <div class="col-4 sm-col-11 sm-col-centered">
@@ -58,6 +59,9 @@ if( $videos->have_posts() ) : ?>
             </div>
 
             <h5 class="video-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+            <?php if($subtitle): ?>
+              <p class="video-subtitle"><?php echo $subtitle; ?></p>
+            <?php endif; ?>
           </div>
 
         <?php endwhile;

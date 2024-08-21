@@ -12,8 +12,17 @@
 $plansToggle = get_field('home_plans_section_toggle');
 $bannerToggle = get_field('home_banner_toggle');
 $extraHeroToggle = get_field('extra_hero_toggle');
+$extraHeroToggle2 = get_field('extra_hero_2_toggle');
 
 get_header();
+
+if( $extraHeroToggle2 ) :
+
+  get_template_part('parts/home/extra-hero-2');
+
+endif;
+
+get_template_part('parts/home/highlight-grid-2');
 
 if( $extraHeroToggle ) :
 
@@ -21,7 +30,7 @@ if( $extraHeroToggle ) :
 
 endif;
 
-get_template_part('parts/home/hero');
+get_template_part('parts/home/testimonial-slider-1');
 
 if( $bannerToggle ) :
 
@@ -29,7 +38,11 @@ if( $bannerToggle ) :
 
 endif;
 
-get_template_part('parts/home/testimonial-slider-1');
+get_template_part('parts/home/hero');
+
+
+
+get_template_part('parts/global/50-50-split');
 
 get_template_part('parts/home/highlight-grid');
 
